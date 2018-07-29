@@ -13,7 +13,7 @@
     "**/tsconfig.app.json":true,
     "**/tsconfig.json": true,
     "**/tslint.json": true,
-    "**/angular.json": true,
+    "**/angular.json": false,
     "**/.gitignore": true,
     "**/test.ts": true,
 
