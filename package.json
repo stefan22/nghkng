@@ -1,0 +1,19 @@
+{
+  "name": "nghkng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "sl",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
