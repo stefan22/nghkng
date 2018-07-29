@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    //   //in workspace settings
+    "**/node_modules": true,
+    "**/*.spec.ts": true,
+    "e2e": true,
+    "editorconfig": false,
+    "karma.conf.js": true,
+    "package-lock.json": true,
+    "protractor.conf.js": true,
+    "typings": true,
+    "**/*.map": true,
+    ".vscode": false,
+    "README.md": true,
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
+  }
+}
