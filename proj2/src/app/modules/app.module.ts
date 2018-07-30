@@ -12,7 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 
-import { AppComponent } from './app.component';
+import { AppComponent } from '../app.component';
 
 @NgModule({
   declarations: [AppComponent],
