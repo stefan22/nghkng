@@ -1,4 +1,4 @@
-export class SouthParkEpisodes {
+export class EpisodeFormat {
   
   title: string;
   cover: string;
@@ -15,4 +15,4 @@ export class SouthParkEpisodes {
 
 
 
-}// SouthParkEpisodes class
+}// EpisodeFormat class

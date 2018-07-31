@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SouthParkEpisodes } from '../shared/southPark-episodes';
+import { EpisodeFormat } from '../shared/episode-format';
 
 @Component({
   selector: "app-main-menu",
@@ -8,14 +8,13 @@ import { SouthParkEpisodes } from '../shared/southPark-episodes';
 })
 export class MainMenuComponent implements OnInit {
   
-
-  episodes: SouthParkEpisodes[] = [
+  episodes: EpisodeFormat[] = [
     {
       episodeNumber: "78",
       title: "Cartman and Anal Probe",
       description:
         "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
-      cover: "images/cover.jpg",
+      cover: "../assets/images/season14.jpg",
       seasonId: "1",
       price: "7.50"
     },
@@ -24,7 +23,7 @@ export class MainMenuComponent implements OnInit {
       title: "Cartman and Anal Probe",
       description:
         "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
-      cover: "images/cover.jpg",
+      cover: "../assets/images/season19.jpg",
       seasonId: "1",
       price: "7.50"
     },
@@ -33,7 +32,7 @@ export class MainMenuComponent implements OnInit {
       title: "Cartman and Anal Probe",
       description:
         "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
-      cover: "images/cover.jpg",
+      cover: "../assets/images/season16.jpg",
       seasonId: "1",
       price: "7.50"
     },
@@ -42,29 +41,22 @@ export class MainMenuComponent implements OnInit {
       title: "Cartman and Anal Probe",
       description:
         "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
-      cover: "images/cover.jpg",
+      cover: "../assets/images/season8.jpg",
       seasonId: "1",
       price: "7.50"
     },
     {
-      episodeNumber:" 82",
+      episodeNumber: " 82",
       title: "Cartman and Anal Probe",
       description:
         "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
-      cover: "images/cover.jpg",
+      cover: "../assets/images/season14.jpg",
       seasonId: "1",
       price: "7.50"
     }
   ];
 
-
-
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit() {}
-
-
-
 }
