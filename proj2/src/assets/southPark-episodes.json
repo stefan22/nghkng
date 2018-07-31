@@ -1,0 +1,41 @@
+{
+  "season": {
+      "episode": [
+        {
+          "episodeNumber": 78,
+          "title": "Cartman and Anal Probe",
+          "description": "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
+          "cover": "images/cover.jpg",
+          "seasonId": 1
+        },
+        {
+          "episodeNumber": 79,
+          "title": "Cartman and Anal Probe",
+          "description": "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
+          "cover": "images/cover.jpg",
+          "seasonId": 1
+        },
+        {
+          "episodeNumber": 80,
+          "title": "Cartman and Anal Probe",
+          "description": "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
+          "cover": "images/cover.jpg",
+          "seasonId": 1
+        },
+        {
+          "episodeNumber": 81,
+          "title": "Cartman and Anal Probe",
+          "description": "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
+          "cover": "images/cover.jpg",
+          "seasonId": 1
+        },
+        {
+          "episodeNumber": 82,
+          "title": "Cartman and Anal Probe",
+          "description": "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
+          "cover": "images/cover.jpg",
+          "seasonId": 1
+        }
+    ]
+  }
+}
