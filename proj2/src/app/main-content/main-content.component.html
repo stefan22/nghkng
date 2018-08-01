@@ -1,4 +1,5 @@
 <div class="container">
+ 
   <mat-list>
     <mat-list-item *ngFor="let episode of episodes">
       <div class="episode">
@@ -7,11 +8,12 @@
         <p matLine>seasonId: {{episode.seasonId}}</p>
         <p matLine>description: {{episode.description}}</p>
         <img matListAvatar src="{{episode.cover}}" />
-        <p matLine>price: {{episode.price}}</p>
-        <button mat-raised-button>Click me!</button>
+        <p matLine>price: {{episode.price}}</p> 
+        <button mat-raised-button color="primary">Buy me!</button>
       </div>
-     
+      <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
       </mat-list-item>
   </mat-list>
+ 
   <!-- endof matlist -->
 </div>

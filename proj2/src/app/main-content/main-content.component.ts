@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { EpisodeFormat } from '../shared/episode-format';
 
 @Component({
-  selector: "app-main-menu",
-  templateUrl: "./main-menu.component.html",
-  styleUrls: ["./main-menu.component.scss"]
+  selector: "app-main-content",
+  templateUrl: "./main-content.component.html",
+  styleUrls: ["./main-content.component.scss"]
 })
-export class MainMenuComponent implements OnInit {
+export class MainContentComponent implements OnInit {
   
   episodes: EpisodeFormat[] = [
     {

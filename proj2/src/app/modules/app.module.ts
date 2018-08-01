@@ -9,13 +9,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 import { AppComponent } from '../app.component';
-import { MainMenuComponent } from '../main-menu/main-menu.component';
+import { MainContentComponent } from '../main-content/main-content.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    MainMenuComponent
+    MainContentComponent
   ],
 
   imports: [
