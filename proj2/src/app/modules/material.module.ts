@@ -4,7 +4,8 @@ import {
         MatMenuModule,
         MatToolbarModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        MatGridListModule
       
 
       } from '@angular/material';
@@ -18,7 +19,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +28,8 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule {}
