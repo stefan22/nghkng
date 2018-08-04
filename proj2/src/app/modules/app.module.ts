@@ -10,12 +10,13 @@ import 'hammerjs';
 
 import { AppComponent } from '../app.component';
 import { MainContentComponent } from '../main-content/main-content.component';
+import { EpisodeDetailsComponent } from '../main-content/episode-details/episode-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent, 
-    MainContentComponent
+    MainContentComponent, EpisodeDetailsComponent
   ],
 
   imports: [

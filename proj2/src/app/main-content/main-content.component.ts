@@ -6,22 +6,16 @@ import { EpisodeFormat } from '../shared/episode-format';
   templateUrl: "./main-content.component.html",
   styleUrls: ["./main-content.component.scss"]
 })
-
-
-
 export class MainContentComponent implements OnInit {
-
   episodes: EpisodeFormat[] = Episodes;
 
   selectedEpisode: EpisodeFormat = Episodes[0];
-  
+
   constructor() {}
 
   ngOnInit() {}
 
-
-
-
+  
 }// MainContentComponent
 
 
