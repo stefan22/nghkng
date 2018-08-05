@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
+
 @Component({
   selector: "app-episode-details",
   templateUrl: "./episode-details.component.html",
@@ -7,7 +8,8 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EpisodeDetailsComponent implements OnInit {
   commentsTitle: string = 'comments';
-  details = Details;  
+  details = Details; 
+  isSelected: any = Details; 
 
   constructor() {}
 
