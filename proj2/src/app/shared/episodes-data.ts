@@ -1,15 +1,14 @@
 import { EpisodeFormat } from './episode-format';
 
-
 export const Episodes: EpisodeFormat[] = [
 
   {
-    episodeNumber: "78",
+    episodeNumber: 78,
     title: "Cartman and Anal Probe",
     description:
       "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
     cover: "../assets/images/season14.jpg",
-    seasonId: "1",
+    seasonId: 1,
     price: "7.50",
     comments: [
       {
@@ -47,12 +46,12 @@ export const Episodes: EpisodeFormat[] = [
   },
 
   {
-    episodeNumber: "79",
+    episodeNumber: 79,
     title: "Cartman and Anal Probe",
     description:
       "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
     cover: "../assets/images/season19.jpg",
-    seasonId: "2",
+    seasonId: 2,
     price: "7.50",
     comments: [
       {
@@ -90,12 +89,12 @@ export const Episodes: EpisodeFormat[] = [
   },
 
   {
-    episodeNumber: "80",
+    episodeNumber: 80,
     title: "Cartman and Anal Probe",
     description:
       "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
     cover: "../assets/images/season16.jpg",
-    seasonId: "3",
+    seasonId: 3,
     price: "7.50",
     comments: [
       {
@@ -133,12 +132,12 @@ export const Episodes: EpisodeFormat[] = [
   },
 
   {
-    episodeNumber: "81",
+    episodeNumber: 81,
     title: "Cartman and Anal Probe",
     description:
       "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
     cover: "../assets/images/season8.jpg",
-    seasonId: "4",
+    seasonId: 4,
     price: "7.50",
     comments: [
       {
@@ -176,12 +175,12 @@ export const Episodes: EpisodeFormat[] = [
   },
 
   {
-    episodeNumber: " 82",
+    episodeNumber: 82,
     title: "Cartman and Anal Probe",
     description:
       "While the boys are waiting for the school bus, Cartman explains the odd nightmare he had the previous night involving alien visitors.",
     cover: "../assets/images/season14.jpg",
-    seasonId: "5",
+    seasonId: 5,
     price: "7.50",
     comments: [
       {

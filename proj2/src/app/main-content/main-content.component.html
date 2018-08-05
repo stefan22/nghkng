@@ -12,18 +12,18 @@
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="250px">
       <div class="episode">
-        <mat-grid-tile *ngFor="let episode of episodes">
+        <mat-grid-tile *ngFor="let episode of episodes"
+          (click)="onSelectedEpisode(episode)">
           <img height="250px" src="{{episode.cover}}" />
           <mat-grid-tile-footer>
-            <p>seasonId: {{episode.seasonId | uppercase }}</p>
+            <p>seasonId: {{episode.seasonId }}</p>
           </mat-grid-tile-footer>
         </mat-grid-tile>
       </div>
     </mat-grid-list>
   </div>
 
-  <app-episode-details ></app-episode-details>
+  <app-episode-details [isSelected]="selectedEpisode" ></app-episode-details>
 
 </div>
 
-<!-- [isSelected]="selectedEpisode" -->
