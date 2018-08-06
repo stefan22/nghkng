@@ -24,12 +24,9 @@ export class MainContentComponent implements OnInit {
 
   }
 
-  // onSelectedEpisode(episode) {
-  //   this.selectedEpisode = episode;
-  //   console.log(this.selectedEpisode);
-  //   return this.selectedEpisode;
+  
 
-  // }//onSelectedEpisode
+  
 }// MainContentComponent
 
 

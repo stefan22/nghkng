@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeasonFormat } from "../shared/season-format";
-import { Season10 } from '../shared/season10-data';
+import { Season10DataService } from '../services/season10-data.service';
 
 @Component({
   selector: 'app-season10',
@@ -9,12 +9,13 @@ import { Season10 } from '../shared/season10-data';
 })
 export class Season10Component implements OnInit {
 
-  season10: SeasonFormat[] = Season10;
+  season10: SeasonFormat[];
   isTen: object;
 
-  constructor() { }
+  constructor(private season10DataService: Season10DataService) { }
 
   ngOnInit() {
+    this.season10 = this.season10DataService.getSeason10Data();
   }
 
   onEpisodeSelected(item) {

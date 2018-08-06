@@ -6,13 +6,11 @@ import { Episodes } from '../shared/episodes-data';
   providedIn: 'root'
 })
 export class EpisodeDataService {
-  episodes: EpisodeFormat[] = Episodes;
 
   constructor() { }
 
   getEpisodesData() :EpisodeFormat[] {
-    console.log()
-    return this.episodes;
+    return Episodes;
   }
 
 

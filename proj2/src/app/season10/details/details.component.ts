@@ -6,7 +6,7 @@ import { SeasonFormat } from "../../shared/season-format";
   templateUrl: "./details.component.html",
   styleUrls: ["./details.component.scss"]
 })
-export class DetailsComponent implements OnInit {
+export class Season10DetailsComponent implements OnInit {
   @Input()
   tenSelected: SeasonFormat;
 
