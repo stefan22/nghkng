@@ -10,6 +10,8 @@ export class DetailsComponent implements OnInit {
   @Input()
   tenSelected: SeasonFormat;
 
+  commentsTitle = 'Season 10 comments:'
+
 
   constructor() {}
 

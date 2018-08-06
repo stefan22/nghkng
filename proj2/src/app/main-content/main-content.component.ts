@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Episodes } from '../shared/episodes-data';
+import { EpisodeFormat } from '../shared/episode-format';
+import { EpisodeDataService } from '../services/episode-data.service';
 
 @Component({
   selector: "app-main-content",
@@ -7,23 +8,28 @@ import { Episodes } from '../shared/episodes-data';
   styleUrls: ["./main-content.component.scss"]
 })
 export class MainContentComponent implements OnInit {
-  episodes = Episodes;
+  episodes: EpisodeFormat[];
+  selectedEpisode: EpisodeFormat;
 
-  selectedEpisode: object;
+  constructor(private episodeDataService: EpisodeDataService) {}
 
-  constructor() {}
+  ngOnInit() {
+    this.episodes = this.episodeDataService.getEpisodesData();
+  }
 
-  ngOnInit() {}
-
-  onSelectedEpisode(episode) {
-    this.selectedEpisode = episode;
+  onSelectedEpisode(item) {
+    this.selectedEpisode = item;
     console.log(this.selectedEpisode);
     return this.selectedEpisode;
 
-  }//onSelectedEpisode
+  }
 
+  // onSelectedEpisode(episode) {
+  //   this.selectedEpisode = episode;
+  //   console.log(this.selectedEpisode);
+  //   return this.selectedEpisode;
 
-
+  // }//onSelectedEpisode
 }// MainContentComponent
 
 
