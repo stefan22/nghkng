@@ -2,7 +2,7 @@
 
   <div fxFlex>
     <div>
-      <h1>Season 10</h1>
+      <h1>Season 10 Episodes</h1>
       <hr/>
     </div>
   </div>
@@ -10,7 +10,8 @@
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="250px">
       <div class="seasons">
-        <mat-grid-tile *ngFor="let ten of season10">
+        <mat-grid-tile *ngFor="let ten of season10"
+          (click)="onEpisodeSelected(ten)">
           <img height="200px" width="300px" src="{{ten.cover}}" />
           <mat-grid-tile-footer>
             <p>Episode: {{ten.episodeNumber }}</p>
@@ -20,6 +21,6 @@
     </mat-grid-list>
   </div>
 
- <app-details></app-details>
+ <app-details [tenSelected]="isTen"></app-details>
 
 </div>

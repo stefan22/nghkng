@@ -10,10 +10,20 @@ import { Season10 } from '../shared/season10-data';
 export class Season10Component implements OnInit {
 
   season10: SeasonFormat[] = Season10;
+  isTen: object;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-}
+  onEpisodeSelected(item) {
+    this.isTen = item;
+    console.log(this.isTen);
+    return this.isTen;
+
+  }
+
+
+
+}//Season10Component class

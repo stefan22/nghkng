@@ -7,7 +7,7 @@ fxLayoutGap="10px" fxLayoutGap.xs="0">
 
   <div fxFlex="30">
     <div fxFlex>
-      <mat-card class="episode-card">
+      <mat-card class="episode-card" *ngIf="tenSelected">
         <mat-card-header class="episode-title">
           <mat-card-title>
             <h3>{{tenSelected.episodeTitle}}</h3>
@@ -27,22 +27,22 @@ fxLayoutGap="10px" fxLayoutGap.xs="0">
   </div>
 
   <div fxFlex="30">
-    <div fxFlex *ngIf="isSelected">
+    <div fxFlex *ngIf="tenSelected">
       <mat-card class="episode-card">
         <mat-card-header class="episode-title">
           <mat-card-title>
             <h3>{{commentsTitle | uppercase }}</h3>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content *ngFor="let comment of isSelected.comments; index as i; last as isLast">
+        <mat-card-content *ngFor="let comment of tenSelected.comments; index as i; last as isLast">
           <p>
-            {{tenSelected.comment}}
+            {{comment.comment}}
           </p>
           <p>
-            {{tenSelected.rating + " stars"}}
+            {{comment.rating + " stars"}}
           </p>
           <p>
-            {{tenSelected.author}}, {{ tenSelected.date | date: mediumDate}}
+            {{comment.author}}, {{ comment.date | date: mediumDate}}
           </p>
           <div *ngIf="!isLast">
             <hr/>
