@@ -1,35 +1,24 @@
-  <mat-toolbar color="primary">
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>theaters</mat-icon>
-        <span>Episodes</span>
-      </button>
-      <button mat-menu-item-disabled>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Alerts-disabled</span>
-      </button>
-    </mat-menu>
-
-    <h1>SouthPark Episodes
-        <mat-icon>supervised_user_circle</mat-icon>
-    </h1>
-   
-  </mat-toolbar>
-
-  <app-main-content></app-main-content>
+ <!-- header -->
+ <app-header></app-header>
 
 
 
-  <app-season10></app-season10>
+ <!-- main-content -->
+<app-random-seasons></app-random-seasons>
+
+<app-season10></app-season10>
 
 
+
+
+
+
+
+
+
+
+<!-- footer -->
+<app-footer></app-footer>
 
 
 

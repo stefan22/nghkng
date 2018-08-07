@@ -11,8 +11,10 @@ import 'hammerjs';
 
 //components
 import { AppComponent } from '../app.component';
-import { MainContentComponent } from '../main-content/main-content.component';
-import { EpisodeDetailsComponent } from '../main-content/episode-details/episode-details.component';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
+import { RandomSeasonsComponent } from '../random-seasons/random-seasons.component';
+import { EpisodeDetailsComponent } from '../random-seasons/episode-details/episode-details.component';
 import { Season10Component } from '../season10/season10.component';
 import { Season10DetailsComponent } from '../season10/details/details.component';
 
@@ -22,13 +24,16 @@ import { Season10DataService } from '../services/season10-data.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    MainContentComponent,
+    RandomSeasonsComponent,
     EpisodeDetailsComponent,
     Season10Component,
-    Season10DetailsComponent
+    Season10DetailsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
 
   imports: [

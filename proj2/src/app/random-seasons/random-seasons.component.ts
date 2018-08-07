@@ -3,11 +3,11 @@ import { EpisodeFormat } from '../shared/episode-format';
 import { EpisodeDataService } from '../services/episode-data.service';
 
 @Component({
-  selector: "app-main-content",
-  templateUrl: "./main-content.component.html",
-  styleUrls: ["./main-content.component.scss"]
+  selector: "app-random-seasons",
+  templateUrl: "./random-seasons.component.html",
+  styleUrls: ["./random-seasons.component.scss"]
 })
-export class MainContentComponent implements OnInit {
+export class RandomSeasonsComponent implements OnInit {
   episodes: EpisodeFormat[];
   selectedEpisode: EpisodeFormat;
 
