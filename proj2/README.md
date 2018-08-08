@@ -27,7 +27,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-> to select with from which module to generate:
+> to select from which module to generate:
+> i choose to create another module for material, same level as app.module and now everytime i generate a component need
+> to specify module - maybe time to fix this.
 
 ```
     ex:
