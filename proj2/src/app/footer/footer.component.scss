@@ -11,8 +11,13 @@ $background-pale: #D1C4E9;
 .footer {
     background-color: $background-dark;
     @include zero-margin(20px, 0px);
-    .mat-subheader {
+    h3.mat-subheader {
       margin:0;
+      margin-bottom: 1em;
+    }
+   
+    .footer-menu {
+      width:47%;
     }
     
     

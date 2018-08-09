@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from './modules/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RoutingModule } from './modules/routing/routing.module';
+
 
 import 'hammerjs';
 
@@ -13,6 +15,8 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+
+//routing components need to move
 import { RandomSeasonsComponent } from './random-seasons/random-seasons.component';
 import { EpisodeDetailsComponent } from './random-seasons/episode-details/episode-details.component';
 import { Season10Component } from './season10/season10.component';
@@ -23,18 +27,15 @@ import { EpisodeDataService } from './services/episode-data.service';
 import { Season10DataService } from './services/season10-data.service';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
     RandomSeasonsComponent,
     EpisodeDetailsComponent,
     Season10Component,
-    Season10DetailsComponent,
-    HeaderComponent,
-    FooterComponent
+    Season10DetailsComponent
   ],
 
   imports: [
@@ -43,7 +44,8 @@ import { Season10DataService } from './services/season10-data.service';
     FormsModule,
     HttpModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RoutingModule
   ],
   providers: [EpisodeDataService, Season10DataService],
   bootstrap: [AppComponent]

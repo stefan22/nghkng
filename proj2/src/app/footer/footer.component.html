@@ -1,4 +1,4 @@
-<div class="container footer" 
+<div class="footer" 
      fxLayout="row wrap" 
      fxLayout.lt-md="column" 
      fxLayoutAlign="center center" 
@@ -8,20 +8,26 @@
     <div fxLayout="row">
       <div fxFlex="40" fxFlexOffset="20px">
         <h3 mat-subheader>The Real South Park</h3>
-        <mat-list>
-          <mat-list-item>
-            <a mat-button>Home</a>
-          </mat-list-item>
-          <mat-list-item>
-            <a mat-button>About</a>
-          </mat-list-item>
-          <mat-list-item>
-            <a mat-button>Menu</a>
-          </mat-list-item>
-          <mat-list-item>
-            <a mat-button>Contact</a>
-          </mat-list-item>
-        </mat-list>
+
+        <div class="footer-menu">
+          <button mat-menu-item>
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>theaters</mat-icon>
+            <span>Episodes</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>video_label</mat-icon>
+            <span>Seasons</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>person_pin</mat-icon>
+            <span>Contact</span>
+          </button>
+        </div> 
+
       </div>
      
     </div>

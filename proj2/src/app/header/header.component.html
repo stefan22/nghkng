@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
+  <button class="southpark" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon> SouthPark Menu
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>
@@ -11,14 +11,25 @@
       <mat-icon>theaters</mat-icon>
       <span>Episodes</span>
     </button>
-    <button mat-menu-item-disabled>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Alerts-disabled</span>
+    <button mat-menu-item>
+      <mat-icon>video_label</mat-icon>
+      <span>Seasons</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>person_pin</mat-icon>
+      <span>Contact</span>
     </button>
   </mat-menu>
 
-  <h1>SouthPark Episodes
-    <mat-icon>supervised_user_circle</mat-icon>
-  </h1>
-
 </mat-toolbar>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and
+      three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>
+    </p>
+  </div>
+</div>
