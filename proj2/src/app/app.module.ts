@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RoutingModule } from './modules/routing/routing.module';
 
 
+
+
 import 'hammerjs';
 
 //components
@@ -20,7 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RandomSeasonsComponent } from './random-seasons/random-seasons.component';
 import { EpisodeDetailsComponent } from './random-seasons/episode-details/episode-details.component';
 import { Season10Component } from './season10/season10.component';
-import { Season10DetailsComponent } from './season10/details/details.component';
+import { Season10DetailsComponent } from './season10/details/season10-details.component';
 
 //services
 import { EpisodeDataService } from './services/episode-data.service';
@@ -36,6 +38,7 @@ import { Season10DataService } from './services/season10-data.service';
     EpisodeDetailsComponent,
     Season10Component,
     Season10DetailsComponent
+   
   ],
 
   imports: [
@@ -46,6 +49,7 @@ import { Season10DataService } from './services/season10-data.service';
     MaterialModule,
     FlexLayoutModule,
     RoutingModule
+   
   ],
   providers: [EpisodeDataService, Season10DataService],
   bootstrap: [AppComponent]

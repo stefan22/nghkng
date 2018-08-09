@@ -1,3 +1,30 @@
-<p>
-  seasons works!
-</p>
+<div class="container">
+  
+  <div>
+    <h1>Season 10 Episodes</h1>
+    <hr/>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6 col-md-4"  
+      *ngFor="let ten of season10" (click)="onEpisodeSelected(ten)">
+      <div class="thumbnail">
+        <img class="img-responsive" width="350px" height="250" src="{{ten.cover}}" />
+        <div class="caption">
+          <h3>Episode</h3>
+          <p>{{ten.episodeNumber }}</p>
+          <p>
+            <a href="#" class="btn btn-primary" role="button">Button</a>
+            <a href="#" class="btn btn-default" role="button">Button</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- <app-season10-details [tenSelected]="isTen"></app-season10-details> -->
+
+</div>
