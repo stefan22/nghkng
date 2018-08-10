@@ -1,3 +1,9 @@
+@mixin intro {
+  font-weight: 300;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
 .southpark {
   font-size: 1.10em;
   font-weight: normal;
@@ -6,9 +12,23 @@
     vertical-align: sub;
   }
   
+  
 }
 
-.brand-logo h1 {
-  float:right;
+
+
+
+
+.jumbotron {
+  background:url(../../assets/images/spbg.png) repeat-x center top;
+  background-size: cover;
+  
 }
+
+.intro {
+  @include intro();
+}
+
+
+
 

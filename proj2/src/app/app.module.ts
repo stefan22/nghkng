@@ -38,7 +38,6 @@ import { Season10DataService } from './services/season10-data.service';
     EpisodeDetailsComponent,
     Season10Component,
     Season10DetailsComponent
-   
   ],
 
   imports: [
@@ -49,7 +48,6 @@ import { Season10DataService } from './services/season10-data.service';
     MaterialModule,
     FlexLayoutModule,
     RoutingModule
-   
   ],
   providers: [EpisodeDataService, Season10DataService],
   bootstrap: [AppComponent]

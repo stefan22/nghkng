@@ -10,7 +10,6 @@ import { Season10DataService } from '../../services/season10-data.service';
   styleUrls: ['./seasons.component.scss']
 })
 export class SeasonsComponent implements OnInit {
-
   season10: SeasonFormat[]; 
   isTen: EpisodeFormat;
 

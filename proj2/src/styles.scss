@@ -1,17 +1,6 @@
 // colors available in theme: primary color, accent color, warning color
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-// body {
-//   padding: 0;
-//   margin:0;
-// }
-
-// .container {
-//   margin:20px;
-//   display: flex;
-// }
-
-
 $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
@@ -22,13 +11,54 @@ $primary-color-light:  #D1C4E9;
 $primary-color-text:   #FFFFFF;
 $accent-color:         #FFC107;
 $primary-text-color:   #212121;
-$secondary-text-color: #757575;
+$secondary-text-color: #424242;
 $divider-color:        #BDBDBD;
 
-// @mixin zero-margin($pad-up-down, $pad-left-right) {
-//     margin: 0px auto;
-//     padding: $pad-up-down $pad-left-right;
-// }
+//btn colors
+$purple: #673ab7;
+$purple-10: #5d28bc;
+
+
+@mixin btn-primary {
+  color: #fff;
+  background-color: #673ab7;
+  border-color: #5d28bc;
+  &:hover {
+    background-color: #845ec7;
+    border-color: #7047b8;
+    color:#fff;
+  }
+  &:active {
+    background-color: #8d58ea;
+    border-color: #7E57C2;
+    box-shadow: inset 0px 0px 1px 0px #9C27B0;
+    color: #f0fefe;
+  }
+}
+
+@mixin subtitle {
+    font-size: .5em;
+    font-style: italic;
+    margin-left: 10px;
+    color: $secondary-text-color;
+}
+
+
+.btn-primary {
+  @include btn-primary();
+}
+
+.subtitle {
+  @include subtitle();
+}
+
+h1 {
+  color: $primary-text-color;
+}
+
+p {
+  color: $secondary-text-color;
+}
 
 
 
