@@ -2,13 +2,17 @@
   font-size: .5em;
   font-style: italic;
 }
-.thumbnail img {
-  overflow: hidden;
-  cursor: pointer;
-  width:100%;
-  height: auto;
-  
-  
+
+
+.thumbnail { 
+  padding:0;
+  img {
+    overflow: hidden;
+    cursor: pointer;
+    width:100%;
+    height: auto;
+  }//img
+
 }//thumbnail
 
 .btn-primary {
@@ -40,6 +44,7 @@
     padding:20px;
     h3 {
       margin-top:0;
+      margin-bottom: 17px;
     }
     
     h5 span {

@@ -12,10 +12,10 @@
     <div class="row">
       <div class="col-sm-6 col-md-4" 
         *ngFor="let episode of randomEpisodes" >
-        <div class="thumbnail">
+        <div class="thumbnail card-body">
           <img class="img-responsive" width="630px" height="630" 
             src="{{episode.cover}}"
-             (click)="onSelectedEpisode(episode)" />
+             (click)="onSelectedEpisode(episode,episode.seasonId)" />
           <div class="caption">
             <h3>Season {{episode.seasonId }}</h3>
             <p>
@@ -37,8 +37,8 @@
     <div *ngIf="isSelected">
       <div class="row">
         <div class="col-sm-8">
-          <h1>Details
-            <span class="subtitle">Season details below</span>
+          <h1>Season {{selectedEpisode.seasonId}}
+            <span class="subtitle">Episode {{selectedEpisode.episodeNumber}}</span>
           </h1>
         </div>
         <div class="col-sm-4">
@@ -65,16 +65,6 @@
               <h5>Price: £ <span class="label label-danger">
                 {{selectedEpisode.price}}
               </span></h5>
-              <h5>Episode number:
-                <span class="label label-danger">
-                  {{selectedEpisode.episodeNumber}}
-                </span>
-              </h5>
-              <h5>Season id:
-                <span class="label label-danger">
-                  {{selectedEpisode.seasonId}}
-                </span>
-              </h5>
               <div class="card-description">
                 <hr/>
                 <h5>Description:</h5>
