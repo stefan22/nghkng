@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EpisodeFormat } from '../../shared/episode-format';
+import { OnsaleFormat } from '../../shared/onsale-format';
+import { OnsaleDataService } from "../../services/onsale-data.service";
 import { EpisodeDataService } from "../../services/episode-data.service";
 
 @Component({
@@ -13,20 +15,35 @@ export class HomeComponent implements OnInit {
   isSelected: boolean = false;
   selectedSeason: EpisodeFormat;
 
-  constructor(private episodeDataService: EpisodeDataService) {}
+  //onsale
+  featured1: OnsaleFormat;
+  featured2: OnsaleFormat;
+
+  constructor(
+    private episodeDataService: EpisodeDataService,
+    private onsaleDataService: OnsaleDataService
+  ) {}
 
   ngOnInit() {
     this.randomSeasons = this.episodeDataService.getEpisodesData();
-    return this.randomSeasons;
+    this.featured1 = this.onsaleDataService.getFeatured(18);
+    this.featured2 = this.onsaleDataService.getFeatured(21);
+
+    //return this.randomSeasons;
   }
 
   onSelectedSeason(item) {
     console.log(item);
     this.selectedSeason = item;
     this.isSelected = true;
-    window.scrollTo(0, 250);
+    window.scrollTo(0, 1200);
     return this.selectedSeason;
   } //onSelectedEpisode
+
+  onFeaturedSelected() {
+    console.log('featured clicked');
+
+  }
 
   backToSeasons() {
     this.isSelected = false;
