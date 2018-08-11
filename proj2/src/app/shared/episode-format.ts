@@ -7,6 +7,7 @@ export class EpisodeFormat {
   description: string;
   episodeNumber: number;
   seasonId: number;
+  featured: boolean;
   comments: CommentsFormat[];
 
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialModule } from "../../modules/material.module";
 import { EpisodeFormat } from '../../shared/episode-format';
 import { EpisodeDataService } from "../../services/episode-data.service";
 
@@ -9,28 +8,28 @@ import { EpisodeDataService } from "../../services/episode-data.service";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  randomEpisodes: EpisodeFormat[];
+  randomSeasons: EpisodeFormat[];
+  //season
   isSelected: boolean = false;
-  selectedEpisode: EpisodeFormat;
+  selectedSeason: EpisodeFormat;
 
   constructor(private episodeDataService: EpisodeDataService) {}
 
   ngOnInit() {
-    this.randomEpisodes = this.episodeDataService.getEpisodesData();
-    return this.randomEpisodes;
+    this.randomSeasons = this.episodeDataService.getEpisodesData();
+    return this.randomSeasons;
   }
 
-  onSelectedEpisode(item) {
+  onSelectedSeason(item) {
     console.log(item);
-    this.selectedEpisode = item;
+    this.selectedSeason = item;
     this.isSelected = true;
-    window.scrollTo(0,250);
-    return this.selectedEpisode;
+    window.scrollTo(0, 250);
+    return this.selectedSeason;
   } //onSelectedEpisode
 
   backToSeasons() {
     this.isSelected = false;
     window.scrollTo(0, 0);
-    
   }
 }//HomeComponent class

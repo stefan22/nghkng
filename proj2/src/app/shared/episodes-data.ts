@@ -10,6 +10,7 @@ export const Episodes: EpisodeFormat[] = [
     cover: "../assets/images/season9.jpg",
     seasonId: 9,
     price: "7.50",
+    featured: true,
     comments: [
       {
         rating: 5,
@@ -53,6 +54,7 @@ export const Episodes: EpisodeFormat[] = [
     cover: "../assets/images/season10.jpg",
     seasonId: 10,
     price: "7.50",
+    featured: false,
     comments: [
       {
         rating: 5,
@@ -96,6 +98,7 @@ export const Episodes: EpisodeFormat[] = [
     cover: "../assets/images/season15.jpg",
     seasonId: 15,
     price: "7.50",
+    featured: true,
     comments: [
       {
         rating: 5,
@@ -139,6 +142,7 @@ export const Episodes: EpisodeFormat[] = [
     cover: "../assets/images/season16.jpg",
     seasonId: 16,
     price: "7.50",
+    featured: true,
     comments: [
       {
         rating: 5,
@@ -182,6 +186,7 @@ export const Episodes: EpisodeFormat[] = [
     cover: "../assets/images/season21.jpg",
     seasonId: 21,
     price: "7.50",
+    featured: false,
     comments: [
       {
         rating: 5,

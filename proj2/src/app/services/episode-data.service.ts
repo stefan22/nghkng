@@ -13,6 +13,28 @@ export class EpisodeDataService {
   }
 
 
+  getSelectedEpisode(id: number) :EpisodeFormat {
+
+      return Episodes.filter((item) => {
+        if(item.seasonId == id) {
+          return item;
+        }
+      })[0];
+
+
+  }//getSelectedEpisode
+
+  getFeaturedEpisode(feat: boolean) :EpisodeFormat {
+
+    return Episodes.filter((item) => {
+      if(item.featured == feat) {
+        return item;
+      }      
+    })[0];
+
+  }//getFeaturedEpisode
+
+
 
 
 

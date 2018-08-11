@@ -6,7 +6,7 @@
     "**/e2e": true,
     "**/.editorconfig": true,
     "**/polyfills.ts": true,
-    "**/main.ts": true,
+    "**/main.ts": false,
     "**/browserslist": true,
     "**/karma.conf.js": true,
     "**/package-lock.json": true,
