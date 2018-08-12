@@ -13,11 +13,40 @@ $accent-color:         #FFC107;
 $primary-text-color:   #212121;
 $secondary-text-color: #424242;
 $divider-color:        #BDBDBD;
+$active-bcolor: #6f41c7d9;
 
 //btn colors
 $purple: #673ab7;
 $purple-10: #5d28bc;
+.active {
+  background: $active-bcolor;
+}
 
+//top-menu
+.mat-menu-panel {
+  width:170px;
+  background: #7b1fa28c;
+  button.mat-menu-item {
+    color:#32004b;
+    .mat-icon {
+      color:#7B1FA2;
+      
+    }
+    span {
+      line-height: 24px;
+      vertical-align: middle;
+    }
+  }
+
+
+}//mat-menu-panel
+
+
+
+
+.cdk-overlay-pane{
+  margin-top:2.3em;
+}
 
 @mixin btn-primary {
   color: #fff;

@@ -11,13 +11,13 @@ import { EpisodeDataService } from "../../services/episode-data.service";
 })
 export class HomeComponent implements OnInit {
   randomSeasons: EpisodeFormat[];
+  allFeatures: OnsaleFormat[];
   //season
   isSelected: boolean = false;
   selectedSeason: EpisodeFormat;
-
-  //onsale
-  featured1: OnsaleFormat;
-  featured2: OnsaleFormat;
+  //user-selected
+  selectedFeatured: OnsaleFormat;
+  isFeaturedSelected: boolean = false;
 
   constructor(
     private episodeDataService: EpisodeDataService,
@@ -26,8 +26,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.randomSeasons = this.episodeDataService.getEpisodesData();
-    this.featured1 = this.onsaleDataService.getFeatured(18);
-    this.featured2 = this.onsaleDataService.getFeatured(21);
+    this.allFeatures = this.onsaleDataService.getAllFeatured();
 
     //return this.randomSeasons;
   }
@@ -40,13 +39,19 @@ export class HomeComponent implements OnInit {
     return this.selectedSeason;
   } //onSelectedEpisode
 
-  onFeaturedSelected() {
-    console.log('featured clicked');
-
-  }
 
   backToSeasons() {
     this.isSelected = false;
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 1200);
   }
+
+  
+
+ 
+
+
+
+
+
+
 }//HomeComponent class

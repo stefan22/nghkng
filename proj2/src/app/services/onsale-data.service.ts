@@ -7,17 +7,30 @@ import { OnsaleData } from '../shared/onsale-data';
 })
 export class OnsaleDataService {
   featured: OnsaleFormat;
-
+  allFeatured: OnsaleFormat[] = [];
   constructor() {}
 
-  getFeatured(episode: number): OnsaleFormat {
+  getFeatured(seasonId: number): OnsaleFormat {
 
     return OnsaleData.filter((item) => {
-      if (item.episodeNumber == episode) {
+      if (item.seasonId == seasonId) {
         return item;
       }
       
     })[0];
+
+
+  }//getFeatured
+
+  getAllFeatured(): OnsaleFormat[] {
+
+    return OnsaleData.filter((item) => {
+      if (item.featured === true) {
+        this.allFeatured.push(item);
+        return this.allFeatured;
+      }
+
+    });
 
 
   }//getFeatured

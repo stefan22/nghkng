@@ -10,26 +10,33 @@
         <h3 mat-subheader>The Real South Park</h3>
 
         <div class="footer-menu">
-          <button mat-menu-item>
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
+          <button mat-menu-item 
+            routerLink="/home" 
+            routerLinkActive="active">
+              <mat-icon>home</mat-icon>
+              <span>Home</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>theaters</mat-icon>
-            <span>Episodes</span>
+          <button mat-menu-item 
+            routerLink="/episodes" 
+            routerLinkActive="active">
+              <mat-icon>theaters</mat-icon>
+              <span>Episodes</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>video_label</mat-icon>
-            <span>Seasons</span>
+          <button mat-menu-item 
+            routerLink="/seasons" 
+            routerLinkActive="active">
+              <mat-icon>video_label</mat-icon>
+              <span>Seasons</span>
           </button>
-          <button mat-menu-item>
-            <mat-icon>person_pin</mat-icon>
-            <span>Contact</span>
+          <button mat-menu-item
+            routerLink="/contact" 
+            routerLinkActive="active">
+              <mat-icon>person_pin</mat-icon>
+              <span>Contact</span>
           </button>
         </div> 
 
       </div>
-     
     </div>
   </div>
 
@@ -59,7 +66,7 @@
       </a>
     </div>
   </div>
-  <div>
+  <div class="copy">
     <p>© Copyright 2018 TheReal¬SouthPark</p>
   </div>
 </div>

@@ -23,6 +23,7 @@ import { Season10DetailsComponent } from './season10/details/season10-details.co
 
 //pages-routing
 import { HomeComponent } from './pages/home/home.component';
+import { FeaturedComponent } from "./pages/home/featured/featured.component";
 import { EpisodesComponent } from './pages/episodes/episodes.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -32,27 +33,35 @@ import { EpisodeDataService } from './services/episode-data.service';
 import { Season10DataService } from './services/season10-data.service';
 import { OnsaleDataService } from './services/onsale-data.service';
 
+
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: "home",
     component: HomeComponent
   },
+
   {
-    path: 'episodes',
+    path: "featured/:seasonId",
+    component: FeaturedComponent
+  },
+
+  {
+    path: "episodes",
     component: EpisodesComponent
   },
   {
-    path: 'seasons',
+    path: "seasons",
     component: SeasonsComponent
   },
+
   {
-    path: 'contact',
+    path: "contact",
     component: ContactComponent
   },
   {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
   }
 ];
 
@@ -68,7 +77,8 @@ const appRoutes: Routes = [
     HomeComponent,
     EpisodesComponent,
     SeasonsComponent,
-    ContactComponent
+    ContactComponent,
+    FeaturedComponent
   ],
 
   imports: [

@@ -8,7 +8,7 @@ export const OnsaleData: OnsaleFormat[] = [
     title: "Woodland Critter Christmas",
     cover: "./assets/images/onsale8ep18.jpg",
     price: "9.50",
-    featured: false,
+    featured: true,
     description: "A thoroughly bizarre but memorable episode, in which Stan finds himself in the middle of the woods with a bunch of seemingly cute woodland animals. With an irritating voiceover narrating his every move, the critters turn out to be the most evil creatures known to man. Things are pretty f**ked right here, as he would say. Eventually, it is revealed that Cartman is the creator of such an awful story, and it's all just so Kyle can be killed in his sick fantasy. Despite all this, it's a strangely fun Christmassy episode."
   },
 
@@ -18,7 +18,7 @@ export const OnsaleData: OnsaleFormat[] = [
     title: "The Losing Edge",
     cover: "./assets/images/onsale13ep21.jpg",
     price: "9.50",
-    featured: false,
+    featured: true,
     description: "The first of several Randy Marsh-heavy episodes. The South Park Cows are on an unwanted winning streak in Little League Baseball, basically because they are the only team in the entire nation who suck the most at throwing a game. The boys try anything to lose a game so that they don't have to play any more boring baseball, but are eventually saved by Randy, who gets drunk and fights rival dads at every game, ultimately disqualifying the team. 'I\'m sorry, I thought this was America?'"
   },
 
