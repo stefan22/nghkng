@@ -41,24 +41,24 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 <br/>
 
 
-![](src/assets/images/screenshots/season10.png)
+![](proj2/src/assets/images/screenshots/season10.png)
 
 <br/>
 
 <br/>
 
-![](src/assets/images/screenshots/cast.png)
+![](proj2/src/assets/images/screenshots/cast.png)
 
 <br/>
 
 <br/>
 
-![](src/assets/images/screenshots/seasons.png)
+![](proj2/src/assets/images/screenshots/seasons.png)
 
 <br/>
 
 <br/>
 
-![](src/assets/images/screenshots/featured.png)
+![](proj2/src/assets/images/screenshots/featured.png)
 
 <br/>

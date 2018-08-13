@@ -1,30 +1,95 @@
-<div class="container">
-  
-  <div>
-    <h1>Season 10 Episodes</h1>
-    <hr/>
-  </div>
-
-
-  <div class="row">
-    <div class="col-sm-6 col-md-4"  
-      *ngFor="let ten of season10" (click)="onEpisodeSelected(ten)">
-      <div class="thumbnail">
-        <img class="img-responsive" width="350px" height="250" src="{{ten.cover}}" />
-        <div class="caption">
-          <h3>Episode</h3>
-          <p>{{ten.episodeNumber }}</p>
-          <p>
-            <a href="#" class="btn btn-primary" role="button">Button</a>
-            <a href="#" class="btn btn-default" role="button">Button</a>
-          </p>
-        </div>
+<section class="season-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 season-header">
+        <h1>Season 10
+          <span class="subtitle">Including never before aired scenes. Avail for a limited time only!</span>
+        </h1>
+        <hr/>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="season-item">
+          <figure>
+            <img src="../../assets/images/ses1.png" width="360" height="200" class="img-responsive" />
+          </figure>
+          <div class="caption">
+            <h3>The Slaughter</h3>
+            <p class="aired">Episode 24 | Aired 22 Mar 2006</p>
+            <p>An event to learn about the latest cloud technologies and how your industry is adapting, innovating, and growing with cloud,
+              with talks, labs, and bootcamps led by Google experts and some of the best minds in cloud technology.
+            </p>
+            <p class="buy-season">
+            <a mat-raised-button href="#" class="btn btn-primary" role="button">Buy now
+            </a>
+              
+              <a href="#" class="btn btn-default" role="button">
+                Watch trailer</a>
+            </p>
+          </div>
+            
+      
+        </div>
+        <!-- endof season-item -->
+      </div>
+      <!-- endof card -->
+
+      <div class="col-sm-6 col-md-4">
+        <div class="season-item">
+          <figure>
+            <img src="../../assets/images/ses1.png" width="360" height="200" class="img-responsive" />
+          </figure>
+          <div class="caption">
+            <h3>Not Funny</h3>
+            <p class="aired">Episode 09 | Aired 30 Nov 2016</p>
+            <p>An event to learn about the latest cloud technologies and how your industry is adapting, innovating, and growing with
+              cloud, with talks, labs, and bootcamps led by Google experts and some of the best minds in cloud technology.
+            </p>
+            <p class="buy-season">
+              <a mat-raised-button href="#" class="btn btn-primary" role="button">Buy now
+              </a>
+      
+              <a href="#" class="btn btn-default" role="button">
+                Watch trailer</a>
+            </p>
+          </div>
+      
+      
+        </div>
+        <!-- endof season-item -->
+      </div>
+      <!-- endof card -->
+
+      <div class="col-sm-6 col-md-4">
+        <div class="season-item">
+          <figure>
+            <img src="../../assets/images/ses1.png" width="360" height="200" class="img-responsive" />
+          </figure>
+          <div class="caption">
+            <h3>Sons a Witches</h3>
+            <p class="aired">Episode 21 | Aired 25 Oct 20017</p>
+            <p>An event to learn about the latest cloud technologies and how your industry is adapting, innovating, and growing with
+              cloud, with talks, labs, and bootcamps led by Google experts and some of the best minds in cloud technology.
+            </p>
+            <p class="buy-season">
+              <a mat-raised-button href="#" class="btn btn-primary" role="button">Buy now
+              </a>
+      
+              <a href="#" class="btn btn-default" role="button">
+                Watch trailer</a>
+            </p>
+          </div>
+      
+      
+        </div>
+        <!-- endof season-item -->
+      </div>
+      <!-- endof card -->
+
+
+    </div><!--endof row-->
   </div>
-
- 
-
-  <!-- <app-season10-details [tenSelected]="isTen"></app-season10-details> -->
-
-</div>
+  <!-- endof container -->
+</section>

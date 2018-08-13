@@ -2,7 +2,7 @@
 
   <div class="featuredOn" [class.featuredOff]="isFeaturedSelected">
     <div class="row">
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-12 col-md-12 season-header">
         <h1>Featured
           <span class="subtitle">click season for details on featured episode offer</span>
         </h1>
@@ -18,10 +18,10 @@
           <div class="caption">
             <h3>Season {{featured.seasonId }}</h3>
             <p>
-              <a class="btn btn-primary" role="button" 
-               [routerLink]="['/featured', featured.seasonId]">Buy</a>
+              <a mat-raised-button class="btn btn-primary" role="button" 
+               [routerLink]="['/featured', featured.seasonId]">Buy now</a>
               <a class="btn btn-default" role="button" 
-               [routerLink]="['/featured', featured.seasonId]">More</a> 
+               [routerLink]="['/featured', featured.seasonId]">Watch trailer</a> 
             </p>
           </div>
         </div>
@@ -56,10 +56,10 @@
           <div class="caption">
             <h3>Season {{season.seasonId }}</h3>
             <p>
-              <a class="btn btn-primary" role="button"
-               (click)="onSelectedEpisode(episode)">Buy</a>
+              <a mat-raised-button class="btn btn-primary" role="button"
+               (click)="onSelectedEpisode(episode)">Buy now</a>
               <a class="btn btn-default" role="button"
-               (click)="onSelectedEpisode(episode)">More</a>
+               (click)="onSelectedEpisode(episode)">Watch trailer</a>
             </p>
           </div>
         </div>
