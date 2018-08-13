@@ -16,7 +16,7 @@ export const Cast: CastFormat[] = [
     title: "Writer, Producer, Creator",
     cover: "../assets/images/cast/mattstone.jpg",
     shortbio:
-      "Trey was born in Conifer, Colorado, on October 19, 1969 to Randy Parker, a geologist, and Sharon Parker, an insurance broker. He has an older sister, Shelley Parker. He met Matt Stone (co-creator of South Park (1997)) while attending the University of Colorado in Boulder, where he had a double major of music and Japanese."
+      " is an American actor, animator, writer, director, producer, singer, and songwriter. He is known for co-creating South Park along with his creative partner Trey Parker, as well as co-writing the Tony Award-winning musical The Book of Mormon (2011). Stone was interested in film and music as a child, and attended the University of Colorado, Boulder following high school, where he met Parker. "
   },
 
   {

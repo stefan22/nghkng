@@ -29,14 +29,14 @@
         <div class="cast-article" *ngFor="let cast of entireCast | slice: 0:7">
           <ul>
             <li class="clearfix">
-              <div class="col-xs-8 col-sm-8 col-md-7 media500">
+              <div class="col-xs-8 col-sm-8 col-md-8 media500">
                 <div class="cast-box">
                   <h3>{{cast.name}}</h3>
                   <h4>{{cast.title}}</h4>
                   <p>{{cast.shortbio}}</p>
                 </div>
               </div>
-              <div class="col-xs-4 col-sm-4 col-md-5 padding0 media500">
+              <div class="col-xs-4 col-sm-4 col-md-4 padding0 media500">
                 <div class="cast-image clearfix">
                   <img src="{{cast.cover}}" width="254" height="400" class="img-responsive" />
                 </div>

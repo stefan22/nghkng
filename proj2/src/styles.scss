@@ -16,29 +16,74 @@ $secondary-text-color: #424242;
 $divider-color:        #BDBDBD;
 $active-bcolor: #6f41c7d9;
 
-h1 {
-  color:$black;
-  font-weight: 400;
-  @media screen and (max-width:991px) {
-    font-size: 2.4em;
-    .subtitle {
-      font-size: .5em;
-    }
+  .season-header {
     @media screen and (max-width:767px) {
-      .subtitle {
-        font-size: .4em;
-      }
-    }
+      padding:0 15px !important;
+    }//767
     
-  }//991
-}
+    h1  {
+      color:$black;
+      font-weight: 400;
+      span.subtitle {
+        @media screen and (max-width:767px) {
+          display:block;
+          font-size:16px !important;
+          padding-bottom:10px !important;
+          margin-top:10px;
+        
+        }//767
+        
+      }//subtitle
+      @media screen and (max-width:991px) {
+        font-size: 2.4em;
+      
+      }//991
+    
+    }//h1
+    
+  }//season-header
 
-.season-header {
-  margin-bottom:2em;
-}
+
+
+
+
 
 .caption h3 {
   font-weight: 400;
+}
+
+.jumbotron { 
+  @media screen and (max-width:767px) {
+    .container {
+      height: 25vh;
+      a.btn.btn-primary.btn-lg {display:none;}
+      @media screen and (max-width:510px) {
+        a.btn.btn-primary.btn-lg {
+          display:block;
+          position:absolute;
+          left:30vw;
+          top: 25vh;
+        }
+      }//610
+    }
+  }
+  h1 {
+    @media screen and (max-width:767px) {
+      display:none;
+    }
+    font-size: 3em;
+    font-weight: normal;
+    color:#212121;
+  }
+  p.intro {
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #47626e;
+    @media screen and (max-width:767px) {
+      display:none;
+    }
+  }//p.intro
 }
 
 
@@ -51,23 +96,29 @@ $purple-10: #5d28bc;
 }
 
 //top-menu
-.mat-menu-panel {
-  width:170px;
-  background: #7b1fa28c;
-  button.mat-menu-item {
-    color:#32004b;
-    .mat-icon {
-      color:#7B1FA2;
-      
+.mat-toolbar.mat-primary {
+  position:fixed;
+  z-index: 10;
+
+  .mat-menu-panel {
+    width:170px;
+    background: #7b1fa28c;
+    button.mat-menu-item {
+      color:#32004b;
+      .mat-icon {
+        color:#7B1FA2;
+        
+      }
+      span {
+        line-height: 24px;
+        vertical-align: middle;
+      }
     }
-    span {
-      line-height: 24px;
-      vertical-align: middle;
-    }
-  }
 
 
-}//mat-menu-panel
+  }//mat-menu-panel
+
+}//mat-toolbar
 
 
 
@@ -101,6 +152,7 @@ $purple-10: #5d28bc;
     line-height: 1.6;
     color: $black;
     font-style: oblique;
+    
 }
 
 .subtitle {
@@ -127,16 +179,3 @@ p {
 
 
 
-.background-primary {
-    background-color: $background-dark!important;
-  }
-.background-accent {
-    background-color: $accent-color!important;
-  }
-.text-floral-white {
-    color: floralwhite!important;
-}
-
-.flex-spacer {
-  flex: 1 1 auto;
-}

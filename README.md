@@ -34,7 +34,8 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - created cast component, added jsondata, created js object, cast-service,  
   images
 - home page featured/random-seasons details wiring √  
-- cast component, sass responsive/media-queries (just cast)         
+- cast component, sass responsive/media-queries (just cast)  
+- season10 comp       
 ..        
 ...         
 - [tons left /free-styling]
