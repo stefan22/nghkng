@@ -24,7 +24,7 @@ import { Season10DetailsComponent } from './season10/details/season10-details.co
 //pages-routing
 import { HomeComponent } from './pages/home/home.component';
 import { FeaturedComponent } from "./pages/home/featured/featured.component";
-import { EpisodesComponent } from './pages/episodes/episodes.component';
+import { CastComponent } from './pages/cast/cast.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
@@ -46,8 +46,8 @@ const appRoutes: Routes = [
   },
 
   {
-    path: "episodes",
-    component: EpisodesComponent
+    path: "cast",
+    component: CastComponent
   },
   {
     path: "seasons",
@@ -75,7 +75,7 @@ const appRoutes: Routes = [
     Season10Component,
     Season10DetailsComponent,
     HomeComponent,
-    EpisodesComponent,
+    CastComponent,
     SeasonsComponent,
     ContactComponent,
     FeaturedComponent

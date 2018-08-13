@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="cast-wrapper">
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <h1>Cast
+          <span class="subtitle">Meet SouthPark Cast & Crew  (limit 7 no-pagination yet)</span>
+        </h1>
+        <hr/>
+        <div class="col-sm-12 col-md-6">
+          <div class="subheading">
+            <h4>"After twenty seasons it's clear that South Park is one of the most successful shows of all time. It's a behemoth, crashing
+              through everything without a care in the world." Eric C.</h4>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="sp-logo">
+            <img src="../../assets/images/cast/southparklogo.jpg" class="img-responsive" width="400" height="225" />   
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 col-md-4 pull-right">
+        <div class="cast-aside">
+          <header class="cast-header">
+            <h2>The Real SouthPark</h2>
+            <p> South Park creators Trey Parker and Matt Stone continue to do most of the writing, directing and voice acting
+            on the show. South Park is an American adult animated sitcom created by Trey Parker and Matt Stone who also do the majority
+            of the voices. Both Parker and Stone do most of the male characters on the show along with April Stewart and Mona
+            Marshall, who do the female characters on the show. Guest stars have lend their voices to the show including Jay Leno, George
+            Clooney, Robert Smith and the comedy duo Cheech & Chong voiced characters representing their likenesses for the season four
+            (2000) episode "Cherokee Hair Tampons", which was the duo's first collaborative effort in 20 years.</p>
+              <p>
+              <a href="/membership">
+                <strong>Receive updates</strong>
+              </a> from us and never miss an episode.
+            </p>
+          </header>
+        </div>
+        <!-- cast aside -->
+      </div>
+   
+      <div class="col-sm-12 col-md-8">
+        <div class="cast-article"
+          *ngFor="let cast of entireCast | slice: 0:7">
+          <ul>
+            <li>
+              <div class="col-sm-12 col-md-7">
+                <div class="cast-box">
+                  <h3>{{cast.name}}</h3>
+                  <h4>{{cast.title}}</h4>
+                  <p>{{cast.shortbio}}</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-5 padding0">
+                <div class="cast-image">
+                  <img src="{{cast.cover}}" width="254" height="400" class="img-responsive"/>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- endof cast-article -->
+      </div>  
+
+    </div>
+    <!-- endof row -->
+  
+  </div>
+  <!-- endof cast-wrapper -->
+</div>
+<!-- endof container -->

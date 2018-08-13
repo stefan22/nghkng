@@ -1,0 +1,110 @@
+.cast-wrapper {
+  margin-bottom: 50px;
+  hr {
+    margin-bottom: 2em;
+  }
+  .subheading {
+    margin:0 2em 2em;
+    padding:45px;
+    h4 {
+      font-size: 19px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      padding-bottom: 45px;
+      line-height: 1.6;
+      font-style: oblique;
+    }
+
+  }//subheading
+
+}//cast-wrapper
+
+.cast-aside {
+  background-color: #f5f5f5;
+  display: block;
+  .cast-header {
+    padding: 25px 40px 0;
+    h2 {
+      color: inherit;
+      color: purple;
+      font-size: 32px;
+      font-weight: 300;
+      height: auto;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      padding-bottom: 45px;
+      line-height: 1.6;
+    }
+  
+  }//cast-header
+
+}//cast-aside
+
+.cast-article {
+  background-color: #e0e0e0;
+  display: block;
+  ul {
+      margin:0;
+      padding:0;
+      list-style: none;
+      li {
+        background-color: #fff;
+        display: block;
+        height: 400px;
+        margin-bottom: 45px;
+        list-style: none;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        -ms-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        .cast-box {
+          float: left;
+          height: 100%;
+          overflow: hidden;
+          padding: 45px 0 45px 45px;
+          h3 {
+            color: #272727;
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: .5em;
+          }//h3
+          h4 {
+            font-style: italic;
+            font-size: 1.7em;
+            font-weight: 300;
+            color:purple;
+          }
+          p {
+            color: #858585;
+            font-size: 1.125em;
+            font-weight: 300;
+            line-height: 1.7;
+            margin:0;
+            padding: 0;
+          }//p
+          
+        }//cast-box
+        .cast-image {
+            margin-left:58px;
+            
+
+        }//cast-image
+
+
+      }//li
+  }//ul
+
+
+
+}//cast-article
+
+.padding0 {
+  padding: 0;
+}
+
+
