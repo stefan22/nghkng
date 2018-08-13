@@ -14,8 +14,21 @@
       line-height: 1.6;
       font-style: oblique;
     }
+    @media screen and (max-width:1199px) {
+      display:none;
+    }
 
   }//subheading
+  .sp-logo {
+    width:100%;
+    img {
+      width:100%;
+      max-width: 400px;
+    }
+    @media screen and (max-width:1199px) {
+      display:none;
+    } 
+  }//sp-logo
 
 }//cast-wrapper
 
@@ -32,6 +45,9 @@
       height: auto;
       text-align: left;
       margin-bottom: 15px;
+      @media screen and (max-width:1199px) { 
+         font-size:1.8em;
+      }
     }
     p {
       font-size: 16px;
@@ -39,15 +55,27 @@
       letter-spacing: 0.5px;
       padding-bottom: 45px;
       line-height: 1.6;
+      @media screen and (max-width:1199px) {
+        font-size:1.2em;
+        
+      }
+    }
+    @media screen and (max-width:1199px) {
+      padding:10px 20px 0;
     }
   
   }//cast-header
+  @media screen and (max-width:991px) {
+      //display:none;
+  }
+  
 
 }//cast-aside
 
 .cast-article {
   background-color: #e0e0e0;
   display: block;
+  width:100%;
   ul {
       margin:0;
       padding:0;
@@ -55,14 +83,24 @@
       li {
         background-color: #fff;
         display: block;
-        height: 400px;
+        height: auto;
         margin-bottom: 45px;
         list-style: none;
         box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
         -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
         -ms-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
         -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        @media screen and (max-width:991px) {
+          //height: 345px;
+        }
         .cast-box {
+          @media screen and (max-width: 1199px) {
+            padding: 15px 0 15px 15px;
+           
+          }
+          @media screen and (max-width: 767px) {
+            padding: 0;
+          }
           float: left;
           height: 100%;
           overflow: hidden;
@@ -72,12 +110,26 @@
             font-size: 2em;
             font-weight: 300;
             margin-bottom: .5em;
+            @media screen and (max-width:1199px) {
+              font-size: 1.8em;
+            }
+            @media screen and (max-width:767px) {
+              font-size: 1em;
+            }
           }//h3
           h4 {
             font-style: italic;
             font-size: 1.7em;
             font-weight: 300;
             color:purple;
+            @media screen and (max-width:991px) {
+              font-size: 1.2em;
+              margin-bottom:15px;
+            }
+            @media screen and (max-width:767px) {
+              font-size: 1em;
+              margin-bottom: 10px;
+            }
           }
           p {
             color: #858585;
@@ -86,12 +138,27 @@
             line-height: 1.7;
             margin:0;
             padding: 0;
+            @media screen and (max-width: 767px) {
+              font-size: 1em;
+            }
+            
           }//p
+          
           
         }//cast-box
         .cast-image {
             margin-left:58px;
-            
+            width:100%;
+            img {
+              max-width: 254px;
+              width:100%;
+            }
+            @media screen and (max-width:1199px) {
+              margin-left:3px;
+            }//mediaMax992
+            @media screen and (max-width:991px) {
+              margin-left:0;
+            }
 
         }//cast-image
 
@@ -108,3 +175,29 @@
 }
 
 
+@media screen and (max-width:500px) {
+  .media500 {
+    width:100%;
+    display:block;
+  }
+  .media500 .cast-image {
+    
+  }
+  .media500 h3 {
+    font-size:1.8em !important;
+  }
+  .media500 h4 {
+    font-size: 1.2em !important;
+    margin-bottom: 15px !important;
+  }
+  .media500 p {
+    font-size: 1.125em !important;
+  }
+  .cast-image img {
+    //need to ge a larger image but this will do for now
+    max-width: 500px !important;
+    margin:0 auto;
+    margin-top: 15px;
+   
+  }
+}

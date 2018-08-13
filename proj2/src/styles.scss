@@ -19,6 +19,18 @@ $active-bcolor: #6f41c7d9;
 h1 {
   color:$black;
   font-weight: 400;
+  @media screen and (max-width:991px) {
+    font-size: 2.4em;
+    .subtitle {
+      font-size: .5em;
+    }
+    @media screen and (max-width:767px) {
+      .subtitle {
+        font-size: .4em;
+      }
+    }
+    
+  }//991
 }
 
 .season-header {

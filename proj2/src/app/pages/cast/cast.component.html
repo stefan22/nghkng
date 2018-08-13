@@ -3,16 +3,16 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 season-header">
         <h1>Cast
-          <span class="subtitle">Meet SouthPark Cast & Crew  (limit 7 no-pagination yet)</span>
+          <span class="subtitle">Meet SouthPark Cast & Crew </span>
         </h1>
         <hr/>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-7 col-md-6">
           <div class="subheading">
             <h4>"After twenty seasons it's clear that South Park is one of the most successful shows of all time. It's a behemoth, crashing
               through everything without a care in the world." Eric C.</h4>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-7 col-md-6">
           <div class="sp-logo">
             <img src="../../assets/images/cast/southparklogo.jpg" class="img-responsive" width="400" height="225" />   
           </div>
@@ -24,7 +24,31 @@
 
 
     <div class="row">
-      <div class="col-sm-12 col-md-4 pull-right">
+
+      <div class="col-xs-12 col-sm-12 col-md-8 clearfix">
+        <div class="cast-article" *ngFor="let cast of entireCast | slice: 0:7">
+          <ul>
+            <li class="clearfix">
+              <div class="col-xs-8 col-sm-8 col-md-7 media500">
+                <div class="cast-box">
+                  <h3>{{cast.name}}</h3>
+                  <h4>{{cast.title}}</h4>
+                  <p>{{cast.shortbio}}</p>
+                </div>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-5 padding0 media500">
+                <div class="cast-image clearfix">
+                  <img src="{{cast.cover}}" width="254" height="400" class="img-responsive" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- endof cast-article -->
+      </div>
+
+
+      <div class="col-xs-12 col-sm-12 col-md-4 clearfix">
         <div class="cast-aside">
           <header class="cast-header">
             <h2>The Real SouthPark</h2>
@@ -44,29 +68,7 @@
         <!-- cast aside -->
       </div>
    
-      <div class="col-sm-12 col-md-8">
-        <div class="cast-article"
-          *ngFor="let cast of entireCast | slice: 0:7">
-          <ul>
-            <li>
-              <div class="col-sm-12 col-md-7">
-                <div class="cast-box">
-                  <h3>{{cast.name}}</h3>
-                  <h4>{{cast.title}}</h4>
-                  <p>{{cast.shortbio}}</p>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-5 padding0">
-                <div class="cast-image">
-                  <img src="{{cast.cover}}" width="254" height="400" class="img-responsive"/>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- endof cast-article -->
-      </div>  
-
+      
     </div>
     <!-- endof row -->
   
