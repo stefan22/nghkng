@@ -3,6 +3,7 @@ import { CastFormat } from './cast-format';
 export const Cast: CastFormat[] = [
   {
     id: 1,
+    featured: false,
     name: "Trey Parker",
     title: "Writer, Producer, Creator",
     cover: "../assets/images/cast/treyparker.jpg",
@@ -12,6 +13,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 2,
+    featured: false,
     name: "Matt Stone",
     title: "Writer, Producer, Creator",
     cover: "../assets/images/cast/mattstone.jpg",
@@ -21,6 +23,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 3,
+    featured: false,
     name: "Issac Hayes",
     title: "Soundtrack, Actor",
     cover: "../assets/images/cast/issachayes.jpg",
@@ -30,6 +33,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 4,
+    featured: false,
     name: "Nancy Pimental",
     title: "Writer, Producer, Crew",
     cover: "../assets/images/cast/nancypimental.jpg",
@@ -39,6 +43,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 5,
+    featured: false,
     name: "Bill Hader",
     title: "Writer, Producer, Actor",
     cover: "../assets/images/cast/billhader.jpg",
@@ -48,6 +53,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 6,
+    featured: false,
     name: "Kristen Schaal",
     title: "Actress, Comedian",
     cover: "../assets/images/cast/kristenschaal.jpg",
@@ -57,6 +63,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 7,
+    featured: false,
     name: "Kenny Hotz",
     title: "Writer, Producer, Director",
     cover: "../assets/images/cast/kennyhotz.jpg",
@@ -66,6 +73,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 8,
+    featured: false,
     name: "Pam Brady",
     title: "Writer, Producer, Crew",
     cover: "../assets/images/cast/pambrady.jpg",
@@ -75,6 +83,7 @@ export const Cast: CastFormat[] = [
 
   {
     id: 9,
+    featured: false,
     name: "Michael Snowden",
     title: "Writer, Producer, Director",
     cover: "../assets/images/cast/michaelsnowden.jpg",
@@ -84,10 +93,21 @@ export const Cast: CastFormat[] = [
 
   {
     id: 10,
+    featured: false,
     name: "Karey Dornetto",
     title: "Writer, Producer, Screenwriter",
     cover: "../assets/images/cast/kareydornetto.jpg",
     shortbio:
       "Karey Dornetto is a screenwriter primarily known for her work on '30 Rock' and 'Californication.' She has appeared as a commentator in every season of Tru Tv's 'World's Dumbest.' Daisy is a graduate of Wellesley College and the University of Southern California's Graduate Screenwriting Program.She lives in Los Angeles, CA"
-  }
+  },
+
+  {
+    id: 1,
+    featured: true,
+    name: "Trey Parker",
+    title: "Writer, Producer, Creator",
+    cover: "../assets/images/cast/treyparker3.jpg",
+    shortbio:
+      "Trey was born in Conifer, Colorado, on October 19, 1969 to Randy Parker, a geologist, and Sharon Parker, an insurance broker. He has an older sister, Shelley Parker. He met Matt Stone (co-creator of South Park (1997)) while attending the University of Colorado in Boulder, where he had a double major of music and Japanese."
+  },
 ];

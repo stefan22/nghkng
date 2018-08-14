@@ -36,32 +36,37 @@ import { OnsaleDataService } from './services/onsale-data.service';
 
 const appRoutes: Routes = [
   {
-    path: "home",
+    path: 'home',
     component: HomeComponent
   },
 
   {
-    path: "featured/:seasonId",
+    path: 'featured/:seasonId',
     component: FeaturedComponent
   },
 
   {
-    path: "cast",
+    path: 'cast/:id',
+    component: CastComponent
+  },
+
+  {
+    path: 'cast',
     component: CastComponent
   },
   {
-    path: "seasons",
+    path: 'seasons',
     component: SeasonsComponent
   },
 
   {
-    path: "contact",
+    path: 'contact',
     component: ContactComponent
   },
   {
-    path: "",
-    redirectTo: "/home",
-    pathMatch: "full"
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   }
 ];
 

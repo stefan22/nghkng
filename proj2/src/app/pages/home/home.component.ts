@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CastFormat } from '../../shared/cast-format';
+import { CastDataService } from '../../services/cast-data.service';
 import { EpisodeFormat } from '../../shared/episode-format';
 import { OnsaleFormat } from '../../shared/onsale-format';
 import { OnsaleDataService } from "../../services/onsale-data.service";
@@ -12,6 +14,9 @@ import { EpisodeDataService } from "../../services/episode-data.service";
 export class HomeComponent implements OnInit {
   randomSeasons: EpisodeFormat[];
   allFeatures: OnsaleFormat[];
+
+  //cast
+  featcast: CastFormat;
   //season
   isSelected: boolean = false;
   selectedSeason: EpisodeFormat;
@@ -21,12 +26,14 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private episodeDataService: EpisodeDataService,
-    private onsaleDataService: OnsaleDataService
+    private onsaleDataService: OnsaleDataService,
+    private castDataService: CastDataService
   ) {}
 
   ngOnInit() {
     this.randomSeasons = this.episodeDataService.getEpisodesData();
     this.allFeatures = this.onsaleDataService.getAllFeatured();
+    this.featcast = this.castDataService.getSelectedCastMember();
 
     //return this.randomSeasons;
   }
@@ -35,7 +42,7 @@ export class HomeComponent implements OnInit {
     console.log(item);
     this.selectedSeason = item;
     this.isSelected = true;
-    window.scrollTo(0, 1200);
+    window.scrollTo(0, 1500);
     return this.selectedSeason;
   } //onSelectedEpisode
 
@@ -45,6 +52,7 @@ export class HomeComponent implements OnInit {
     window.scrollTo(0, 1200);
   }
 
+  
   
 
  

@@ -35,7 +35,11 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
   images
 - home page featured/random-seasons details wiring √  
 - cast component, sass responsive/media-queries (just cast)  
-- season10 comp       
+- season10 comp    
+- added featured boolean property to cast obj in order to select them later  
+- featured season (url route param) 'season/:id, cast/:id both top home page 
+  featured section 
+- need cast details pg too
 ..        
 ...         
 - [tons left /free-styling]
