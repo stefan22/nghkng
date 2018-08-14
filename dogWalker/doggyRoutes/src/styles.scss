@@ -1,0 +1,30 @@
+body {
+  padding-top:50px;
+}
+
+
+/*
+Mixins
+------ */
+@mixin fonweight300 {
+  font-weight: 300;
+  
+}
+
+
+/*
+Globals
+-------*/
+h1,h2,h3,h4,h5,h6 {
+  @include fonweight300();
+}
+
+
+
+
+
+/*
+Colors
+------*/
+
+$palered: #bb3737;

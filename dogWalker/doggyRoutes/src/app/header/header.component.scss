@@ -1,0 +1,45 @@
+$palered: #bb3737;
+
+//navbar
+//------
+  li {
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      outline: none;
+    }
+    a {
+      cursor: pointer;
+    }
+    
+
+  }//li
+
+
+//header-wrap
+//-----------
+.header-wrap {
+  margin-bottom: 3em;
+  .page-header {
+    h1 {
+      font-weight: 300;
+    }
+    .small {
+      font-weight: 300;
+      color: $palered;
+      
+    }
+
+  }//page-header
+
+
+
+
+
+
+}//header-wrap
+
+
+
+

@@ -1,0 +1,45 @@
+<div class="container">
+  <header>
+    <h2>Dog Walking routes</h2>
+  </header>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="row">
+          <div class="dogroutes">
+
+            <div class="colxs-12 col-sm-12 col-md-4"
+               *ngFor="let dogRoute of allDoggieRoutes">
+              <mat-card class="dog-card">
+                <mat-card-header>
+                  <mat-card-title>{{dogRoute.name}}, {{dogRoute.id}}</mat-card-title>
+                  
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    This is dog route: <strong>{{dogRoute.name}}</strong> and 
+                    id: <strong>{{dogRoute.id}}</strong>
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          
+          </div> <!-- endof /.dogroutes -->   
+        </div>
+    </div>
+  </div> <!-- endof /.row -->
+
+
+
+
+
+</div>
+<!-- endof /.container -->
+
+
+
