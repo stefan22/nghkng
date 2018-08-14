@@ -4,5 +4,6 @@ export class CastFormat {
   title: string;
   cover: string;
   shortbio: string;
+  featured: boolean;
 
 }//CastFormat class

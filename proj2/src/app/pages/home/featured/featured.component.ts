@@ -5,6 +5,7 @@ import { OnsaleDataService } from '../../../services/onsale-data.service';
 import { OnsaleFormat } from '../../../shared/onsale-format';
 
 
+
 @Component({
   selector: 'app-featured',
   templateUrl: './featured.component.html',
@@ -13,11 +14,13 @@ import { OnsaleFormat } from '../../../shared/onsale-format';
 export class FeaturedComponent implements OnInit {
 
   selectedFeatured: OnsaleFormat;  
+  
 
   constructor(
     private onsaleDataService: OnsaleDataService,
     private route: ActivatedRoute,
     private location: Location
+    
   
   
   ) { }
@@ -27,11 +30,13 @@ export class FeaturedComponent implements OnInit {
     console.log(seasonId);
     this.selectedFeatured = this.onsaleDataService.getFeatured(seasonId);
     console.log(this.selectedFeatured);
+
+    
   }
 
   goBack(): void {
     this.location.back();
-    window.scrollTo(0,420);
+    window.scrollTo(0,110);
   
   }//goBack
     

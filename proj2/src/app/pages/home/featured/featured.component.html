@@ -48,3 +48,53 @@
 </div>
 
 <!-- endof isFeatured details -->
+
+<!-- cast -->
+
+<div class="container">
+  <div class="featuredOn">
+    <div class="row">
+      <div>
+        <div class="col-sm-8 season-header">
+          <h1>Season {{selectedFeatured.seasonId}}
+            <span class="subtitle">Episode {{selectedFeatured.episodeNumber}}</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-info btn-lg pull-right all-seasons" (click)="goBack()">
+          All Featured</button>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card-body">
+          <img class="img-responsive" width="768" height="593" src="{{selectedFeatured.cover}}" />
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <div class="card-body padding-20">
+          <h3>{{selectedFeatured.title}}</h3>
+
+          <h5>Price: £
+            <span class="label label-danger">
+              {{selectedFeatured.price}}
+            </span>
+          </h5>
+          <div class="card-description">
+            <hr/>
+            <h5>Description:</h5>
+            <p>{{selectedFeatured.description}}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>

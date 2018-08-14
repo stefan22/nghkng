@@ -18,15 +18,29 @@ export class CastDataService {
   }
 
 
-  getSelectedCastMember(cast: string) {
-    let name = cast.split(' ')[1];
+  getSelectedCastMember(): CastFormat {
     return this.allCasts.filter((item) => {
-      if(item.name.indexOf(name) > 0) {
-        return item;
+      if(item.featured) {
+        console.log(item);
+        this.cast = item;
+        return this.cast;
       } 
       
     })[0];
     
+  }
+
+
+
+  getSelectedCastFeatured(cast: string) {
+    let name = cast.split(' ')[1];
+    return this.allCasts.filter((item) => {
+      if (item.name.indexOf(name) > 0) {
+        return item;
+      }
+
+    })[0];
+
   }
 
 

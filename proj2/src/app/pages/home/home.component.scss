@@ -56,9 +56,8 @@
     h3 {
       margin-top:0;
       margin-bottom: 17px;
-  
-      
     }
+    
     
     h5 span {
       line-height: 16px;
@@ -88,3 +87,56 @@
 }
 
 
+.castimgdiv {
+  width:100%;
+}
+
+.castimgdiv img {
+  width:100%;
+  
+}
+
+
+
+
+.caption {
+  
+  padding-bottom: 15px;
+  h3 {
+    display:inline-block;
+    margin-right: 12px;
+    span {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 36px;
+      padding-top: 15px;
+      margin:0;
+      font-style: italic
+    }
+  }//h3
+  h4 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding-bottom: 45px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }//h4
+  .button-row {
+    padding-top:3px;
+  }
+  mat-button-ripple {
+    margin-right: 3px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+    padding-top: 15px;
+    margin:0;
+  }
+
+
+
+
+}//caption
