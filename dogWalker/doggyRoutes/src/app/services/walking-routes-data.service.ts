@@ -4,33 +4,25 @@ import { WalkingRouteFormat } from "../shared/walking-route-format";
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class WalkingRoutesDataService {
-
   allDogRoutes: WalkingRouteFormat[] = WalkingRoutesData;
   dogRoute: WalkingRouteFormat;
 
-  constructor() { }
+  constructor() {}
 
   getAllDogRoutes() {
     return this.allDogRoutes;
+  } //getAllDogRoutes
 
-  }//getAllDogRoutes
-
-
-
-  getSelectedDogRoute(id: number) {
-    return this.allDogRoutes.filter((item) => {
-      if(this.dogRoute.id == id) {
+  getSelectedDogRoute(id: number): WalkingRouteFormat {
+    //debugger;
+    return this.allDogRoutes.filter(item => {
+      if (item.id == id) {
+        this.dogRoute = item;
         return this.dogRoute;
       }
-
     })[0];
-  
-  }//getSelectedDogRoute
-
- 
-
-
+  } //getSelectedDogRoute
 }//WalkingRoutesDataService class

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10">
+
+      <section 
+      *ngIf="selectedRoute"
+      class="details-wrapper">
+        
+        <h3>Welcome to {{selectedRoute.name}}, 
+          <span>id {{selectedRoute.id}}</span>
+        </h3>
+        <div class="route-details">
+
+          <ol class="coordinates" *ngFor="let coordinates of selectedRouteDetails">
+            <li>{{coordinates.altitude}}</li>
+            <li>{{coordinates.latitude}}</li>
+            <li>{{coordinates.longitude}}</li>
+          </ol>
+
+        </div><!-- /.route-details -->
+
+      </section>
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2">
+      <button class="pull-right" mat-raised-button 
+        color="primary" 
+        (click)="goBack()">
+        Go Back
+      </button>
+    </div>
+  
+</div>
+
+
+

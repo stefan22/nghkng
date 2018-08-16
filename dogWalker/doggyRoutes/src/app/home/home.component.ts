@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WalkingRouteFormat } from '../shared/walking-route-format';
 import { WalkingRoutesDataService } from
        '../services/walking-routes-data.service';
 
@@ -9,7 +10,8 @@ import { WalkingRoutesDataService } from
 })
 export class HomeComponent implements OnInit {
 
-  allDoggieRoutes: any[];
+  allDoggieRoutes: WalkingRouteFormat[];
+  isDogRoute: WalkingRouteFormat;
 
   constructor
   (
@@ -20,12 +22,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.allDoggieRoutes = this.walkingRoutes.getAllDogRoutes();
     console.log('all doggie routes: ', this.allDoggieRoutes);
+    return this.allDoggieRoutes;
   }
 
+  onDogRouteSelected(dog): WalkingRouteFormat {
+    console.log('doggie route selected: ', dog);
+    this.isDogRoute = dog;
+    return this.isDogRoute;
 
 
+  }//onDogRouteSelected
 
 
+  
 
 
 }//HomeComponent class

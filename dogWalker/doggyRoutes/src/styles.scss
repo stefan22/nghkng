@@ -1,16 +1,15 @@
-body {
-  padding-top:50px;
-}
-
-
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 /*
 Mixins
 ------ */
 @mixin fonweight300 {
   font-weight: 300;
-  
 }
 
+/*
+Colors
+------*/
+$palered: #bb3737;
 
 /*
 Globals
@@ -19,12 +18,45 @@ h1,h2,h3,h4,h5,h6 {
   @include fonweight300();
 }
 
+body {
+  padding-top:50px;
+}
+
+
 
 
 
 
 /*
-Colors
-------*/
+  navbar
+  ------
+*/
+.navbar-inverse {
+  background-color: #4A148C;
+}
 
-$palered: #bb3737;
+ul.nav.navbar-nav li a {
+ font-size: 1.1em;
+}
+
+//main-menu
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: #582597;
+}
+
+//pancake bars bg
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #582597;
+}
+
+
+
+
+
+
+
+
+
+
+

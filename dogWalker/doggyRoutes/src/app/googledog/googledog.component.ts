@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DogSnackCalcService } from '../services/dog-snack-calc.service';
+
 
 @Component({
   selector: 'app-googledog',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoogledogComponent implements OnInit {
 
-  constructor() { }
+  coordinates: any;
+
+  constructor
+  (
+    private dogsnackService: DogSnackCalcService  //enterArray
+
+  ) { }
 
   ngOnInit() {
+    this.coordinates = this.dogsnackService.enterArray();
+    console.log(this.coordinates);
+
+
   }
 
-}
+  
+
+
+  
+
+
+
+
+}//GoogledogComponent class

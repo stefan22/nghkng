@@ -1,9 +1,18 @@
+//colors
+$purple: #673ab7;
+
+@mixin purpletext {
+  color: $purple;
+  font-weight: 400;
+}
+
 header {
   margin-bottom: 3em;
+  padding:0 15px;
 }
 
 .dogroutes {
-  min-height: 100vh;
+  //min-height: 100vh;
   margin-bottom: 3em;
   
 
@@ -15,6 +24,11 @@ header {
     text-align: center;
     display: block;
     font-size: 1.5em;
+    .mat-card-title {
+      font-size:20px;
+      @include purpletext();
+      
+    }
 
   }//mat-card-header
 
@@ -23,10 +37,22 @@ header {
     margin-top: 0;
     font-size: 1.25em;
     font-weight: 300;
+    span {
+      @include purpletext();
+    }
 
   }//mat-card-content
+
+  .mat-card-actions {
+    .route-details-button {
+      margin-right: 10px;
+    }
+
+
+  }
 
 
 
 }//mat-card
+
 

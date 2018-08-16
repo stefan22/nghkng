@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 //material
-import { MaterialModule } from './material/material.module';
+import { CustomMaterialModule } from "./material/material.module";
 
 
 //routes
@@ -15,11 +15,13 @@ import { AppComponent } from './app.component';
 //services
 import { WalkingARouteDataService } from './services/walking-a-route-data.service';
 import { WalkingRoutesDataService } from './services/walking-routes-data.service';
+import { LatlonCalcService } from './services/latlon-calc.service';
+import { DogSnackCalcService } from './services/dog-snack-calc.service';
 
 
 //routing components
 import { HomeComponent } from "./home/home.component";
-import { DogroutesComponent } from "./dogroutes/dogroutes.component";
+import { DogroutesComponent } from "./home/dogroutes/dogroutes.component";
 import { GoogledogComponent } from './googledog/googledog.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -33,7 +35,7 @@ const routes: Routes = [
   },
 
   {
-    path: "dogroutes",
+    path: 'dogroutes/:id',
     component: DogroutesComponent
   },
 
@@ -64,11 +66,16 @@ const routes: Routes = [
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    CustomMaterialModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [WalkingRoutesDataService, WalkingARouteDataService],
-  bootstrap: [AppComponent]
+  providers: [
+    WalkingRoutesDataService,
+    WalkingARouteDataService,
+    LatlonCalcService,
+    DogSnackCalcService
+  ],
 
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
