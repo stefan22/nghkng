@@ -2,12 +2,31 @@
 .featuredOn {
   background: #f9f9f9;
   padding: 20px;
-  border: 1px solid #ececee;
   .feature-header {
     h2 {
-      padding-right: 2em;
       text-align: end;
+      
     }//h2
+    hr.featured {
+        margin-bottom: 40px;
+        width:96%;
+        float:right;
+    }//hr
+
+    .divider {
+      height: 50px;
+      margin:3em 0;
+      h2 {
+        text-align: left;
+      }
+      hr.featured-b {
+        width:90%;
+        float: left;
+    }
+
+
+    }//divider
+
     @media screen and (max-width:599px) {
       padding:0;
       h2 {
@@ -24,6 +43,7 @@
           padding-left: 0;
           text-align: center !important;
         }
+        
       }//divider
     }
     
@@ -39,21 +59,12 @@
 
 }//featuredOn
 
-.divider {
-  height: 50px;
-  margin:3em 0;
-}
-
-.divider h2 {
-  text-align: left !important;
-  padding-left:3.5em;
-
-}
 
 
-hr.featured {
-  margin-bottom: 40px;
-}
+
+
+
+
 
 
 .short {
@@ -192,11 +203,10 @@ hr.featured {
 
 
 .caption {
-  
   padding-bottom: 15px;
   h3 {
-    font-weight: 300px;
     display:inline-block;
+    font-weight: 300;
      margin-left: 10px;  
     margin-right: 12px;
     @media screen and (max-width:599px) {
@@ -204,8 +214,6 @@ hr.featured {
     }
     span {
       font-size: 18px;
-      font-weight: 300;
-      line-height: 36px;
       padding-top: 15px;
       margin:0;
       font-style: italic
@@ -213,55 +221,23 @@ hr.featured {
   }//h3
   h4 {
     font-size: 16px;
-    font-weight: 300;
     letter-spacing: 0.5px;
     padding-bottom: 45px;
     line-height: 1.6;
     padding-bottom: 20px;
   }//h4
+
   .button-row {
     .mat-mini-fab {
       margin-left: 10px;
-      padding: 0px 0px;
-      display: inline-block;
-      line-height: 40px;
-      font-size: .85em !important;
+      font-size: .7em;
       text-align: center;
-
     }
-    padding-top:3px;
-    @media screen and (max-width:599px) {
-      .mat-mini-fab  {
-        margin-left: 10px;
-        padding: 0px 0px;
-        display: inline-block;
-        line-height: 36px;
-        font-size: .75em !important;
-        text-align: center;
-
-        }
-    }//mat-mini-fab
-  }
-  mat-button-ripple {
-    margin-right: 3px;
-  }
-  p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 36px;
-    padding-top: 15px;
-    margin:0;
-  }
-
-
-
-
+  }//button-row
+  
 }//caption
 
 
-.featuredOn, .feature-header, .short,card-body {
-  width:100%;
-}
 
 .thumbnail .caption h3 {margin-left:0;}
 
