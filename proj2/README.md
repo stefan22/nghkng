@@ -45,6 +45,14 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 
 <br/>
 
+
+
+<br/>
+
+![](src/assets/images/screenshots/newlayout.png)
+
+<br/>
+
 <br/>
 
 ![](src/assets/images/screenshots/cast.png)
