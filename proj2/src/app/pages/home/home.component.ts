@@ -3,31 +3,33 @@ import { CastFormat } from '../../shared/cast-format';
 import { CastDataService } from '../../services/cast-data.service';
 import { EpisodeFormat } from '../../shared/episode-format';
 import { OnsaleFormat } from '../../shared/onsale-format';
-import { OnsaleDataService } from "../../services/onsale-data.service";
-import { EpisodeDataService } from "../../services/episode-data.service";
+import { OnsaleDataService } from '../../services/onsale-data.service';
+import { EpisodeDataService } from '../../services/episode-data.service';
+
 
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.scss"]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   randomSeasons: EpisodeFormat[];
   allFeatures: OnsaleFormat[];
 
-  //cast
+  // cast
   featcast: CastFormat;
-  //season
-  isSelected: boolean = false;
+  // season
+  isSelected = false;
   selectedSeason: EpisodeFormat;
-  //user-selected
+  // user-selected
   selectedFeatured: OnsaleFormat;
-  isFeaturedSelected: boolean = false;
+  isFeaturedSelected = false;
 
   constructor(
     private episodeDataService: EpisodeDataService,
     private onsaleDataService: OnsaleDataService,
     private castDataService: CastDataService
+
   ) {}
 
   ngOnInit() {
@@ -35,7 +37,7 @@ export class HomeComponent implements OnInit {
     this.allFeatures = this.onsaleDataService.getAllFeatured();
     this.featcast = this.castDataService.getSelectedCastMember();
 
-    //return this.randomSeasons;
+    // return this.randomSeasons;
   }
 
   onSelectedSeason(item) {
@@ -44,22 +46,10 @@ export class HomeComponent implements OnInit {
     this.isSelected = true;
     window.scrollTo(0, 1500);
     return this.selectedSeason;
-  } //onSelectedEpisode
-
+  } // onSelectedEpisode
 
   backToSeasons() {
     this.isSelected = false;
     window.scrollTo(0, 1200);
   }
-
-  
-  
-
- 
-
-
-
-
-
-
-}//HomeComponent class
+}// HomeComponent class

@@ -21,6 +21,8 @@
   }//subheading
   .sp-logo {
     width:100%;
+    background: white;
+    box-shadow: 0px 2px 3px 0px #717171;
     img {
       width:100%;
       max-width: 400px;
@@ -188,4 +190,26 @@
     margin-top: 15px;
    
   }
+}
+
+
+.caption button {
+  
+
+
+.mat-mini-fab {
+    font-size:.5em;
+    padding:0;
+    margin-left:10px;
+  .mat-button-wrapper {
+    padding: 5px 0px;
+    margin-left:10px;
+    display: inline-block;
+    line-height: 20px;
+    font-size: .0125em;
+
+  }
+  
+}
+
 }

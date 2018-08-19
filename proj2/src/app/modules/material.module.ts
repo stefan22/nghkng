@@ -5,9 +5,10 @@ import { MatMenuModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
-import { MatListModule } from '@angular/material';  
+import { MatListModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material';
 import { MatBadgeModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MatBadgeModule } from '@angular/material';
     MatCardModule,
     MatListModule,
     MatGridListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -29,7 +31,8 @@ import { MatBadgeModule } from '@angular/material';
     MatCardModule,
     MatListModule,
     MatGridListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatInputModule
   ]
 })
 export class MaterialModule {}

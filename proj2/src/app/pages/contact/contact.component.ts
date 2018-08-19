@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  matButton;
-  constructor() { }
+  constructor
+  () { }
 
   ngOnInit() {
   }

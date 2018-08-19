@@ -9,11 +9,12 @@ $background-pale: #D1C4E9;
 }
 
 .footer {
+    margin-top: 3em;
     background-color: $background-dark;
-    @include zero-margin(20px, 0px);
     h3.mat-subheader {
       margin:0;
       margin-bottom: 1em;
+
       color:#ffe9ffbf;
       font-weight: 400;
     }

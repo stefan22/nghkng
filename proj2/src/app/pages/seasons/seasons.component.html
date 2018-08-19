@@ -21,10 +21,15 @@
             <p class="content">{{season.description}}
             </p>
             <p class="buy-season">
-            <a mat-raised-button href="#" class="btn btn-primary" role="button">Buy now
+            <a mat-raised-button 
+              (click)="onBuySeasonNow($event)"
+              class="btn btn-primary" 
+              role="button">Buy now
             </a>
-              
-              <a href="#" class="btn btn-default" role="button">
+          
+              <a class="btn btn-default" 
+                (click)="onWatchTrailer($event)"
+                role="button">
                 Watch trailer</a>
             </p>
           </div>

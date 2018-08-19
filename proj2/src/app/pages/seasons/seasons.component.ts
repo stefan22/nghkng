@@ -29,6 +29,17 @@ export class SeasonsComponent implements OnInit {
     console.log(ten);
   }
 
+  onBuySeasonNow(e) {
+    e.preventDefault();
+    console.log('Buy now button, seasons pg');
+
+  }// onBuySeasonNow
+
+  onWatchTrailer(e) {
+    e.preventDefault();
+    console.log('Watch trailer, seasons pg');
+  }// onWatchTrailer
 
 
-}//SeasonsComponent class
+
+}// SeasonsComponent class

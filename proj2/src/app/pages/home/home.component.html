@@ -1,19 +1,29 @@
-<div class="container">
+<div class="container fat-container">
 
   <div class="featuredOn" [class.featuredOff]="isFeaturedSelected">
     <div class="row">
-      <div class="col-sm-12 col-md-12 season-header">
-        <h1>Featured
-          <span class="subtitle">click season for details on featured episode offer</span> 
-        </h1>
-        <hr/>
+      
+      <div class="col-xs-12 col-sm-12 col-md-12 feature-header">
+        <h2>Finally here!
+          <span class="subtitle">South Parkded entire Eight Season again.</span>
+        </h2>
+        <hr class="featured"/>
       </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-sm-6 col-md-6"
+
+      <!-- season -->
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="short">
+          <h2>The Fractured But Whole
+            <span class="subtitle">Cartman dresses up as a robot from Japan, sent to Butters. He tricks him into believing it and can't
+              give away his identity because he finds out Butters has a video of him dancing to Britney Spears and kissing a Justin
+              Timberlake picture! It gets even more out of hand as the military decide to try to capture 'the robot' to make it a weapon.</span>
+          </h2>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-sm-4 col-md-6 col-lg-3 col-lg-offset-1"
         [routerLink]="['/featured', allFeatures[0].seasonId]">
-        
         <div class="thumbnail card-body">
           <img class="img-responsive" width="630px" height="630" 
           src="{{allFeatures[0].cover}}"  />
@@ -27,14 +37,21 @@
             </p>
           </div>
         </div>
+      </div><!-- endof /.season -->
+
+      <div class="col-xs-12 col-sm-12 col-md-12 feature-header clearfix">
+        <div class="divider">
+        <h2>Trey Parker
+          <span class="subtitle">the real villain behind Eric Cartman.</span>
+        </h2>
+          <hr class="featured" />
+        </div><!-- endof /.drag-drop -->
       </div>
 
-
-      <!-- cast -->
-      <div class="col-sm-6 col-md-6" 
-      [routerLink]="['/cast', featcast.id]">
-        <div class="thumbnail card-body castimgdiv">
-          <img class="img-responsive" width="768" height="593" src="{{featcast.cover}}" [routerLink]="['/cast', featcast.id]"
+      <div class="col-xs-12 col-sm-12 col-sm-6 col-md-6 col-lg-3 col-lg-offset-1" 
+      [routerLink]="['/cast']">
+        <div class="card-body castimgdiv">
+          <img class="img-responsive" width="768" height="593" src="{{featcast.cover}}" [routerLink]="['/cast']"
           />
           <div class="caption">
             <!-- <h3 class="cast">Cast</h3><br/> -->
@@ -48,39 +65,48 @@
                 {{featcast.title.split(' ')[1]}}
               </button>
               <button mat-mini-fab color="warn">
-                 {{featcast.title.split(' ')[2]}}
+                  {{featcast.title.split(' ')[2]}}
               </button>
             </div>
+          </div><!--endof /.caption -->
+        
+        </div><!--endof /.card-body -->
+      </div>
 
-           
-           
-          </div>
+      <!-- cast -->
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-lg-offset-1">
+        <div class="short-r">
+          <h2>Medicinal Fried Chicken
+            <span class="subtitle">In "Medicinal Fried Chicken", the only KFC in South Park is closed down, along with all the other KFCs in Colorado, to make
+            room for a Medical Marijuana Dispensary. This causes Cartman, who is going through withdrawal of KFC, to work for Billy Miller
+            who, along with Colonel Sanders, is moving illegal shipments of KFC into the state.</span>
+          </h2>
+          <hr/>
         </div>
       </div>
 
+
     </div>
-  
-  </div>
-  <!-- endof featured -->
+      
+  </div><!-- endof /.featuredOn-->
+</div> <!-- endof /.fat-container -->
 
 
-  <div class="divider">
-    <hr/>
-  </div>
- 
+
+<div class="container">
   
   <div class="random randomOn" [class.randomOff]="isSelected"> 
     <div>
-      <h1>Random Seasons
+      <h2>Random Seasons
         <span class="subtitle">click season for details below</span>
-      </h1>
+      </h2>
       <hr/>
     </div>
 
     <div class="row">
-      <div class="col-sm-6 col-md-4" 
-        *ngFor="let season of randomSeasons" >
-        <div class="thumbnail card-body">
+      <div class="col-sm-6 col-md-3" 
+        *ngFor="let season of randomSeasons | slice:0:4" >
+        <div class="card-body thumbnail">
           <img class="img-responsive" width="630px" height="630" 
             src="{{season.cover}}"
              (click)="onSelectedSeason(season)" />

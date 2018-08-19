@@ -1,5 +1,5 @@
-import { CastFormat } from "../shared/cast-format";
-import { Cast } from "../shared/cast-data";
+import { CastFormat } from '../shared/cast-format';
+import { Cast } from '../shared/cast-data';
 
 import { Injectable } from '@angular/core';
 
@@ -20,20 +20,20 @@ export class CastDataService {
 
   getSelectedCastMember(): CastFormat {
     return this.allCasts.filter((item) => {
-      if(item.featured) {
-        console.log(item);
+      if (item.featured) {
+        // console.log(item);
         this.cast = item;
         return this.cast;
-      } 
-      
+      }
+
     })[0];
-    
+
   }
 
 
 
   getSelectedCastFeatured(cast: string) {
-    let name = cast.split(' ')[1];
+    const name = cast.split(' ')[1];
     return this.allCasts.filter((item) => {
       if (item.name.indexOf(name) > 0) {
         return item;
@@ -47,4 +47,4 @@ export class CastDataService {
 
 
 
-}//CastDataService
+}// CastDataService

@@ -1,36 +1,32 @@
-@mixin intro {
-  font-weight: 300;
-  font-size: 21px;
-  margin-bottom: 15px;
+@mixin header-anim {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform .3s cubic-bezier(.4,0,.2,1) .3s,opacity 0s .3s;
 }
 
-.southpark {
-  font-size: 1.10em;
-  font-weight: normal;
-  letter-spacing: .75px;
-  mat-icon.mat-icon.material-icons {
-    vertical-align: sub;
-  }
-  
-  
-}//southpark
+.header {
+  opacity: 1;
+  &.header-show {
+    @include header-anim();
+  }// header-show  
+
+  .southpark {
+    font-size: 1.10em;
+    font-weight: normal;
+    letter-spacing: .75px;
+    mat-icon.mat-icon.material-icons {
+      vertical-align: sub;
+    }
+    
+    
+  }//southpark
+
+}// header
 
 
 
 
 
-
-
-.jumbotron {
-  background:url(../../assets/images/spbg.png) repeat-x center top;
-  background-size: cover;
-  padding-top: 90px;
-  
-}
-
-.intro {
-  @include intro();
-}
 
 
 

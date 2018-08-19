@@ -1,12 +1,15 @@
 // colors available in theme: primary color, accent color, warning color
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-$black: #212121;
-$lt-gray: #ddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
-$primary-color-dark:   #512DA8;
+/*
+ all colors
+ ------
+*/
+$nero: rgba(0,0,0,0.87);
+$old-black: #212121;
+//btn colors
+$purple: #673ab7;
+$purple-10: #5d28bc;
+$active-bcolor: #6f41c7d9;
 $primary-color:        #673AB7;
 $primary-color-light:  #D1C4E9;
 $primary-color-text:   #FFFFFF;
@@ -14,117 +17,22 @@ $accent-color:         #FFC107;
 $primary-text-color:   #212121;
 $secondary-text-color: #424242;
 $divider-color:        #BDBDBD;
-$active-bcolor: #6f41c7d9;
+//background
+$body-bg: #fafafa;
 
-  .season-header {
-    @media screen and (max-width:767px) {
-      padding:0 15px !important;
-    }//767
-    
-    h1  {
-      color:$black;
-      font-weight: 400;
-      span.subtitle {
-        @media screen and (max-width:767px) {
-          display:block;
-          font-size:16px !important;
-          padding-bottom:10px !important;
-          margin-top:10px;
-        
-        }//767
-        
-      }//subtitle
-      @media screen and (max-width:991px) {
-        font-size: 2.4em;
-      
-      }//991
-    
-    }//h1
-    
-  }//season-header
-
-
-
-
-
-
-.caption h3 {
-  font-weight: 400;
-}
-
-.jumbotron { 
-  @media screen and (max-width:767px) {
-    .container {
-      height: 25vh;
-      a.btn.btn-primary.btn-lg {display:none;}
-      @media screen and (max-width:510px) {
-        a.btn.btn-primary.btn-lg {
-          display:block;
-          position:absolute;
-          left:30vw;
-          top: 25vh;
-        }
-      }//610
+/*
+ mixins
+ ------
+*/
+@mixin fat-container {
+    .container.fat-container {
+      max-width: 1470px !important;
+      width: 90vw;
+      margin-left:15px;
+      margin-right: 15px;
+      margin-left:auto;
+      margin-right: auto;
     }
-  }
-  h1 {
-    @media screen and (max-width:767px) {
-      display:none;
-    }
-    font-size: 3em;
-    font-weight: normal;
-    color:#212121;
-  }
-  p.intro {
-    font-weight: 300;
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #47626e;
-    @media screen and (max-width:767px) {
-      display:none;
-    }
-  }//p.intro
-}
-
-
-
-//btn colors
-$purple: #673ab7;
-$purple-10: #5d28bc;
-.active {
-  background: $active-bcolor;
-}
-
-//top-menu
-.mat-toolbar.mat-primary {
-  position:fixed;
-  z-index: 10;
-
-  .mat-menu-panel {
-    width:170px;
-    background: #7b1fa28c;
-    button.mat-menu-item {
-      color:#32004b;
-      .mat-icon {
-        color:#7B1FA2;
-        
-      }
-      span {
-        line-height: 24px;
-        vertical-align: middle;
-      }
-    }
-
-
-  }//mat-menu-panel
-
-}//mat-toolbar
-
-
-
-
-.cdk-overlay-pane{
-  margin-top:2.3em;
 }
 
 @mixin btn-primary {
@@ -150,32 +58,116 @@ $purple-10: #5d28bc;
     letter-spacing: 0.5px;
     padding-bottom: 45px;
     line-height: 1.6;
-    color: $black;
+    color: $nero;
     font-style: oblique;
     
 }
 
+
+body {
+  z-index: -1;
+  background-color: $body-bg;
+  color: $nero;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  font-weight: 300;
+  color:$nero;
+}
+
+/*
+ season-header
+ -------------
+*/
+.season-header {
+  @media screen and (max-width:767px) {
+    padding:0 15px !important;
+  }//767
+  
+  h1  {
+    color:$nero;
+    font-weight: 400;
+    span.subtitle {
+      @media screen and (max-width:767px) {
+        display:block;
+        font-size:16px !important;
+        padding-bottom:10px !important;
+        margin-top:10px;
+      
+      }//767
+      
+    }//subtitle
+    @media screen and (max-width:991px) {
+      font-size: 2.4em;
+    
+    }//991
+  
+  }//h1
+  
+}//season-header
+
+
+
+
+
+
+/*
+ main-menu
+ ---------
+*/
+.mat-toolbar.mat-primary {
+  z-index: 10;
+  overflow: hidden;
+  
+
+}//mat-toolbar
+
+.cdk-overlay-pane{
+  margin-top:3.3em;
+  .mat-menu-panel {
+      width:175px;
+      background:#b8abbe8c;
+      button.mat-menu-item {
+        color:#32004b;
+        .mat-icon {
+          color:#7B1FA2;
+          
+        }
+        span {
+          line-height: 24px;
+          vertical-align: middle;
+        }
+      }
+    }//mat-menu-panel
+}//cdk-overlay-pane
+
+
+
 .subtitle {
   @include subtitle();
 }
-
 
 .btn-primary {
   @include btn-primary();
 }
 
-.subtitle {
-  @include subtitle();
-}
-
-h1 {
-  color: $primary-text-color;
-}
-
-p {
-  color: $secondary-text-color;
+.caption h3 {
+  font-weight: 400;
 }
 
 
 
+.active {
+  background: $active-bcolor;
+}
 
+
+
+
+
+
+
+@media (min-width:1200px) {
+    @include fat-container();
+}
+ 

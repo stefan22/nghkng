@@ -1,4 +1,4 @@
-//modules
+// modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,28 +10,29 @@ import { RouterModule, Routes } from '@angular/router';
 
 import 'hammerjs';
 
-//components
+// components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-//non-routing components atm
+// non-routing components atm
 import { RandomSeasonsComponent } from './random-seasons/random-seasons.component';
 import { EpisodeDetailsComponent } from './random-seasons/episode-details/episode-details.component';
 import { Season10Component } from './season10/season10.component';
 import { Season10DetailsComponent } from './season10/details/season10-details.component';
 
-//pages-routing
+// pages-routing
 import { HomeComponent } from './pages/home/home.component';
-import { FeaturedComponent } from "./pages/home/featured/featured.component";
+import { FeaturedComponent } from './pages/home/featured/featured.component';
 import { CastComponent } from './pages/cast/cast.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
-//services
+// services
 import { EpisodeDataService } from './services/episode-data.service';
 import { Season10DataService } from './services/season10-data.service';
 import { OnsaleDataService } from './services/onsale-data.service';
+import { JumboComponent } from './header/jumbo/jumbo.component';
 
 
 const appRoutes: Routes = [
@@ -83,7 +84,8 @@ const appRoutes: Routes = [
     CastComponent,
     SeasonsComponent,
     ContactComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    JumboComponent
   ],
 
   imports: [
@@ -96,9 +98,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    EpisodeDataService, 
-    Season10DataService, 
+    EpisodeDataService,
+    Season10DataService,
     OnsaleDataService
+
   ],
   bootstrap: [AppComponent]
 })

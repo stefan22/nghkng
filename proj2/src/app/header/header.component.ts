@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  jumboGreeting: string = 'Hello Eric!'
+  jumboGreeting = 'Hello Eric!';
   constructor() { }
 
   ngOnInit() {
   }
 
-}
+
+  onScrollDown() {
+
+
+
+  }
+
+
+
+
+
+}// HeaderComponent class

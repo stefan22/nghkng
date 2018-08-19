@@ -1,0 +1,52 @@
+@mixin intro {
+  font-size: 22px;
+  margin-bottom: 15px;
+  letter-spacing: .3px;
+}
+
+/*
+ jumbotron
+ ---------
+*/
+.jumbotron {
+  background: url(../../../assets/images/fp-ban3.jpg) repeat-x center center;
+  margin-top: 2px;
+  background-color: #e3e3e340;
+  border-bottom: 1px solid #ececee;
+  box-shadow: 3px 0px 1px 0px #b992ff;
+  .intro {
+    @include intro();
+  } 
+  @media screen and (max-width:767px) {
+    .container {
+      height: 25vh;
+      a.btn.btn-primary.btn-lg {display:none;}
+      @media screen and (max-width:510px) {
+        a.btn.btn-primary.btn-lg {
+          display:block;
+          position:absolute;
+          left:30vw;
+          top: 25vh;
+        }
+      }//610
+    }
+  }
+  h1 {
+    font-size: 3.5em;
+    letter-spacing: .5px;
+    @media screen and (max-width:767px) {
+      display:none;
+    }
+    
+
+    
+  }
+  p.intro {
+    @include intro();
+    &strong {font-weight: normal;
+    }
+    @media screen and (max-width:767px) {
+      display:none;
+    }
+  }//p.intro
+}
