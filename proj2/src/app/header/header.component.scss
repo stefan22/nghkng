@@ -5,21 +5,44 @@
 }
 
 .header {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   opacity: 1;
+  background: #673ab7;
   &.header-show {
     @include header-anim();
   }// header-show  
+  .mat-toolbar {
+    margin-left: 3%;
+    .southpark {
+      font-size: 20px;
+      font-weight: normal;
+      letter-spacing: .35px;
+      mat-icon.mat-icon.material-icons {
+        vertical-align: sub;
+      }
+      
+    }//southpark
 
-  .southpark {
-    font-size: 1.10em;
-    font-weight: normal;
-    letter-spacing: .75px;
-    mat-icon.mat-icon.material-icons {
-      vertical-align: sub;
-    }
-    
-    
-  }//southpark
+
+
+  }//mat-toolbar
+  button.login {
+    height: auto;
+    max-height: 64px;
+    width:110px;
+    background:beige;
+    margin-right:4%;
+    text-align: center;
+    color:#fff;
+    background: #6f41c7d9;
+    letter-spacing: .35px;
+    border:1px solid #5f33ad;
+  }
+
+  
 
 }// header
 
