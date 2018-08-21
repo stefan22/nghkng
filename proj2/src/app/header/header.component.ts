@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MatDialogClose } from '@angular/material';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   jumboGreeting = 'Hello Eric!';
-  constructor() { }
+
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -18,6 +21,22 @@ export class HeaderComponent implements OnInit {
 
 
   }
+
+  openLoginForm() {
+    this.dialog.open(LoginComponent, {
+      width: '400px',
+      height: '350px'
+
+    });
+
+
+
+
+  }// openLoginForm
+
+
+
+
 
 
 

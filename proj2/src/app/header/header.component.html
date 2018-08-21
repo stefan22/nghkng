@@ -24,10 +24,12 @@
 
   </mat-toolbar>
 
-  <button id="login" class="login" mat-menu-item>
-    <!-- <mat-icon>login</mat-icon> -->
-    <span>Login</span>
-  </button>
+  <a id="login" class="login" 
+    mat-menu-item
+    (click)="openLoginForm()">
+    <i class="material-icons">person</i><span>Login</span>
+  </a>
+
  </header> 
 
 

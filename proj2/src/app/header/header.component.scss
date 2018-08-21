@@ -5,6 +5,51 @@
 }
 
 .header {
+  a#login {
+    @media screen and (max-width:599px) {
+      width:110px;
+      max-height: 56px;
+      margin-right: 0;
+      span {
+        display: none !important;
+      }//span
+      i {
+        text-align: center;
+        width:110px;
+        line-height: 56px !important;
+        font-size: 24px !important;
+      }
+    }//599
+    color:#fff;
+    transition: color .1s cubic-bezier(.4,0,.2,1);
+    width: 140px;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    max-height: 64px;
+    height: auto;
+    cursor: pointer;
+    // color:#fff;
+    text-decoration: none;
+    padding: 0 16px;
+    i {
+      line-height: 64px;
+      vertical-align: middle;
+      font-size: 28px;
+
+    }//i
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      line-height: 64px;
+      font-size: 16px;
+      vertical-align: middle;
+    }//span
+    &:focus,&:active {
+      outline: none;
+    }
+
+  }//login
   width:100%;
   display: flex;
   flex-direction: row;
@@ -14,8 +59,19 @@
   &.header-show {
     @include header-anim();
   }// header-show  
+
   .mat-toolbar {
     margin-left: 3%;
+    @media screen and (max-width:599px) {
+      margin-left: 0px;  
+      .southpark {
+        font-size: 18px !important;
+        .mat-icon.material-icons {
+          line-height: 22px;
+          vertical-align: middle !important;
+        }
+      }//southpark
+    }
     .southpark {
       font-size: 20px;
       font-weight: normal;
@@ -29,18 +85,7 @@
 
 
   }//mat-toolbar
-  button.login {
-    height: auto;
-    max-height: 64px;
-    width:110px;
-    background:beige;
-    margin-right:4%;
-    text-align: center;
-    color:#fff;
-    background: #6f41c7d9;
-    letter-spacing: .35px;
-    border:1px solid #5f33ad;
-  }
+
 
   
 

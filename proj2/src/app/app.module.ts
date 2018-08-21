@@ -21,18 +21,24 @@ import { EpisodeDetailsComponent } from './random-seasons/episode-details/episod
 import { Season10Component } from './season10/season10.component';
 import { Season10DetailsComponent } from './season10/details/season10-details.component';
 
-// pages-routing
+
+// page-routing
 import { HomeComponent } from './pages/home/home.component';
 import { FeaturedComponent } from './pages/home/featured/featured.component';
 import { CastComponent } from './pages/cast/cast.component';
 import { SeasonsComponent } from './pages/seasons/seasons.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
+// login
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 // services
 import { EpisodeDataService } from './services/episode-data.service';
 import { Season10DataService } from './services/season10-data.service';
 import { OnsaleDataService } from './services/onsale-data.service';
 import { JumboComponent } from './header/jumbo/jumbo.component';
+
 
 
 const appRoutes: Routes = [
@@ -85,7 +91,8 @@ const appRoutes: Routes = [
     SeasonsComponent,
     ContactComponent,
     FeaturedComponent,
-    JumboComponent
+    JumboComponent,
+    LoginComponent
   ],
 
   imports: [
@@ -95,6 +102,7 @@ const appRoutes: Routes = [
     HttpModule,
     MaterialModule,
     FlexLayoutModule,
+    MatDialogModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
@@ -103,6 +111,12 @@ const appRoutes: Routes = [
     OnsaleDataService
 
   ],
+
+  entryComponents: [
+      LoginComponent
+  ],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}

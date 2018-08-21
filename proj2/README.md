@@ -33,7 +33,9 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - home-featured now passing url params instead of using input - home top
 - created cast component, added jsondata, created js object, cast-service,  
   images
-- home page featured/random-seasons details wiring √           
+- home page featured/random-seasons details wiring √      
+- header component    
+- login component/material dialog/popup 
 ..        
 ...         
 - [tons left /free-styling]
@@ -45,13 +47,13 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 
 <br/>
 
+<br/>
 
+![](src/assets/images/screenshots/fplayout.png)
 
 <br/>
 
-![](src/assets/images/screenshots/newlayout.png)
 
-<br/>
 
 <br/>
 
