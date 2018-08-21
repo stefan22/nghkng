@@ -13,11 +13,17 @@ export class LoginComponent implements OnInit {
     remember: false
   };
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<LoginComponent>) { }
 
   ngOnInit() {
 
   }
+
+  onSubmit() {
+    console.log('user: ', this.user);
+    this.dialogRef.close();
+
+  }// onSubmit
 
 
 

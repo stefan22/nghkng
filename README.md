@@ -40,6 +40,8 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - featured season (url route param) 'season/:id, cast/:id both top home page 
   featured section 
 - need cast details pg too
+- header component    
+- login component/material dialog/popup 
 ..        
 ...         
 - [tons left /free-styling]
