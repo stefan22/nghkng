@@ -54,7 +54,13 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 <br/>
 
 
-![](proj2/src/assets/images/screenshots/fplayout.png)
+
+
+
+<br/>
+
+
+![](proj2/src/assets/images/screenshots/login.png)
 
 <br/>
 
