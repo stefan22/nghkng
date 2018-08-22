@@ -38,6 +38,7 @@ import { EpisodeDataService } from './services/episode-data.service';
 import { Season10DataService } from './services/season10-data.service';
 import { OnsaleDataService } from './services/onsale-data.service';
 import { JumboComponent } from './header/jumbo/jumbo.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -92,7 +93,8 @@ const appRoutes: Routes = [
     ContactComponent,
     FeaturedComponent,
     JumboComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
 
   imports: [
@@ -113,7 +115,8 @@ const appRoutes: Routes = [
   ],
 
   entryComponents: [
-      LoginComponent
+      LoginComponent,
+      RegisterComponent
   ],
 
 

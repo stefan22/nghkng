@@ -1,0 +1,37 @@
+<div class="register-popup">
+  <h3 mat-dialog-title color="primary">Register</h3>
+  <hr/>
+  <div class="inner-popup">
+
+    <form novalidate>
+      <mat-dialog-content>
+        <p>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" name="username"placeholder="please enter your name" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" name="email" placeholder="please enter your email" required />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" placeholder="please enter your password" required />
+          </mat-form-field>
+
+          
+        </p>
+      </mat-dialog-content>
+
+      <mat-dialog-actions>
+        <button mat-stroked-button mat-dialog-close color="primary">Close</button>
+        <button mat-raised-button color="primary">Register</button>
+      </mat-dialog-actions>
+
+
+    </form>
+  </div><!-- /.inner-popup -->
+
+</div>
