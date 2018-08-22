@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
     console.log('register form');
     this.dialog.open(RegisterComponent, {
       width: '400px',
-      height: '410px'
+      height: '420px'
     });
 
 

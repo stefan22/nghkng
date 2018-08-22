@@ -12,13 +12,16 @@
         flex-direction: column;
         
       }//mat-form-field
+      .mat-dialog-content {
+        margin-bottom: 1em;
+      }
 
-    .mat-dialog-actions {
-      display:flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      
-    } //mat-dialog-actions 
+      .mat-dialog-actions {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+      } //mat-dialog-actions 
       
 
 

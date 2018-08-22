@@ -9,6 +9,7 @@ $old-black: #212121;
 //btn colors
 $purple: #673ab7;
 $purple-10: #5d28bc;
+$pink-ic: #c3588e;
 $active-bcolor: #6f41c7d9;
 $primary-color:        #673AB7;
 $primary-color-light:  #D1C4E9;
@@ -53,9 +54,11 @@ $body-bg: #fafafa;
 }
 
 @mixin subtitle {
+    display:inline-block;
+    margin-top:10px;
     font-size: 19px;
     font-weight: 300;
-    letter-spacing: 0.35px;
+    letter-spacing: 0.5px;
     line-height: 24px;
     color: $nero;
     font-style: oblique;

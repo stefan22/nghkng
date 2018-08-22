@@ -5,6 +5,16 @@
   .feature-header {
     h2 {
       text-align: end;
+      img.purple-ic {
+        display:inline-block;
+        margin-right:10px;
+        vertical-align: unset;
+      }
+      span.purple-ic {
+        color:#7b3184;
+        display: inline-block;
+        margin-right:10px;
+      }
       
     }//h2
     hr.featured {
@@ -22,6 +32,7 @@
       hr.featured-b {
         width:90%;
         float: left;
+        margin-bottom: 40px;
     }
 
 
@@ -68,7 +79,15 @@
 
 
 .short {
+  h2 {
+    color:#c3588e;
+  }
   padding: 3em 0 3em 3em;
+  img.pink-ic {
+    display:inline-block;
+    margin-right:10px;
+    vertical-align: unset;
+  }
   @media screen and (max-width:599px) {
     padding:0;
     text-align: center;
@@ -80,7 +99,15 @@
 }
 
 .short-r {
+  h2 {
+    color:#c3588e;
+  }
   padding:3em 3em 3em 0;
+  img.pink-ic {
+    display:inline-block;
+    margin-right:10px;
+    vertical-align: unset;
+  }
   @media screen and (max-width:599px) {
     padding:0;
     text-align: center;
@@ -120,6 +147,14 @@
   justify-content: space-between;
   flex-flow: column;
   margin-top:3em;
+  span.purple-ic {
+    color:#7b3184;
+    display: inline-block;
+    margin-right:10px;
+  }
+  hr {
+    margin-bottom: 40px;
+  }
   @media screen and (max-width:599px) {
     h2 {
       text-align: center;

@@ -19,11 +19,11 @@ export class LoginComponent implements OnInit {
 
   }
 
-  onSubmit() {
+  onLogin() {
     console.log('user: ', this.user);
     this.dialogRef.close();
 
-  }// onSubmit
+  }// onLogin
 
 
 
