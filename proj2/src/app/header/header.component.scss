@@ -5,33 +5,40 @@
 }
 
 .header {
-  a#login {
-    @media screen and (max-width:599px) {
-      width:110px;
-      max-height: 56px;
-      margin-right: 0;
+  a.login, a.register {
+    @media screen and (max-width:1199px) {
+      width:60px;
+      padding:0 5px;
+      @media screen and (max-width:599px) {
+        max-height: 56px;
+      }
+    
       span {
         display: none !important;
       }//span
       i {
         text-align: center;
         width:110px;
-        line-height: 56px !important;
+        @media screen and (max-width:599px) {
+          max-height: 56px !important;
+          line-height: 56px !important;
+        }
         font-size: 24px !important;
       }
     }//599
+
     color:#fff;
     transition: color .1s cubic-bezier(.4,0,.2,1);
-    width: 140px;
+    width: 125px;
     margin-right: 3%;
     display: flex;
     flex-direction: row;
     max-height: 64px;
+    font-weight: normal;
     height: auto;
     cursor: pointer;
-    // color:#fff;
     text-decoration: none;
-    padding: 0 16px;
+    padding: 0 10px;
     i {
       line-height: 64px;
       vertical-align: middle;
@@ -56,6 +63,21 @@
   flex-wrap: nowrap;
   opacity: 1;
   background: #673ab7;
+
+  a.register {
+    margin-right: 10px;
+    width:150px;
+    @media screen and (max-width:1199px) {
+      width:60px;
+      padding:0 5px;
+      margin-right: 0;
+    }//599
+
+
+  }//register
+  
+
+  
   &.header-show {
     @include header-anim();
   }// header-show  
