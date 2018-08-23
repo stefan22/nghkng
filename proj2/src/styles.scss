@@ -4,8 +4,7 @@
  all colors
  ------
 */
-$nero: rgba(0,0,0,0.87);
-$old-black: #212121;
+
 //btn colors
 $purple: #673ab7;
 $purple-10: #5d28bc;
@@ -20,6 +19,7 @@ $secondary-text-color: #424242;
 $divider-color:        #BDBDBD;
 //background
 $body-bg: #fafafa;
+$nero: rgba(0,0,0,0.87);
 
 /*
  mixins
@@ -153,9 +153,7 @@ h1,h2,h3,h4,h5,h6,p {
   @include btn-primary();
 }
 
-.caption h3 {
-  font-weight: 400;
-}
+
 
 
 

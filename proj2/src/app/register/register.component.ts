@@ -30,5 +30,17 @@ export class RegisterComponent implements OnInit {
 
 
 
+  getPasswordError(pass) {
+    if(pass.length < 5) {
+      return 'Must be 5 characters long';
+    }
+    else if(pass.length >= 5) {
+      return 'Password is good';
+    }
+
+  }
+
+
+
 
 }// RegisterComponent class

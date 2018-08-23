@@ -16,15 +16,18 @@
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <div class="short">
           <h2><img class="pink-ic img-responsive" src="../../assets/images/pink-icon.jpg" width="20" height="20" />The Fractured But Whole
-            <span class="subtitle">Cartman dresses up as a robot from Japan, sent to Butters. He tricks him into believing it and can't
-              give away his identity because he finds out Butters has a video of him dancing to Britney Spears and kissing a Justin
-              Timberlake picture! It gets even more out of hand as the military decide to try to capture 'the robot' to make it a weapon.</span>
-          </h2>
+          <span class="subtitle">Cartman dresses up as a robot from Japan, sent to Butters. He tricks him into believing it and can't
+          give away his identity because he finds out Butters has a video of him dancing to Britney Spears and kissing a Justin
+          Timberlake picture! It gets even more out of hand as the military decide to try to capture 'the robot' to make it a weapon.
+          Cartman and the other children decide to play superheroes with the goal of launching a superhero media franchise by finding
+          a missing cat and claiming the $100 reward. The New Kid joins the game and Cartman provides them with a tragic backstory;
+          seeing their father have sex with their mother.. </span>
+        </h2>
           <hr/>
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-sm-4 col-md-6 col-lg-4 col-lg-offset-1"
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-lg-offset-1"
         [routerLink]="['/featured', allFeatures[0].seasonId]">
         <div class="thumbnail card-body">
           <img class="img-responsive" width="630px" height="630" 
@@ -51,7 +54,7 @@
         </div><!-- endof /.drag-drop -->
       </div>
 
-      <div class="col-xs-12 col-sm-12 col-sm-6 col-md-6 col-lg-4 col-lg-offset-1" 
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-lg-offset-1" 
       [routerLink]="['/cast']">
         <div class="card-body castimgdiv">
           <img class="img-responsive" width="768" height="593" src="{{featcast.cover}}" [routerLink]="['/cast']"
@@ -82,7 +85,8 @@
           <h2><img class="pink-ic img-responsive" src="../../assets/images/pink-icon.jpg" width="20" height="20" />Medicinal Fried Chicken
             <span class="subtitle">In "Medicinal Fried Chicken", the only KFC in South Park is closed down, along with all the other KFCs in Colorado, to make
             room for a Medical Marijuana Dispensary. This causes Cartman, who is going through withdrawal of KFC, to work for Billy Miller
-            who, along with Colonel Sanders, is moving illegal shipments of KFC into the state.</span>
+            who, along with Colonel Sanders, is moving illegal shipments of KFC into the state. With aid from Morgan Freeman, the New Kid learns to time travel with their farts. They travel to the future where Mitch has completed his master plan to make every day Christmas Day, causing drunken anarchy throughout the town. They then travel
+            to the past and confront Cartman before..</span>
           </h2>
           <hr/>
         </div>
@@ -94,20 +98,26 @@
   </div><!-- endof /.featuredOn-->
 </div> <!-- endof /.fat-container -->
 
+<div class="col-xs-12">
+  <!-- <img class="img-responsive" src="../../assets/images/casa-bonita.jpg" width="100%" height="450" /> -->
+</div>
+
 
 
 <div class="container">
   
   <div class="random randomOn" [class.randomOff]="isSelected"> 
     <div>
-      <h2><span class="purple-ic">Trey ParkerRandom Seasons</span>
+      <h2><img class="purple-ic img-responsive" src="../../assets/images/purple-icon.jpg" width="22" 
+        height="22" />
+        <span class="purple-ic">Random Seasons</span>
         <span class="subtitle">click season for details below</span>
       </h2>
       <hr/>
     </div>
 
     <div class="row">
-      <div class="col-sm-6 col-md-3" 
+      <div class="col-sm-6 col-md-4 col-lg-3" 
         *ngFor="let season of randomSeasons | slice:0:4" >
         <div class="card-body thumbnail">
           <img class="img-responsive" width="630px" height="630" 

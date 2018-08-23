@@ -12,31 +12,31 @@
 
     <div class="col-sm-4">
       <button type="button" class="btn btn-info btn-lg pull-right all-seasons" (click)="goBack()">
-        All Featured</button>
+        Back</button>
     </div>
   </div>
 
   <hr/>
 
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-8">
       <div class="card-body">
         <img class="img-responsive" width="768" height="593" src="{{selectedFeatured.cover}}" />
       </div>
     </div>
 
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-4">
       <div class="card-body padding-20">
-        <h3>{{selectedFeatured.title}}</h3>
+        <h2>{{selectedFeatured.title}}</h2>
 
-        <h5>Price: £
+        <h4>Price: £
           <span class="label label-danger">
             {{selectedFeatured.price}}
           </span>
-        </h5>
+        </h4>
         <div class="card-description">
           <hr/>
-          <h5>Description:</h5>
+          <h4>Description:</h4>
           <p>{{selectedFeatured.description}}</p>
 
         </div>
@@ -51,7 +51,7 @@
 
 <!-- cast -->
 
-<div class="container">
+<!-- <div class="container">
   <div class="featuredOn">
     <div class="row">
       <div>
@@ -97,4 +97,4 @@
     </div>
 
 
-  </div>
+  </div> -->

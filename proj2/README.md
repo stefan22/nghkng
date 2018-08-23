@@ -36,6 +36,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - home page featured/random-seasons details wiring √      
 - header component    
 - login component/material dialog/popup 
+- register component/material dialog/popup
 ..        
 ...         
 - [tons left /free-styling]

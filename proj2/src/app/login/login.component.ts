@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
     remember: false
   };
 
-  constructor(private dialogRef: MatDialogRef<LoginComponent>) { }
+  options: any;
+
+  constructor(private dialogRef: MatDialogRef<LoginComponent>) {}
 
   ngOnInit() {
 
@@ -24,6 +27,8 @@ export class LoginComponent implements OnInit {
     this.dialogRef.close();
 
   }// onLogin
+
+  
 
 
 

@@ -10,6 +10,9 @@
       .mat-form-field {
         display:flex;
         flex-direction: column;
+        .hint {
+          color: #673ab7;
+        }
         
       }//mat-form-field
       .mat-dialog-content {

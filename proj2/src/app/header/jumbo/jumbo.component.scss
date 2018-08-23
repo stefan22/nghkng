@@ -9,8 +9,13 @@
  ---------
 */
 .jumbotron {
-  background: url(../../../assets/images/fp-ban3.jpg) repeat-x center center;
+  // background: url(../../../assets/images/fp-ban3.jpg) repeat-x center center;
+  background: url(../../../assets/images/fbh-bg.jpg) repeat-x center center;
   margin-top: 2px;
+  background-size: cover;
+  width:100vw;
+  height:45vh;
+  color:azure;
   background-color: #e3e3e340;
   border-bottom: 1px solid #ececee;
   .intro {
@@ -32,6 +37,7 @@
   }
   h1 {
     font-size: 3.5em;
+    text-shadow: 1px 1px 0px #101b44;
     letter-spacing: .5px;
     @media screen and (max-width:767px) {
       display:none;

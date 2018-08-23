@@ -3,31 +3,40 @@
   <hr/>
   <div class="inner-popup">
 
-    <form novalidate (ngSubmit)="onRegister()">
+    <form novalidate
+      #registerForm="ngForm" 
+      (ngSubmit)="registerForm.form.valid && onRegister()">
       <mat-dialog-content>
         <p>
           <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
             <input matInput type="text"
+              #name="ngModel"
               [(ngModel)]="user.name" 
-              name="username" 
+              name="name" 
               placeholder="please enter your name" required />
+              <mat-error *ngIf="name.errors?.required">Name is required</mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="fill">
             <mat-label>Email</mat-label>
-            <input matInput type="email" 
+            <input matInput type="email"
+              #email="ngModel" 
               [(ngModel)]="user.email"
               name="email" 
               placeholder="please enter your email" required />
+              <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
           </mat-form-field>
 
           <mat-form-field appearance="fill">
             <mat-label>Password</mat-label>
-            <input matInput type="password" 
+            <input matInput type="password"
+              #password="ngModel" 
               [(ngModel)]="user.password"
               name="password" 
               placeholder="please enter your password" required />
+              <mat-hint class="hint" *ngIf="!password.pristine && password.value.length < 5">Try making your password, at least 5 characters long</mat-hint>
+              <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
           </mat-form-field>
 
           
@@ -36,7 +45,10 @@
 
       <mat-dialog-actions>
         <button mat-stroked-button mat-dialog-close color="primary">Close</button>
-        <button type="submit" mat-raised-button color="primary">Register</button>
+
+        <button type="submit"
+                mat-raised-button 
+                color="primary">Register</button>
       </mat-dialog-actions>
 
 
@@ -44,3 +56,7 @@
   </div><!-- /.inner-popup -->
 
 </div>
+
+
+
+<!-- [disabled]="registerForm.form.invalid" -->
