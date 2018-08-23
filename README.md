@@ -42,6 +42,8 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - need cast details pg too
 - header component    
 - login component/material dialog/popup 
+- register comp/mat/dia/popup/form/entry-comp
+- a few layout changes
 ..        
 ...         
 - [tons left /free-styling]
@@ -66,6 +68,12 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 <br/>
 
 ![](proj2/src/assets/images/screenshots/login.png)
+
+<br/>
+
+<br/>
+
+![](proj2/src/assets/images/screenshots/layout6.png)
 
 <br/>
 

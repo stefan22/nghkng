@@ -37,6 +37,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - header component    
 - login component/material dialog/popup 
 - register component/material dialog/popup
+- layout changes
 ..        
 ...         
 - [tons left /free-styling]
@@ -72,7 +73,12 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 
 ![](src/assets/images/screenshots/login.png)
 
+
 <br/>
+
+![](src/assets/images/screenshots/layout6.png)
+
+
 
 <br/>
 
