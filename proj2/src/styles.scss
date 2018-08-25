@@ -1,4 +1,5 @@
 // colors available in theme: primary color, accent color, warning color
+@import '~@angular/material/theming';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 /*
  all colors
@@ -26,7 +27,7 @@ $nero: rgba(0,0,0,0.87);
  ------
 */
 @mixin fat-container {
-    .container.fat-container {
+    @media screen and (min-width:1200px) {
       max-width: 1470px !important;
       width: 90vw;
       margin-left:15px;
@@ -59,9 +60,7 @@ $nero: rgba(0,0,0,0.87);
     font-size: 19px;
     font-weight: 300;
     letter-spacing: 0.5px;
-    line-height: 24px;
     color: $nero;
-    font-style: oblique;
     
 }
 
@@ -71,6 +70,8 @@ body {
   background-color: $body-bg;
   color: $nero;
 }
+
+
 
 h1,h2,h3,h4,h5,h6,p {
   font-weight: 300;
@@ -150,7 +151,9 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .btn-primary {
+  @include mat-elevation-transition;
   @include btn-primary();
+  
 }
 
 

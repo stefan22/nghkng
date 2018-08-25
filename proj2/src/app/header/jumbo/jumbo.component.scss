@@ -54,4 +54,11 @@
       display:none;
     }
   }//p.intro
+
+  .jumbo-learn {
+    @media screen and (max-width:599px) {
+      display: none;  
+    }
+
+  }//jumbo-learn
 }

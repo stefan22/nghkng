@@ -1,3 +1,8 @@
+@import '~@angular/material/theming';
+@mixin mat-display-1 {
+  margin:20px 0 10px;
+}
+
 .featuredOn {
   //background-image: url("../../../assets/images/casa-bonita.jpg");
   //background-image: url(../../../../assets/images/season9.jpg);
@@ -9,17 +14,28 @@
   background: #f9f9f9;
   padding: 20px;
   .feature-header {
+    
+    @media screen and (max-width:1200px) {
+      h2 {
+        text-align: center !important;
+      }
+    }//1200
     h2 {
+      @include mat-display-1();
       text-align: end;
       img.purple-ic {
         display:inline-block;
         margin-right:10px;
         vertical-align: unset;
+        @media screen and (max-width:599px) {
+          display: none;
+        }//599
       }
       span.purple-ic {
         color:#7b3184;
         display: inline-block;
         margin-right:10px;
+        
       }
       
     }//h2
@@ -102,6 +118,9 @@
     display:inline-block;
     margin-right:10px;
     vertical-align: unset;
+    @media screen and (max-width:599px) {
+      display: none;
+    }
   }
   
   @media screen and (max-width:599px) {
@@ -125,6 +144,9 @@
     display:inline-block;
     margin-right:10px;
     vertical-align: unset;
+    @media screen and (max-width:599px) {
+      display: none;
+    }
   }
   @media screen and (max-width:599px) {
     padding:0;
@@ -167,10 +189,14 @@
   flex-flow: column;
   margin-top:3em;
   h2 {
+    @include mat-display-1();
     img.purple-ic {
       display:inline-block;
       margin-right:10px;
       vertical-align: unset;
+      @media screen and (max-width:599px) {
+        display: none;
+      }
     }
     span.purple-ic {
       color:#7b3184;

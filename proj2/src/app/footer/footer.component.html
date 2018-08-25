@@ -1,39 +1,99 @@
-<div class="footer" 
-     fxLayout="row wrap" 
-     fxLayout.lt-md="column" 
-     fxLayoutAlign="center center" 
-     fxLayoutGap="10px">
+<div class="footer">
 
-  <div fxFlex="100" fxFlex.gt-sm="50">
-    <div fxLayout="row">
-      <div fxFlex="40" fxFlexOffset="20px">
-        <h3 mat-subheader>The Real South Park</h3>
-
+  <div class="container fat-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <h3 mat-subheader-2>The Real South Park</h3>
         <div class="footer-menu">
-          <button mat-menu-item 
-            routerLink="/home" 
-            routerLinkActive="active">
+          <mat-toolbar>
+            <button mat-menu-item routerLink="/home" routerLinkActive="active">
               <mat-icon>home</mat-icon>
               <span>Home</span>
-          </button>
-          <button mat-menu-item 
-            routerLink="/cast" 
-            routerLinkActive="active">
+            </button>
+            <button mat-menu-item routerLink="/cast" routerLinkActive="active">
               <mat-icon>theaters</mat-icon>
               <span>Cast</span>
-          </button>
-          <button mat-menu-item 
-            routerLink="/seasons" 
-            routerLinkActive="active">
+            </button>
+            <button mat-menu-item routerLink="/seasons" routerLinkActive="active">
               <mat-icon>video_label</mat-icon>
               <span>Seasons</span>
-          </button>
-          <button mat-menu-item
-            routerLink="/contact" 
-            routerLinkActive="active">
+            </button>
+            <button mat-menu-item routerLink="/contact" routerLinkActive="active">
               <mat-icon>person_pin</mat-icon>
               <span>Contact</span>
-          </button>
+            </button>
+          </mat-toolbar>
+        </div><!-- /.footer-menu-->
+      </div>
+      <div class="mdbelow-hidden col-lg-2">
+        <div class="copy-footer">
+          <p class="body-1">© Copyright 2018 TheReal¬SouthPark</p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-lg-offset-1">
+        <div class="hang-social">
+          <h3 mat-subheader-2>Let's hang:</h3>
+          <div class="footer-social">
+            <a mat-icon-button class="btn-google-plus" href="http://google.com/+">
+              <i class="fa fa-google-plus fa-lg"></i>
+            </a>
+            <a mat-icon-button class="btn-facebook" href="http://www.facebook.com/profile.php?id=">
+              <i class="fa fa-facebook fa-lg"></i>
+            </a>
+            <a mat-icon-button class="btn-linkedin" href="http://www.linkedin.com/in/">
+              <i class="fa fa-linkedin fa-lg"></i>
+            </a>
+            <a mat-icon-button class="btn-twitter" href="http://twitter.com/">
+              <i class="fa fa-twitter fa-lg"></i>
+            </a>
+            <a mat-icon-button class="btn-youtube" href="http://youtube.com/">
+              <i class="fa fa-youtube fa-lg"></i>
+            </a>
+            <a mat-icon-button class="btn-mail" href="mailto:">
+              <i class="fa fa-envelope-o fa-lg"></i>
+            </a>
+          </div>
+        </div><!-- /.hang-social -->
+      </div>
+
+    </div>
+  </div><!-- /.container.fat-container -->
+
+     
+
+  <!-- <div fxFlex="100" fxFlex.gt-sm="50">
+    <div fxLayout="row">
+      <div fxFlex="40" fxFlexOffset="20px">
+        
+
+        <div class="footer-menu">
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item 
+              routerLink="/home" 
+              routerLinkActive="active">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+            <button mat-menu-item 
+              routerLink="/cast" 
+              routerLinkActive="active">
+                <mat-icon>theaters</mat-icon>
+                <span>Cast</span>
+            </button>
+            <button mat-menu-item 
+              routerLink="/seasons" 
+              routerLinkActive="active">
+                <mat-icon>video_label</mat-icon>
+                <span>Seasons</span>
+            </button>
+            <button mat-menu-item
+              routerLink="/contact" 
+              routerLinkActive="active">
+                <mat-icon>person_pin</mat-icon>
+                <span>Contact</span>
+            </button>
+          </mat-menu>
         </div> 
 
       </div>
@@ -66,7 +126,10 @@
       </a>
     </div>
   </div>
+
   <div class="copy">
     <p>© Copyright 2018 TheReal¬SouthPark</p>
   </div>
+ -->
+
 </div>

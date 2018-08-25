@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
 
 
 
@@ -28,7 +29,8 @@ import { MatCheckboxModule } from '@angular/material';
     MatInputModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
 
   ],
   exports: [
@@ -43,7 +45,8 @@ import { MatCheckboxModule } from '@angular/material';
     MatInputModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
 
   ]
 })

@@ -1,52 +1,200 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
-
-  <div fxFlex>
-    <div class="season-header">
-      <h1>Where to find us
-        <span class="subtitle">We'll never hide from you.. unlike some.</span>
-      </h1>
-      <hr>
-    </div>
-  </div>
-
-  <div fxFlex>
-    <div class="inner-contact">
-      <div fxLayout="column" fxLayout.gt-sm="row">
-        <div fxFlex="50" fxFlexOffset="20px">
-          <h4>Business address:</h4>
-          <address>
-            60 Cardigan road
-            <br> Canary Wharf
-            <br> London
-            <br>
-            <i class="fa fa-phone"></i>: 0203-224-2929
-            <br>
-            <i class="fa fa-envelope"></i>:
-            <a href="mailto:stefano@theRealSouthPark.com">stefano@theRealSouthPark.com</a>
-          </address>
-        
-          <div class="call-to-action">
-            <div class="button-row">
-              <a mat-raised-button href="tel|+02032241919">
-                <i class="fa fa-phone"></i> Call
-              </a>
-              <a mat-raised-button>
-                <i class="fa fa-skype"></i> Skype
-              </a>
-              <a mat-raised-button href="mailto:confusion@food.net">
-                <i class="fa fa-envelope-o"></i> Email
-              </a>
-            </div>
-          </div>
-        </div>
-        <div fxFlex="40">
-          <h4>Google us:</h4>
-          <div class="findus-map">
-
-
-          </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="contact-header">
+            <div class="season-contact-header">
+              <h1 class="mat-display-1">Where to find us
+                <span class="subtitle">We'll never hide from you.. unlike some.</span>
+              </h1>
+              <hr>
+            </div><!-- /.season-header -->
+          </div><!-- /.contact-header -->
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="isbusiness">
+            <div class="inner-contact">
+              <div class="business-address">
+                <h3 class="mat-subheading-3">Business address:</h3>
+                <address>
+                  60 Cardigan road
+                  <br> Canary Wharf
+                  <br> London
+                  <br>
+                  <i class="fa fa-phone"></i>: 0203-224-2929
+                  <br>
+                  <i class="fa fa-envelope"></i>:
+                  <a href="mailto:stefano@theRealSouthPark.com">Stefano@theRealSouthPark.com</a>
+                </address>
+              
+                <div class="call-to-action">
+                  <div class="button-row">
+                    <a mat-raised-button href="tel|+02032241919">
+                      <i class="fa fa-phone"></i> Call
+                    </a>
+                    <a mat-raised-button>
+                      <i class="fa fa-skype"></i> Skype
+                    </a>
+                    <a mat-raised-button href="mailto:stefano@therealsouthpark.com">
+                      <i class="fa fa-envelope-o"></i> Email
+                    </a>
+                  </div>
+                  <hr />
+                </div>
+              </div><!-- /.business-address -->  
+              
+              <div class="form-size">
+                <h3 class="mat-subheading-3">We must have your feedback! 
+                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </h3>
+                
+                <form id="contact" 
+                  class="contact" novalidate 
+                  [formGroup]="feedbackForm">
+                  
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <p>
+                        <mat-form-field class="c-field" appearance="fill">  
+                          <!-- /username -->
+                          <mat-label>Username</mat-label>
+                          <input matInput type="text" 
+                              placeholder="Enter username"
+                              formControlName="username"  
+                              required />
+                        </mat-form-field>
+                    
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /email -->
+                          <mat-label>Email</mat-label>
+                          <input matInput type="email"
+                              placeholder="Enter email"
+                              formControlName="email"  
+                              required />
+                        </mat-form-field>
+
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /email -->
+                          <mat-label>Mobile</mat-label>
+                          <input matInput type="number"
+                              placeholder="Enter mobile number"
+                              formControlName="mobile" 
+                              size="7"
+                              required />
+                        </mat-form-field>
+
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /age -->
+                          <mat-label>Age</mat-label>
+                          <input matInput type="number"
+                                 placeholder="Enter your age" 
+                                 formControlName="age" />
+                        </mat-form-field>
+
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /message -->
+                          <mat-label>Message</mat-label>
+                          <input matInput #message 
+                            formControlName="message" 
+                            maxlength="256" placeholder="We love to hear from you">
+                          <mat-hint align="start">
+                            <strong>Keep your message short</strong>
+                          </mat-hint>
+                          <mat-hint align="end">
+                            {{message.value.length}} / 256
+                          </mat-hint>
+                        </mat-form-field>
+                    
+                      </p>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <p>
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /consent -->
+                          <mat-label>Consent</mat-label>
+                          <input matInput type="boolean" formControlName="consent" placeholder="We need your consent to proceed" required />
+                        </mat-form-field>
+
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /gender -->
+                          <mat-label>Gender</mat-label>
+                          <input matInput type="text" 
+                            placeholder="For internal marketing purposes only"
+                          formControlName="gender" required />
+                        </mat-form-field>
+                        
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /favSeason -->
+                          <mat-label>Favorite season</mat-label>
+                          <input matInput type="number"  
+                            formControlName="favSeason" 
+                            placeholder="Enter your favorite season ever" required />
+                        </mat-form-field>
+                        
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /favCharacter -->
+                          <mat-label>Favorite character</mat-label>
+                          <input matInput type="text"
+                            formControlName="favCharacter" 
+                            placeholder="Please choose wisely" required />
+                        </mat-form-field>
+
+                        <mat-form-field class="c-field" appearance="fill">
+                          <!-- /contactType -->
+                          <mat-label>Contact type</mat-label>
+                          <mat-select formControlName="contactType"
+                            placeholder="How would you like us to reach you">
+                            <mat-option value="none">None</mat-option>
+                            <mat-option value="email">Email</mat-option>
+                            <mat-option value="mobile">Mobile</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      
+                      </p>
+              
+                      
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <mat-dialog-actions class="feedback-buttons">
+                          <button type="submit" mat-raised-button color="primary">
+                            Feedback
+                          </button>
+                        </mat-dialog-actions>
+                      </div>
+                    </div>
+                  
+                </form>
+              
+              </div><!-- /.form-size -->
+                
+              
+                
+
+
+                
+
+
+
+
+
+                <!-- <div fxFlex="40">
+                  <h4>Google us:</h4>
+                  <div class="findus-map">
+
+
+                  </div>
+                </div> -->
+            </div> <!-- /.inner-contact -->
+          </div><!-- /.isbusiness-->
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
