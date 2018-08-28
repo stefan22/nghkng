@@ -82,6 +82,16 @@
           
         }//mat-form-field
 
+        .form-consent {
+          &.mat-card {
+            padding: 14px;
+            margin-bottom: 19px;
+
+          }//mat-card
+
+
+        }//form-consent
+
         .feedback-buttons {
           display:flex;
           flex-wrap: nowrap;

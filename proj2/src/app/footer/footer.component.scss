@@ -14,71 +14,69 @@ $background-pale: #D1C4E9;
 
 .footer {
   .container.fat-container {
-    @include fat-container;
-    .footer-menu {
-      width:100%;
-      float: left;
-      .mat-toolbar {
-        display: flex;
-        flex-wrap: nowrap;
-        @media screen and (max-width:599px) {
-          justify-content: space-evenly;
-        }
-        justify-content: flex-start;
-        background: transparent;
-        padding: 1em 0;
-        button {
-          @media screen and (max-width:991px) {
-            max-width: 70px;
-          }
-          max-width: 90px;
-          padding: 0 10px;
-          .mat-icon {
-            text-align: center;
-            margin: 0 0 15px 0;
-            display: inline-block;
-            width: 100%;
-          }//mat-icon
-          span {
-            position: absolute;
-            top: 27px;
-            left: 10px;
-            font-size: 12px;
-            line-height: 20px;
-            display: inline-block;
-            text-align: center;
-            width: 78%;
-
-          }//span
-          @include mat-elevation-transition;
-          @include mat-elevation(2);
-          &:hover {
-            @include mat-elevation(8);
-          }
-          &:active,&:focus {
-            outline:none;
-          }
-        }//button
-
-      }//mat-toolbar
-    }//footer-menu
-    .mdbelow-hidden {
-      @media screen and (max-width:1200px) {
-         display: none; 
-      }
-      .copy-footer {
+      @include fat-container;
+      .footer-menu {
         width:100%;
-        float: right;
-        padding: 3em 0 1em;
-        p {
-          margin:20px 0 4px;
-          text-align: right;
+        float: left;
+        .mat-toolbar {
+          display: flex;
+          flex-wrap: nowrap;
+          @media screen and (max-width:599px) {
+            justify-content: space-evenly;
+          }
+          justify-content: flex-start;
+          background: transparent;
+          padding: 1em 0;
+          button {
+            @media screen and (max-width:991px) {
+              max-width: 70px;
+            }
+            max-width: 90px;
+            padding: 0 10px;
+            .mat-icon {
+              text-align: center;
+              margin: 0 0 15px 0;
+              display: inline-block;
+              width: 100%;
+            }//mat-icon
+            span {
+              position: absolute;
+              top: 27px;
+              left: 10px;
+              font-size: 12px;
+              line-height: 20px;
+              display: inline-block;
+              text-align: center;
+              width: 78%;
+
+            }//span
+            @include mat-elevation-transition;
+            @include mat-elevation(2);
+            &:hover {
+              @include mat-elevation(8);
+            }
+            &:active,&:focus {
+              outline:none;
+            }
+          }//button
+
+        }//mat-toolbar
+      }//footer-menu
+      .mdbelow-hidden {
+        @media screen and (max-width:1200px) {
+          display: none; 
         }
-      }
-    }//mdbelow
-
-
-
+        .copy-footer {
+          width:100%;
+          float: right;
+          padding: 3em 0 1em;
+          p {
+            margin:20px 0 4px;
+            text-align: right;
+          }
+        }
+      }//mdbelow
+  
   }//fat-container
 
 
@@ -94,8 +92,9 @@ $background-pale: #D1C4E9;
       margin-left: 0;
       float:none;
       h3 {
-        margin-left:0 !important;
-      }
+        font-size: 20px;
+        margin:15px 0 5px !important;
+      }//h3
       .footer-social {
         justify-content: space-evenly !important;
       }
@@ -135,16 +134,50 @@ $background-pale: #D1C4E9;
       }
     }//footer-social
 
-
-
-
-
-
   }//hang-social
+
+  
+  .bott-foot {
+    display: block;
+    padding: 0 15px;
+    max-height: 20px;
+    height: auto;
+    background: #010101; 
+    .secrow-foocopy {
+      background:#010101;
+      p {
+        margin: 0;
+        color: darkgray;
+        text-align: center;
+        font-weight: 400;
+      
+      }//p
+    }//secrow-foocopy
+
+  }//bott-foot
+
+  .toprow-foot {
+    @media screen and (max-width:599px) {
+      h3 {
+        font-size:20px;
+        margin:10px 0 15px;
+      }//h3
+    }//599
+    display:block;
+    width:100%;
+    padding:1em 0;
+    overflow: hidden;
+  }//toprow-foot
+
+  
   
 
 
 }//footer
+
+
+
+ 
 
 
 

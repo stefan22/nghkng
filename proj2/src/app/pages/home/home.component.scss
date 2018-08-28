@@ -1,98 +1,123 @@
 @import '~@angular/material/theming';
+
+@mixin fat-container {
+    @media screen and (min-width:1200px) {
+      max-width: 1470px !important;
+      width: 90vw;
+      margin-left:15px;
+      margin-right: 15px;
+      margin-left:auto;
+      margin-right: auto;
+    }
+}
+
+
 @mixin mat-display-1 {
   margin:20px 0 10px;
 }
 
-.featuredOn {
-  //background-image: url("../../../assets/images/casa-bonita.jpg");
-  //background-image: url(../../../../assets/images/season9.jpg);
-  background-repeat: repeat-x;
-  background-position: center center;
-  @media screen and (max-width:768px) {
-    padding: 0;
-  }
-  background: #f9f9f9;
-  padding: 20px;
-  .feature-header {
-    
-    @media screen and (max-width:1200px) {
-      h2 {
-        text-align: center !important;
-      }
-    }//1200
-    h2 {
-      @include mat-display-1();
-      text-align: end;
-      img.purple-ic {
-        display:inline-block;
-        margin-right:10px;
-        vertical-align: unset;
-        @media screen and (max-width:599px) {
-          display: none;
-        }//599
-      }
-      span.purple-ic {
-        color:#7b3184;
-        display: inline-block;
-        margin-right:10px;
-        
-      }
+.container.fat-container {
+  @include fat-container();
+
+  .featuredOn {
+    background-repeat: repeat-x;
+    background-position: center center;
+    @media screen and (max-width:768px) {
+      padding: 0;
+    }
+    background: #f9f9f9;
+    padding: 20px;
+    .feature-header {
       
-    }//h2
-    hr.featured {
-        margin-bottom: 40px;
-        width:96%;
-        float:right;
-    }//hr
+      @media screen and (max-width:1200px) {
+        h2 {
+          text-align: center !important;
+          margin-bottom:60px !important;
+        }
+        hr.featured {
+          display:none;
+        }//hr.featured
 
-    .divider {
-      height: 50px;
-      margin:3em 0;
+        .divider {
+          margin-bottom:60px !important;
+          hr.featured-b {
+            display:none;
+          }
+        }
+      }//1200
       h2 {
-        text-align: left;
-      }
-      hr.featured-b {
-        width:90%;
-        float: left;
-        margin-bottom: 40px;
-      }
+        @include mat-display-1();
+        text-align: end;
+        img.purple-ic {
+          display:inline-block;
+          margin-right:10px;
+          vertical-align: unset;
+          @media screen and (max-width:599px) {
+            display: none;
+          }//599
+        }
+        span.purple-ic {
+          color:#7b3184;
+          display: inline-block;
+          margin-right:10px;
+          
+        }
+        
+      }//h2
+      hr.featured {
+          margin-bottom: 40px;
+          width:96%;
+          float:right;
+      }//hr
 
-
-    }//divider
-
-    @media screen and (max-width:599px) {
-      padding:0;
-      h2 {
-        padding-right: 0;
-        padding-left: 0;
-        text-align:center !important;
-      }
       .divider {
-        height: auto;
-        padding-right:20px;
-        padding-left:20px;
+        height: 50px;
+        margin:3em 0;
+        h2 {
+          text-align: left;
+        }
+        hr.featured-b {
+          width:90%;
+          float: left;
+          margin-bottom: 40px;
+        }
+
+
+      }//divider
+
+      @media screen and (max-width:599px) {
+        padding:0;
         h2 {
           padding-right: 0;
           padding-left: 0;
-          text-align: center !important;
+          text-align:center !important;
         }
-        
-      }//divider
-    }
-    
+        .divider {
+          height: auto;
+          padding-right:20px;
+          padding-left:20px;
+          h2 {
+            padding-right: 0;
+            padding-left: 0;
+            text-align: center !important;
+          }
+          
+        }//divider
+      }
+      
 
 
 
 
 
 
-  }//feature-header
+    }//feature-header
 
 
 
-}//featuredOn
+  }//featuredOn
 
-
+}//container.fat-container
 
 
 
@@ -332,9 +357,9 @@
 .thumbnail .caption h3 {margin-left:0;}
 
 @media screen and (max-width:599px) {
-.thumbnail.card-body h3 {
-  margin-left:0px;
-  font-weight: 300px;
-}
+  .thumbnail.card-body h3 {
+    margin-left:0px;
+    font-weight: 300px;
+  }
 
 }

@@ -42,12 +42,52 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 ...         
 - [tons left /free-styling]
 
+
+
+<br/>
+
+
+![](src/assets/images/screenshots/home-desktop.png)
+
+<br/>
+
+<br/>
+
+![](src/assets/images/screenshots/home-tablet.png)
+
+<br/>
+
+
+
+<br/>
+
+![](src/assets/images/screenshots/home-mobile.png)
+
+<br/>
+
 <br/>
 
 
 ![](src/assets/images/screenshots/season10.png)
 
 <br/>
+
+<br/>
+
+![](src/assets/images/screenshots/desktop-layout.png)
+
+<br/>
+
+<br/>
+
+
+![](src/assets/images/screenshots/mobile-layout.png)
+
+<br/>
+
+
+
+
 
 <br/>
 

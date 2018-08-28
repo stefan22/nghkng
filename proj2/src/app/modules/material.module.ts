@@ -13,6 +13,7 @@ import { MatDialogModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
+import { MatSlideToggleModule } from '@angular/material';
 
 
 
@@ -30,7 +31,8 @@ import { MatSelectModule } from '@angular/material';
     MatDialogModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule
 
   ],
   exports: [
@@ -46,7 +48,8 @@ import { MatSelectModule } from '@angular/material';
     MatDialogModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule
 
   ]
 })

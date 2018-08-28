@@ -40,6 +40,7 @@ import { Season10DataService } from './services/season10-data.service';
 import { OnsaleDataService } from './services/onsale-data.service';
 import { JumboComponent } from './header/jumbo/jumbo.component';
 import { RegisterComponent } from './register/register.component';
+import { MousedownComponent } from './header/jumbo/mousedown/mousedown.component';
 
 
 
@@ -95,7 +96,8 @@ const appRoutes: Routes = [
     FeaturedComponent,
     JumboComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MousedownComponent
   ],
 
   imports: [

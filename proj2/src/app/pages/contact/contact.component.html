@@ -80,7 +80,7 @@
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /email -->
                           <mat-label>Mobile</mat-label>
-                          <input matInput type="number"
+                          <input matInput type="tel"
                               placeholder="Enter mobile number"
                               formControlName="mobile" 
                               size="7"
@@ -98,7 +98,7 @@
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /message -->
                           <mat-label>Message</mat-label>
-                          <input matInput #message 
+                          <input matInput #message type="text"
                             formControlName="message" 
                             maxlength="256" placeholder="We love to hear from you">
                           <mat-hint align="start">
@@ -116,7 +116,7 @@
                       <p>
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /consent -->
-                          <mat-label>Consent</mat-label>
+                          <mat-label>May we contact you</mat-label>
                           <input matInput type="boolean" formControlName="consent" placeholder="We need your consent to proceed" required />
                         </mat-form-field>
 

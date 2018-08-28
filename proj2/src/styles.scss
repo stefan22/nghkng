@@ -1,6 +1,7 @@
 // colors available in theme: primary color, accent color, warning color
 @import '~@angular/material/theming';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 /*
  all colors
  ------
@@ -55,12 +56,15 @@ $nero: rgba(0,0,0,0.87);
 }
 
 @mixin subtitle {
-    display:inline-block;
-    margin-top:10px;
-    font-size: 19px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    color: $nero;
+  @media screen and (max-width:599px) {
+    font-size: 16px;
+  }//599
+  display:inline-block;
+  margin-top:10px;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: $nero;
     
 }
 

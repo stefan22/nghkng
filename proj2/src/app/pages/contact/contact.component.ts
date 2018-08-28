@@ -29,16 +29,16 @@ export class ContactComponent implements OnInit {
   createForm() {
     this.feedbackForm = this.fb.group({
 
-      username: '',
-      email: '',
-      mobile: '',
-      age: '',
-      gender: '',
-      consent: '',
-      favSeason: '',
+      username:     '',
+      email:        '',
+      mobile:       '',
+      age:          '',
+      gender:       '',
+      consent:      '',
+      favSeason:    '',
       favCharacter: '',
-      message: '',
-      contactType: ''
+      message:      '',
+      contactType:  ''
 
 
     });
