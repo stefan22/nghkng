@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MatDialogClose } from '@angular/material';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,18 +10,14 @@ import { RegisterComponent } from '../register/register.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  jumboGreeting = 'Hello Eric!';
+  goBeyondJumboClass = false;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) {
+
+   }
 
   ngOnInit() {
-  }
-
-
-  onScrollDown() {
-
-
-
+    this.goBeyondJumboClass = false;
   }
 
   openLoginForm() {
@@ -29,9 +26,6 @@ export class HeaderComponent implements OnInit {
       height: '400px'
 
     });
-
-
-
 
   }// openLoginForm
 
@@ -43,14 +37,24 @@ export class HeaderComponent implements OnInit {
       height: '420px'
     });
 
-
-
-
-
   }// openRegisterForm
 
 
+  goBeyondJumbo() {
+    // console.log('passing input to jumbo');
+    this.goBeyondJumboClass = true;
 
+  }// goBeyondJumbo
+
+
+  @HostListener('window: scroll', ['$event'])
+  onScrollDown(e) {
+    console.log(e);
+    if (e.target.scrollingElement.scrollTop >= 347) {// contact pg height
+      this.goBeyondJumboClass = false;
+    }
+
+  }// onScrollDown
 
 
 

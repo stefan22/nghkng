@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HostListener } from '@angular/core';
 
 @Component({
@@ -8,9 +8,13 @@ import { HostListener } from '@angular/core';
 })
 export class JumboComponent implements OnInit {
   jumboGreeting = 'Hello Eric';
-
   height: string;
   width: string;
+
+  @Input()
+  leJumbo = false;
+
+
   @HostListener('window: resize', ['$event'])
   onResizeViewport(e) {
     const height = e.target.visualViewport.height;
@@ -22,8 +26,9 @@ export class JumboComponent implements OnInit {
       this.height = (height - 70) + 'px';
     }
 
+  }// onResizeViewport
 
-  }
+
 
   constructor() { }
 

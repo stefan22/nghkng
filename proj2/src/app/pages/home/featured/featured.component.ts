@@ -31,15 +31,13 @@ export class FeaturedComponent implements OnInit {
     this.selectedFeatured = this.onsaleDataService.getFeatured(seasonId);
     console.log(this.selectedFeatured);
 
-    
   }
 
   goBack(): void {
     this.location.back();
-    window.scrollTo(0,110);
-  
-  }//goBack
-    
-  
+    window.scrollTo(0, 110);
+
+  }// goBack
+
 
 }

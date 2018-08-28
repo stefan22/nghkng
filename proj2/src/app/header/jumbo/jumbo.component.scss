@@ -4,6 +4,16 @@
   letter-spacing: .3px;
 }
 
+@mixin forLeJumbo {
+  .jumbo-message {
+    display: none;
+  }
+ 
+  height: 1vh;
+  padding:10px 0;
+  
+}// forLeJumbo
+
 
 /*
  jumbotron
@@ -118,3 +128,14 @@
 
 
 
+
+.jumbotron.leJumbo {
+  transition-delay: .5s;
+  transition:all ease-out .5s;
+  @include forLeJumbo();
+}
+
+.jumbotron {
+  transition-delay: 1s;
+  transition: opacity ease-in 1s;
+}

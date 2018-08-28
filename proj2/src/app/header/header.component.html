@@ -4,19 +4,19 @@
       <mat-icon>more_vert</mat-icon> SouthPark Menu
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/home">
+      <button (click)="goBeyondJumbo()" mat-menu-item routerLink="/home">
         <mat-icon>home</mat-icon>
         <span class="mat-subheading-2">Home</span>
       </button>
-      <button mat-menu-item routerLink="/cast">
+      <button (click)="goBeyondJumbo()" mat-menu-item routerLink="/cast">
         <mat-icon>theaters</mat-icon>
         <span class="mat-subheading-2">Cast</span>
       </button>
-      <button mat-menu-item routerLink="seasons">
+      <button (click)="goBeyondJumbo()" mat-menu-item routerLink="seasons">
         <mat-icon>video_label</mat-icon>
         <span class="mat-subheading-2">Seasons</span>
       </button>
-      <button mat-menu-item routerLink="contact">
+      <button (click)="goBeyondJumbo()" mat-menu-item routerLink="contact">
         <mat-icon>person_pin</mat-icon>
         <span class="mat-subheading-2">Contact</span>
       </button>
@@ -39,7 +39,8 @@
 
 
 
-<app-jumbo></app-jumbo>
+<app-jumbo [leJumbo]="goBeyondJumboClass">
+</app-jumbo>
 
 
 

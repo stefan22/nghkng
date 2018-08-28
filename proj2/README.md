@@ -38,6 +38,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - login component/material dialog/popup 
 - register component/material dialog/popup
 - layout changes
+- input/event on clicking menu nav item
 ..        
 ...         
 - [tons left /free-styling]
