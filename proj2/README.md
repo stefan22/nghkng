@@ -38,6 +38,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - login component/material dialog/popup 
 - register component/material dialog/popup
 - layout changes
+- full-page size jumbo layout with/ scroll-down mouse at the bottom
 ..        
 ...         
 - [tons left /free-styling]
