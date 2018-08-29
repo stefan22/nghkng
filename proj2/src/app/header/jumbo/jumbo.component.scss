@@ -132,6 +132,7 @@
 .jumbotron.leJumbo {
   transition-delay: .5s;
   transition:all ease-out .5s;
+  height: 1vh !important;
   @include forLeJumbo();
 }
 

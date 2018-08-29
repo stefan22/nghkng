@@ -2,39 +2,40 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FeedbackForm, ContactType } from '../../shared/feedback-form';
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  // template class
+  feedbackSubmitted = false;
+
   feedback: FeedbackForm;
-  feedbackForm: FormGroup;   // formGroup
+  form: FormGroup;   // formGroup
   contactType = ContactType; // contactType
 
-  constructor
-  (
-      private fb: FormBuilder
-  ) {
-    this.createForm();
+  formatLabel(value: number) {
+    return value + ' season';
+  }// fromatLabel
 
+  constructor(public fb: FormBuilder) {
+    this.createForm();
   }// const
 
   ngOnInit() {
+    this.feedbackSubmitted = false;
   }
 
 
 
   createForm() {
-    this.feedbackForm = this.fb.group({
-
+    this.form = this.fb.group({
       username:     '',
       email:        '',
       mobile:       '',
       age:          '',
-      gender:       '',
-      consent:      '',
+      consent:      'yes',
       favSeason:    '',
       favCharacter: '',
       message:      '',
@@ -45,6 +46,14 @@ export class ContactComponent implements OnInit {
 
 
   }// createForm
+
+  onContactFormSubmitted() {
+    this.feedbackSubmitted = true;
+    this.feedback = this.form.value;
+    console.log(this.feedback);
+    this.form.reset();
+
+  }// onContactFormSubmitted
 
 
 

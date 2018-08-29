@@ -4,13 +4,12 @@ export class FeedbackForm {
   email: string;
   mobile: number;
   age: number;
-  gender: string;
-  consent: boolean;
+  consent: string;
   favSeason: number;
   favCharacter: string;
   message: string;
   contactType: string;
 
-}; // FeedbackForm class
+} // FeedbackForm class
 
-export const ContactType = ['email', 'mobile', 'none'];
+export const ContactType = ['none', 'email', 'mobile'];

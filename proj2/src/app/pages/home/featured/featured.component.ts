@@ -13,29 +13,27 @@ import { OnsaleFormat } from '../../../shared/onsale-format';
 })
 export class FeaturedComponent implements OnInit {
 
-  selectedFeatured: OnsaleFormat;  
-  
+  selectedFeatured: OnsaleFormat;
+
 
   constructor(
     private onsaleDataService: OnsaleDataService,
     private route: ActivatedRoute,
     private location: Location
-    
-  
-  
   ) { }
 
   ngOnInit() {
-    let seasonId = this.route.snapshot.params['seasonId'];
+    const seasonId = this.route.snapshot.params['seasonId'];
     console.log(seasonId);
     this.selectedFeatured = this.onsaleDataService.getFeatured(seasonId);
+    window.scrollTo(0, 960);
     console.log(this.selectedFeatured);
 
   }
 
   goBack(): void {
     this.location.back();
-    window.scrollTo(0, 110);
+    window.scrollTo(0, 760);
 
   }// goBack
 

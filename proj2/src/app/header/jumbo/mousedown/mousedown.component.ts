@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HostListener } from '@angular/core';
 
 @Component({
@@ -9,6 +9,9 @@ import { HostListener } from '@angular/core';
 export class MousedownComponent implements OnInit {
   height: string;
   width: string;
+
+  @Input()
+  floatingMouse: boolean;
 
   constructor() { }
 

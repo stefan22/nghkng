@@ -41,15 +41,15 @@ export class HomeComponent implements OnInit {
   }
 
   onSelectedSeason(item) {
-    console.log(item);
+    console.log('item: ', item);
     this.selectedSeason = item;
     this.isSelected = true;
-    window.scrollTo(0, 1500);
+    window.scrollTo(0, 2500);
     return this.selectedSeason;
   } // onSelectedEpisode
 
   backToSeasons() {
     this.isSelected = false;
-    window.scrollTo(0, 1200);
+    window.scrollTo(0, 2400);
   }
 }// HomeComponent class

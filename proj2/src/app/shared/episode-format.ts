@@ -1,6 +1,6 @@
-import { CommentsFormat } from "./comments-format";
+import { CommentsFormat } from './comments-format';
 export class EpisodeFormat {
-  
+
   title: string;
   cover: string;
   price: string;
@@ -12,3 +12,4 @@ export class EpisodeFormat {
 
 
 }// EpisodeFormat class
+

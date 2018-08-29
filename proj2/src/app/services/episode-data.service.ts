@@ -3,7 +3,7 @@ import { EpisodeFormat } from '../shared/episode-format';
 import { Episodes } from '../shared/episodes-data';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class EpisodeDataService {
   constructor() {}
@@ -14,17 +14,17 @@ export class EpisodeDataService {
 
   getSelectedEpisode(id: number): EpisodeFormat {
     return Episodes.filter(item => {
-      if (item.seasonId == id) {
+      if (item.seasonId === id) {
         return item;
       }
     })[0];
-  } //getSelectedEpisode
+  } // getSelectedEpisode
 
   getFeaturedEpisode(feat: boolean): EpisodeFormat {
     return Episodes.filter(item => {
-      if (item.featured == feat) {
+      if (item.featured === feat) {
         return item;
       }
     })[0];
-  } //getFeaturedEpisode
-}//EpisodeDataService class
+  } // getFeaturedEpisode
+}// EpisodeDataService class

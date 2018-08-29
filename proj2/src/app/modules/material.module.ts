@@ -14,6 +14,8 @@ import { MatFormFieldModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatRadioModule } from '@angular/material';
 
 
 
@@ -32,7 +34,9 @@ import { MatSlideToggleModule } from '@angular/material';
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSliderModule,
+    MatRadioModule
 
   ],
   exports: [
@@ -49,7 +53,9 @@ import { MatSlideToggleModule } from '@angular/material';
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSliderModule,
+    MatRadioModule
 
   ]
 })

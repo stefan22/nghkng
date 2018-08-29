@@ -48,59 +48,62 @@
               </div><!-- /.business-address -->  
               
               <div class="form-size">
-                <h3 class="mat-subheading-3">We must have your feedback! 
+                <h3 class="mat-subheading-3">We must have your feedback!
+                  <span class="feedback-sub">..at least just the required fields </span>
                   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  <span class="feedback-submitted" *ngIf="!form.dirty && feedbackSubmitted">
+                    Feedback received! Thank you.</span>
                 </h3>
-                
+              
                 <form id="contact" 
-                  class="contact" novalidate 
-                  [formGroup]="feedbackForm">
-                  
-                    <div class="row">
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <p>
-                        <mat-form-field class="c-field" appearance="fill">  
+                  class="contact" novalidate
+                  (ngSubmit)="onContactFormSubmitted()" 
+                  [formGroup]="form">
+              
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <p>
+                        <mat-form-field class="c-field" appearance="fill">
                           <!-- /username -->
                           <mat-label>Username</mat-label>
-                          <input matInput type="text" 
-                              placeholder="Enter username"
-                              formControlName="username"  
-                              required />
+                          <input matInput type="text" placeholder="Enter username" formControlName="username" required />
                         </mat-form-field>
-                    
+              
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /email -->
                           <mat-label>Email</mat-label>
-                          <input matInput type="email"
-                              placeholder="Enter email"
-                              formControlName="email"  
-                              required />
+                          <input matInput type="email" placeholder="Enter email" formControlName="email" required />
                         </mat-form-field>
 
                         <mat-form-field class="c-field" appearance="fill">
-                          <!-- /email -->
-                          <mat-label>Mobile</mat-label>
-                          <input matInput type="tel"
-                              placeholder="Enter mobile number"
-                              formControlName="mobile" 
-                              size="7"
-                              required />
+                          <span matPrefix>+0 &nbsp;</span>
+                          <input type="tel" 
+                            #mobile
+                            formControlName="mobile"
+                            matInput min="7"
+                            placeholder="Mobile" required />
+                          <mat-icon matSuffix>mode_edit</mat-icon>
+                          <mat-hint
+                            *ngIf="mobile.value.length < 10 && mobile.value.length > 2" 
+                            align="start">
+                            No whitespaces after the {{mobile.value[0]}}
+                          </mat-hint>
+                          <mat-hint align="end">
+                            {{mobile.value.length}}</mat-hint>
                         </mat-form-field>
-
+                        
+                        
+              
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /age -->
                           <mat-label>Age</mat-label>
-                          <input matInput type="number"
-                                 placeholder="Enter your age" 
-                                 formControlName="age" />
+                          <input matInput type="age" placeholder="Enter your age" formControlName="age" />
                         </mat-form-field>
-
+              
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /message -->
                           <mat-label>Message</mat-label>
-                          <input matInput #message type="text"
-                            formControlName="message" 
-                            maxlength="256" placeholder="We love to hear from you">
+                          <input matInput #message type="text" formControlName="message" maxlength="256" placeholder="We love to hear from you">
                           <mat-hint align="start">
                             <strong>Keep your message short</strong>
                           </mat-hint>
@@ -108,70 +111,83 @@
                             {{message.value.length}} / 256
                           </mat-hint>
                         </mat-form-field>
-                    
+              
                       </p>
-                      </div>
+                    </div>
 
-                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                      <p>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                      <section class="contact-you">
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /consent -->
                           <mat-label>May we contact you</mat-label>
-                          <input matInput type="boolean" formControlName="consent" placeholder="We need your consent to proceed" required />
+                          <input matInput type="text" formControlName="consent" placeholder="We need your consent to proceed" required />
                         </mat-form-field>
-
-                        <mat-form-field class="c-field" appearance="fill">
-                          <!-- /gender -->
-                          <mat-label>Gender</mat-label>
-                          <input matInput type="text" 
-                            placeholder="For internal marketing purposes only"
-                          formControlName="gender" required />
-                        </mat-form-field>
+              
+                      </section>
                         
-                        <mat-form-field class="c-field" appearance="fill">
-                          <!-- /favSeason -->
-                          <mat-label>Favorite season</mat-label>
-                          <input matInput type="number"  
-                            formControlName="favSeason" 
-                            placeholder="Enter your favorite season ever" required />
-                        </mat-form-field>
+                      <!-- /favSeason -->
+                      <section  class="fav-season">
+                      <mat-label>
+                        Favorite season 
+                          <span class="selectedSeason">
+                            {{selectedSeason}}
+                          </span>  
+                        </mat-label>
+                      <mat-slider
+                        thumbLabel
+                        formControlName="favSeason"
+                        [displayWith]="formatLabel"
+                        tickInterval="1" 
+                        [(ngModel)]="selectedSeason"
+                        min="1" max="27">
+                      </mat-slider>
+                      </section>
                         
+                       
+                        
+                      <p>
+              
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /favCharacter -->
                           <mat-label>Favorite character</mat-label>
-                          <input matInput type="text"
-                            formControlName="favCharacter" 
-                            placeholder="Please choose wisely" required />
+                          <input matInput type="text" formControlName="favCharacter" placeholder="Please choose wisely" required />
                         </mat-form-field>
-
+              
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /contactType -->
                           <mat-label>Contact type</mat-label>
-                          <mat-select formControlName="contactType"
-                            placeholder="How would you like us to reach you">
-                            <mat-option value="none">None</mat-option>
-                            <mat-option value="email">Email</mat-option>
-                            <mat-option value="mobile">Mobile</mat-option>
+                          <mat-select formControlName="contactType" placeholder="How would you like us to reach you">
+                            <mat-option
+                              *ngFor="let ct of contactType"
+                              value="ct">{{ct}}
+                            </mat-option>
+                            
                           </mat-select>
                         </mat-form-field>
-                      
+              
                       </p>
               
-                      
-                      </div>
-
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <mat-dialog-actions class="feedback-buttons">
-                          <button type="submit" mat-raised-button color="primary">
-                            Feedback
-                          </button>
-                        </mat-dialog-actions>
-                      </div>
+              
                     </div>
-                  
+              
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                      <mat-dialog-actions class="feedback-buttons">
+                        <button type="submit" 
+                         [disabled]="form.invalid"
+                         [class.disabled]="form.invalid"
+                          mat-raised-button color="primary">
+                          Feedback
+                        </button>
+                       
+                      </mat-dialog-actions>
+                     
+                    </div>
+                  </div>
+              
                 </form>
               
               </div><!-- /.form-size -->
+                
                 
               
                 

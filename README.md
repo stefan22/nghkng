@@ -45,6 +45,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - register comp/mat/dia/popup/form/entry-comp
 - a few layout changes
 - full-page size jumbo layout with/ scroll-down mouse at the bottom
+- feedback form /reactive
 ..        
 ...         
 - [tons left /free-styling]

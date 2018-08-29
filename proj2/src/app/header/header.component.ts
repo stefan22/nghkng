@@ -49,12 +49,17 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window: scroll', ['$event'])
   onScrollDown(e) {
-    console.log(e);
+    // console.log(e);
     if (e.target.scrollingElement.scrollTop >= 347) {// contact pg height
       this.goBeyondJumboClass = false;
+      this.rmvEvtListnr();
     }
 
   }// onScrollDown
+
+  rmvEvtListnr() {
+    document.removeEventListener('scroll', this.onScrollDown);
+  }// rmvEvtListnr
 
 
 

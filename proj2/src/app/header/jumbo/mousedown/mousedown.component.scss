@@ -1,4 +1,4 @@
-.down-mouse {
+.down-mouse.img-responsive {
   height: 5px;
   background: #3a3a3a;
   @media screen and (max-width:768px) {
@@ -17,6 +17,9 @@
       left:45%;
       z-index: 10;
       cursor: pointer;
+      &.ishidden {
+        top:-85vh !important;
+      }
       @media screen and (max-width:1200px) {
         width: 144px;
         top: 89.5vh;
