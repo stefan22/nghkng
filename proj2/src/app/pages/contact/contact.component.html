@@ -26,11 +26,13 @@
                   <br> London
                   <br>
                   <i class="fa fa-phone"></i>: 0203-224-2929
+
+                  {{f}}
                   <br>
                   <i class="fa fa-envelope"></i>:
                   <a href="mailto:stefano@theRealSouthPark.com">Stefano@theRealSouthPark.com</a>
                 </address>
-              
+
                 <div class="call-to-action">
                   <div class="button-row">
                     <a mat-raised-button href="tel|+02032241919">
@@ -45,8 +47,8 @@
                   </div>
                   <hr />
                 </div>
-              </div><!-- /.business-address -->  
-              
+              </div><!-- /.business-address -->
+
               <div class="form-size">
                 <h3 class="mat-subheading-3">We must have your feedback!
                   <span class="feedback-sub">..at least just the required fields </span>
@@ -54,52 +56,71 @@
                   <span class="feedback-submitted" *ngIf="!form.dirty && feedbackSubmitted">
                     Feedback received! Thank you.</span>
                 </h3>
-              
-                <form id="contact" 
-                  class="contact" novalidate
-                  (ngSubmit)="onContactFormSubmitted()" 
-                  [formGroup]="form">
-              
+ 
+
+  
+
+                <form id="feedback" class="contact" novalidate (ngSubmit)="onContactFormSubmitted()" [formGroup]="form">
+
                   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                       <p>
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /username -->
                           <mat-label>Username</mat-label>
-                          <input matInput type="text" placeholder="Enter username" formControlName="username" required />
-                        </mat-form-field>
+                          <input matInput type="text" placeholder="Enter username" 
+                          #username
+                          formControlName="username" 
+                          minlength="5"
+                          required />
+                          <!-- error   -->
+                          <mat-error *ngIf="form.get('username').
+                          hasError('required') 
+                          && form.get('username').touched">Username is required
+                          </mat-error>
+                          <!-- hint -->
+                          <mat-hint [hidden]="form.get('username').
+                            value.length > 5">
+                            Min 5 characters
+                          </mat-hint>
+                          
               
+                        </mat-form-field>
+
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /email -->
                           <mat-label>Email</mat-label>
                           <input matInput type="email" placeholder="Enter email" formControlName="email" required />
+                          <mat-error *ngIf="form.get('email').hasError('required') && form.get('email').touched">
+                            Email is required
+                           <mat-hint [hidden]="!form.get('email').hasError('required') && !form.get('email').touched"></mat-hint> 
+                          </mat-error>
                         </mat-form-field>
 
-                        <mat-form-field class="c-field" appearance="fill">
-                          <span matPrefix>+0 &nbsp;</span>
-                          <input type="tel" 
-                            #mobile
-                            formControlName="mobile"
-                            matInput min="7"
-                            placeholder="Mobile" required />
+                        <mat-form-field class="c-field mobile" appearance="fill">
+                          <!-- <span matPrefix>+0 &nbsp;</span> -->
+                          <mat-label>Mobile</mat-label>
+                          <input type="tel" #mobile formControlName="mobile" matInput min="7" placeholder="Mobile" />
+                          
                           <mat-icon matSuffix>mode_edit</mat-icon>
-                          <mat-hint
-                            *ngIf="mobile.value.length < 10 && mobile.value.length > 2" 
-                            align="start">
+                          <mat-hint *ngIf="mobile.value.length < 10 && mobile.value.length > 2" align="start">
                             No whitespaces after the {{mobile.value[0]}}
                           </mat-hint>
                           <mat-hint align="end">
                             {{mobile.value.length}}</mat-hint>
                         </mat-form-field>
-                        
-                        
-              
+                     
+
+                     
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /age -->
-                          <mat-label>Age</mat-label>
-                          <input matInput type="age" placeholder="Enter your age" formControlName="age" />
+                         
+                            <mat-label>Age</mat-label>
+                            <input matInput type="age" placeholder="Enter your age" formControlName="age" />
+                          
                         </mat-form-field>
-              
+                      
+                   
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /message -->
                           <mat-label>Message</mat-label>
@@ -111,7 +132,7 @@
                             {{message.value.length}} / 256
                           </mat-hint>
                         </mat-form-field>
-              
+
                       </p>
                     </div>
 
@@ -121,85 +142,91 @@
                           <!-- /consent -->
                           <mat-label>May we contact you</mat-label>
                           <input matInput type="text" formControlName="consent" placeholder="We need your consent to proceed" required />
+                          <mat-icon align="start" matSuffix>sentiment_very_satisfied</mat-icon>
+                          <mat-hint align="end">If you answered no, then you would have certainly made it clear, that we're no longer friends.</mat-hint>
+                          <mat-error *ngIf="form.get('consent').hasError('required') && form.get('consent').touched">
+                            Consent is required
+                            <mat-hint [hidden]="!form.get('consent').hasError('required') && !form.get('consent').touched"></mat-hint>
+                          </mat-error>
                         </mat-form-field>
-              
+
                       </section>
-                        
+
                       <!-- /favSeason -->
-                      <section  class="fav-season">
-                      <mat-label>
-                        Favorite season 
-                          <span class="selectedSeason">
-                            {{selectedSeason}}
-                          </span>  
-                        </mat-label>
-                      <mat-slider
-                        thumbLabel
-                        formControlName="favSeason"
-                        [displayWith]="formatLabel"
-                        tickInterval="1" 
-                        [(ngModel)]="selectedSeason"
-                        min="1" max="27">
-                      </mat-slider>
+                      <section class="fav-season">
+                        <div class="top-slide">
+                          <mat-label>
+                            Favorite season
+                            <span class="selectedSeason">
+                              {{selectedSeason}}
+                            </span>
+                          </mat-label>
+                          <mat-slider thumbLabel formControlName="favSeason" [displayWith]="formatSeasonLabel" tickInterval="1" [(ngModel)]="selectedSeason"
+                            min="1" max="27">
+                          </mat-slider>
+                        </div>
+                        <div class="hints">
+                          <mat-hint>Move slider to make your selection</mat-hint>
+                        </div>
                       </section>
-                        
-                       
-                        
+
+
+
                       <p>
-              
+
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /favCharacter -->
                           <mat-label>Favorite character</mat-label>
                           <input matInput type="text" formControlName="favCharacter" placeholder="Please choose wisely" required />
+                          <!-- error   -->
+                          <mat-error *ngIf="(form.get('favCharacter').hasError('required') && form.get('favCharacter').touched)">
+                            Field is required
+                            <mat-hint [hidden]="!form.get('username').hasError('required') && form.get('username').touched">
+                            </mat-hint>
+                          </mat-error>
                         </mat-form-field>
-              
+
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /contactType -->
                           <mat-label>Contact type</mat-label>
                           <mat-select formControlName="contactType" placeholder="How would you like us to reach you">
-                            <mat-option
-                              *ngFor="let ct of contactType"
-                              value="ct">{{ct}}
+                            <mat-option *ngFor="let ct of contactType" value="ct">{{ct}}
                             </mat-option>
-                            
                           </mat-select>
                         </mat-form-field>
-              
+
                       </p>
-              
-              
+
+
                     </div>
-              
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                       <mat-dialog-actions class="feedback-buttons">
-                        <button type="submit" 
-                         [disabled]="form.invalid"
-                         [class.disabled]="form.invalid"
-                          mat-raised-button color="primary">
+                        <button type="submit" [disabled]="form.invalid" [class.disabled]="form.invalid" mat-raised-button color="primary">
                           Feedback
                         </button>
-                       
+
                       </mat-dialog-actions>
-                     
+
                     </div>
                   </div>
-              
+
                 </form>
-              
+
               </div><!-- /.form-size -->
-                
-                
-              
-                
-
-
-                
 
 
 
 
 
-                <!-- <div fxFlex="40">
+
+
+
+
+
+
+
+              <!-- <div fxFlex="40">
                   <h4>Google us:</h4>
                   <div class="findus-map">
 

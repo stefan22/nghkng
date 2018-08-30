@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FeedbackForm, ContactType } from '../../shared/feedback-form';
+import { FeedbackFormModel, ContactTypeData } from '../../shared/feedbackForm-model';
 
 
 @Component({
@@ -11,13 +11,13 @@ import { FeedbackForm, ContactType } from '../../shared/feedback-form';
 export class ContactComponent implements OnInit {
   feedbackSubmitted = false;
 
-  feedback: FeedbackForm;
+  feedback: FeedbackFormModel;
   form: FormGroup;   // formGroup
-  contactType = ContactType; // contactType
+  contactType = ContactTypeData; // contactType
 
-  formatLabel(value: number) {
+  formatSeasonLabel(value: number) {
     return value + ' season';
-  }// fromatLabel
+  }// formatSeasonLabel
 
   constructor(public fb: FormBuilder) {
     this.createForm();
@@ -31,13 +31,13 @@ export class ContactComponent implements OnInit {
 
   createForm() {
     this.form = this.fb.group({
-      username:     '',
-      email:        '',
-      mobile:       '',
-      age:          '',
-      consent:      'yes',
+      username:    ['', Validators.required],
+      email:       ['', Validators.required],
+      mobile:      ['', Validators.required],
+      age:         ['', Validators.required],
+      consent:     ['yes', Validators.required],
+      favCharacter: ['', Validators.required],
       favSeason:    '',
-      favCharacter: '',
       message:      '',
       contactType:  ''
 
@@ -51,7 +51,17 @@ export class ContactComponent implements OnInit {
     this.feedbackSubmitted = true;
     this.feedback = this.form.value;
     console.log(this.feedback);
-    this.form.reset();
+    this.form.reset({
+      username: '',
+      email: '',
+      mobile: '',
+      age: '',
+      consent: '',
+      favSeason: '',
+      favCharacter: '',
+      message: '',
+      contactType: ''
+    });
 
   }// onContactFormSubmitted
 

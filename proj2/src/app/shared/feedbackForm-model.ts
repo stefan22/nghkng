@@ -1,4 +1,4 @@
-export class FeedbackForm {
+export class FeedbackFormModel {
 
   username: string;
   email: string;
@@ -12,4 +12,4 @@ export class FeedbackForm {
 
 } // FeedbackForm class
 
-export const ContactType = ['none', 'email', 'mobile'];
+export const ContactTypeData = ['none', 'email', 'mobile'];

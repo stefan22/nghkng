@@ -77,7 +77,8 @@
 
       }//h3
 
-      #contact {
+      #feedback.contact {
+        padding: 1em 0;
         width:100%;
         height: auto;
         
@@ -89,16 +90,25 @@
           padding: 0 15px;
           line-height: 34px;
         }
+
+       
+       
+            
+       
          section.fav-season {
             &:hover, &:active {
               @include mat-elevation(3);
+              .top-slide {
+                border-bottom: 2px solid #606060;
+              }
+
             }
             @include mat-elevation-transition;
             border-bottom: 1px solid #8b8b8b;
             color:#606060;
             background:#f0f0f0;
-            margin-bottom: 1.3em;
-            padding: 16px 10px;
+            
+            padding: 0;
             mat-label {
               display: block;
               span.selectedSeason {
@@ -107,17 +117,43 @@
               }
             }
             mat-slider {
-              margin-top:20px;
+              margin:18px 0;
     
             }// mat-slider
             .mat-slider-horizontal {
               @include mat-elevation-transition;
-              border-bottom: 1px solid #8b8b8b;
+             
+             
               width:300px;
+              display: block;
+              transition-delay: .1ms;
+              transition:box-shadow ease-in .25s;
               &:hover, &:active {
+                transition-delay: .1ms;
+                transition:box-shadow ease-in .25s;
                 @include mat-elevation(3);
+                background:#d6bfff;
               }
 
+            }
+            .mat-hint {
+              font-size:11px;
+              font-weight: bold;
+            }
+
+            .top-slide {
+              padding: 16px 10px 0px;
+              border-bottom: 1px solid #8b8b8b;
+            }
+            .hints {
+              padding: 0px 10px;
+              background: #fafafa;
+              .mat-hint {
+                opacity:1;
+                font-size: 10.5px;
+                font-weight: 500
+              }
+              
             }
            
             
@@ -125,6 +161,9 @@
           
 
           }// fav-season
+
+         
+        
 
         .mat-form-field.mat-form-field-appearance-fill {
           @include mat-elevation-transition;
@@ -186,3 +225,11 @@
 .mat-form-field-flex {
   padding-top:1.75em;
 }
+.mat-hint strong {
+  font-weight: 400;
+}
+
+
+
+
+
