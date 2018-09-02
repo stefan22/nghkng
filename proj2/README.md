@@ -39,7 +39,7 @@ logs:  [___proj2___][`work-in-progress`]<kbd>[southpark]</kbd>
 - register component/material dialog/popup
 - layout changes
 - input/event on clicking menu nav item
-- feedback form/reactive
+- feedback form/reactive, validation[req,minlength]/material
 ..        
 ...         
 - [tons left /free-styling]

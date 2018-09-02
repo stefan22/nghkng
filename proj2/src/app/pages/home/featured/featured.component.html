@@ -1,57 +1,57 @@
 <!-- featured details -->
 <div class="container">
-<div class="featuredOn">
-  <div class="row">
-    <div>
-      <div class="col-sm-8 season-header">
-        <h1>Season {{selectedFeatured.seasonId}}
-          <span class="subtitle">Episode {{selectedFeatured.episodeNumber}}</span>
-        </h1>
+  <div class="featuredOn" *ngIf="selectedFeatured">
+    <div class="row">
+      <div>
+        <div class="col-sm-8 season-header">
+          <h1>Season {{selectedFeatured.seasonId}}
+            <span class="subtitle">Episode {{selectedFeatured.episodeNumber}}</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-info btn-lg pull-right all-seasons" (click)="goBack()">
+          Back</button>
       </div>
     </div>
 
-    <div class="col-sm-4">
-      <button type="button" class="btn btn-info btn-lg pull-right all-seasons" (click)="goBack()">
-        Back</button>
-    </div>
-  </div>
+    <hr/>
 
-  <hr/>
-
-  <div class="row">
-    <div class="col-sm-12 col-md-8">
-      <div class="card-body">
-        <img class="img-responsive" width="768" height="593" src="{{selectedFeatured.cover}}" />
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <div class="card-body">
+          <img class="img-responsive" width="768" height="593" src="{{selectedFeatured.cover}}" />
+        </div>
       </div>
-    </div>
 
-    <div class="col-sm-12 col-md-4">
-      <div class="card-body padding-20">
-        <h2>{{selectedFeatured.title}}</h2>
+      <div class="col-sm-12 col-md-4">
+        <div class="card-body padding-20">
+          <h2>{{selectedFeatured.title}}</h2>
 
-        <h4>Price: £
-          <span class="label label-danger">
-            {{selectedFeatured.price}}
-          </span>
-        </h4>
-        <div class="card-description">
-          <hr/>
-          <h4>Description:</h4>
-          <p>{{selectedFeatured.description}}</p>
+          <h4>Price: £
+            <span class="label label-danger">
+              {{selectedFeatured.price}}
+            </span>
+          </h4>
+          <div class="card-description">
+            <hr/>
+            <h4>Description:</h4>
+            <p>{{selectedFeatured.description}}</p>
 
+          </div>
         </div>
       </div>
     </div>
+
+
   </div>
 
+  <!-- endof isFeatured details -->
 
-</div>
+  <!-- cast -->
 
-<!-- endof isFeatured details -->
-
-<!-- cast -->
-
-<!-- <div class="container">
+  <!-- <div class="container">
   <div class="featuredOn">
     <div class="row">
       <div>

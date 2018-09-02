@@ -6,4 +6,4 @@ export class CastFormat {
   shortbio: string;
   featured: boolean;
 
-}//CastFormat class
+}// CastFormat class

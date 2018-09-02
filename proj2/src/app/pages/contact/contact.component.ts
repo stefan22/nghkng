@@ -31,15 +31,15 @@ export class ContactComponent implements OnInit {
 
   createForm() {
     this.form = this.fb.group({
-      username:    ['', Validators.required],
-      email:       ['', Validators.required],
-      mobile:      ['', Validators.required],
-      age:         ['', Validators.required],
-      consent:     ['yes', Validators.required],
+      username: ['', Validators.required],
+      email: ['', Validators.required],
+      mobile: ['', Validators.required],
+      age: ['', Validators.required],
+      consent: ['yes', Validators.required],
       favCharacter: ['', Validators.required],
-      favSeason:    '',
-      message:      '',
-      contactType:  ''
+      favSeason: '',
+      message: '',
+      contactType: ''
 
 
     });

@@ -12,7 +12,7 @@ import { OnsaleFormat } from '../../../shared/onsale-format';
   styleUrls: ['./featured.component.scss']
 })
 export class FeaturedComponent implements OnInit {
-
+  
   selectedFeatured: OnsaleFormat;
 
 
@@ -23,19 +23,21 @@ export class FeaturedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const seasonId = this.route.snapshot.params['seasonId'];
-    console.log(seasonId);
-    this.selectedFeatured = this.onsaleDataService.getFeatured(seasonId);
-    window.scrollTo(0, 960);
-    console.log(this.selectedFeatured);
 
-  }
+    const seasonId = this.route.snapshot.params['seasonId'];
+    this.selectedFeatured = this.onsaleDataService.getFeatured(seasonId);
+    // console.log(this.selectedFeatured);
+    window.scrollTo(0, 0);
+    return this.selectedFeatured;
+  
+
+  }// ngOnInit
 
   goBack(): void {
     this.location.back();
-    window.scrollTo(0, 760);
+    window.scrollTo(0, 0);
 
   }// goBack
 
 
-}
+}// FeaturedComponent

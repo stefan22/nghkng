@@ -15,7 +15,8 @@ export class Season10Component implements OnInit {
   constructor(private season10DataService: Season10DataService) { }
 
   ngOnInit() {
-    this.season10 = this.season10DataService.getSeason10Data();
+    const season10 = this.season10DataService.getSeason10Data_PD();
+    return season10;
   }
 
   onEpisodeSelected(item) {
@@ -27,4 +28,4 @@ export class Season10Component implements OnInit {
 
 
 
-}//Season10Component class
+}// Season10Component class

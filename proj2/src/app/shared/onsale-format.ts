@@ -7,4 +7,4 @@ export class OnsaleFormat {
     featured: boolean;
     description: string;
 
-}//Onsale class
+}// Onsale class

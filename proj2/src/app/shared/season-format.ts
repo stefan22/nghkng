@@ -1,8 +1,8 @@
-import { CommentsFormat } from "./comments-format";
+import { CommentsFormat } from './comments-format';
 
 export class SeasonFormat {
     
-  episodeNumber: number
+  episodeNumber: number;
   seasonId: number;
   episodeTitle: string;
   aired: string;

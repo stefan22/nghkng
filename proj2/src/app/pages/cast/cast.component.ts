@@ -14,8 +14,18 @@ export class CastComponent implements OnInit {
   constructor(private castData: CastDataService) { }
 
   ngOnInit() {
-    this.entireCast = this.castData.getEntireCast();
-  }
+    this.addCastMembersToPage();
+
+  }// ngOnInit
+
+
+  addCastMembersToPage() {
+    this.castData.getCast().
+      then((cast) => {
+        this.entireCast = cast;
+      });
+
+  }// addCastMembersToPage
 
 
 

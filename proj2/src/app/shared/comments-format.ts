@@ -5,7 +5,4 @@ export class CommentsFormat {
     author: string;
     date: string;
 
-
-
-
 }

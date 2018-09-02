@@ -9,7 +9,14 @@
       </div>
     </div>
 
-    <div class="row">
+  <!-- mat-spinner   -->
+  <div [hidden]="season10">
+    <mat-progress-spinner [color]="primary" [mode]="determinate" [value]="50">
+    </mat-progress-spinner>
+  </div>
+  <!-- endof spinner -->
+
+    <div class="row" *ngIf="season10">
       <div class="col-xs-12 col-md-4" *ngFor="let season of season10">
         <div class="season-item">
           <figure>
@@ -40,13 +47,18 @@
       </div>
       <!-- endof card -->
 
+     
       
 
 
     </div><!--endof row-->
   </div>
+
+
   <!-- endof container -->
 </section>
+
+
 
 
 

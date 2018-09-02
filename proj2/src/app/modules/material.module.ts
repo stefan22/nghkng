@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatRadioModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 
 
@@ -36,7 +37,8 @@ import { MatRadioModule } from '@angular/material';
     MatSelectModule,
     MatSlideToggleModule,
     MatSliderModule,
-    MatRadioModule
+    MatRadioModule,
+    MatProgressSpinnerModule
 
   ],
   exports: [
@@ -55,7 +57,8 @@ import { MatRadioModule } from '@angular/material';
     MatSelectModule,
     MatSlideToggleModule,
     MatSliderModule,
-    MatRadioModule
+    MatRadioModule,
+    MatProgressSpinnerModule
 
   ]
 })

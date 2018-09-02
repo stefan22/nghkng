@@ -25,9 +25,7 @@
                   <br> Canary Wharf
                   <br> London
                   <br>
-                  <i class="fa fa-phone"></i>: 0203-224-2929
-
-                  {{f}}
+                  <i class="fa fa-phone"></i>: 0203-224-2929 {{f}}
                   <br>
                   <i class="fa fa-envelope"></i>:
                   <a href="mailto:stefano@theRealSouthPark.com">Stefano@theRealSouthPark.com</a>
@@ -56,9 +54,9 @@
                   <span class="feedback-submitted" *ngIf="!form.dirty && feedbackSubmitted">
                     Feedback received! Thank you.</span>
                 </h3>
- 
 
-  
+
+
 
                 <form id="feedback" class="contact" novalidate (ngSubmit)="onContactFormSubmitted()" [formGroup]="form">
 
@@ -68,11 +66,7 @@
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /username -->
                           <mat-label>Username</mat-label>
-                          <input matInput type="text" placeholder="Enter username" 
-                          #username
-                          formControlName="username" 
-                          minlength="5"
-                          required />
+                          <input matInput type="text" placeholder="Enter username" #username formControlName="username" minlength="5" required />
                           <!-- error   -->
                           <mat-error *ngIf="form.get('username').
                           hasError('required') 
@@ -83,8 +77,8 @@
                             value.length > 5">
                             Min 5 characters
                           </mat-hint>
-                          
-              
+
+
                         </mat-form-field>
 
                         <mat-form-field class="c-field" appearance="fill">
@@ -93,7 +87,7 @@
                           <input matInput type="email" placeholder="Enter email" formControlName="email" required />
                           <mat-error *ngIf="form.get('email').hasError('required') && form.get('email').touched">
                             Email is required
-                           <mat-hint [hidden]="!form.get('email').hasError('required') && !form.get('email').touched"></mat-hint> 
+                            <mat-hint [hidden]="!form.get('email').hasError('required') && !form.get('email').touched"></mat-hint>
                           </mat-error>
                         </mat-form-field>
 
@@ -101,7 +95,7 @@
                           <!-- <span matPrefix>+0 &nbsp;</span> -->
                           <mat-label>Mobile</mat-label>
                           <input type="tel" #mobile formControlName="mobile" matInput min="7" placeholder="Mobile" />
-                          
+
                           <mat-icon matSuffix>mode_edit</mat-icon>
                           <mat-hint *ngIf="mobile.value.length < 10 && mobile.value.length > 2" align="start">
                             No whitespaces after the {{mobile.value[0]}}
@@ -109,18 +103,18 @@
                           <mat-hint align="end">
                             {{mobile.value.length}}</mat-hint>
                         </mat-form-field>
-                     
 
-                     
+
+
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /age -->
-                         
-                            <mat-label>Age</mat-label>
-                            <input matInput type="age" placeholder="Enter your age" formControlName="age" />
-                          
+
+                          <mat-label>Age</mat-label>
+                          <input matInput type="age" placeholder="Enter your age" formControlName="age" />
+
                         </mat-form-field>
-                      
-                   
+
+
                         <mat-form-field class="c-field" appearance="fill">
                           <!-- /message -->
                           <mat-label>Message</mat-label>
@@ -143,7 +137,8 @@
                           <mat-label>May we contact you</mat-label>
                           <input matInput type="text" formControlName="consent" placeholder="We need your consent to proceed" required />
                           <mat-icon align="start" matSuffix>sentiment_very_satisfied</mat-icon>
-                          <mat-hint align="end">If you answered no, then you would have certainly made it clear, that we're no longer friends.</mat-hint>
+                          <mat-hint align="end">If you answered no, then you would have certainly made it clear, that we're
+                            no longer friends.</mat-hint>
                           <mat-error *ngIf="form.get('consent').hasError('required') && form.get('consent').touched">
                             Consent is required
                             <mat-hint [hidden]="!form.get('consent').hasError('required') && !form.get('consent').touched"></mat-hint>

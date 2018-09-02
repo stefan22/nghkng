@@ -14,7 +14,7 @@ import { EpisodeDataService } from '../../services/episode-data.service';
 })
 export class HomeComponent implements OnInit {
   randomSeasons: EpisodeFormat[];
-  allFeatures: OnsaleFormat[];
+  allFeatured: OnsaleFormat[];
 
   // cast
   featcast: CastFormat;
@@ -30,15 +30,27 @@ export class HomeComponent implements OnInit {
     private onsaleDataService: OnsaleDataService,
     private castDataService: CastDataService
 
-  ) {}
+  ) { }
 
   ngOnInit() {
-    this.randomSeasons = this.episodeDataService.getEpisodesData();
-    this.allFeatures = this.onsaleDataService.getAllFeatured();
+
+    this.onsaleDataService.getAllFeatured()
+      .then((allfeas) => {
+        this.allFeatured = allfeas;
+        // console.log('all featured: ', this.allFeatured);
+        return this.allFeatured;
+
+      }); // getAllFeatured
+
     this.featcast = this.castDataService.getSelectedCastMember();
 
-    // return this.randomSeasons;
-  }
+    this.episodeDataService.getAllEpisodes()
+      .then((episodes) => {
+        this.randomSeasons = episodes;
+      });
+
+
+  }// ngOnInit
 
   onSelectedSeason(item) {
     console.log('item: ', item);
@@ -48,8 +60,16 @@ export class HomeComponent implements OnInit {
     return this.selectedSeason;
   } // onSelectedEpisode
 
+
   backToSeasons() {
     this.isSelected = false;
     window.scrollTo(0, 2400);
   }
+
+
+
 }// HomeComponent class
+
+
+
+
